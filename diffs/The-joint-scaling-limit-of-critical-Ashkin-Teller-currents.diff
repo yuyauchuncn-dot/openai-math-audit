@@ -1,0 +1,941 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/main.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/main.tex	2026-10-15 02:18:27
+@@ -51,7 +51,7 @@
+ \setlength{\emergencystretch}{2em}
+ \title{The joint scaling limit of critical Ashkin--Teller currents}
+ \author{OpenAI}
+-\date{September 25, 2026}
++\date{October 6, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/references.bib	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/references.bib	2026-10-15 02:18:27
+@@ -102,7 +102,7 @@
+   author = {{OpenAI}},
+   title = {{The Gaussian free field limit of integer Lipschitz heights with two-arc boundary data}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026/paper.pdf}{OAI:The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-October-6-2026/paper.pdf}{OAI:The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-October-6-2026}},
+   year = {2026}
+ }
+ 
+@@ -280,4 +280,51 @@
+   howpublished = {OpenAI Math Release preprint
+                   \href{https://github.com/openai/math/blob/main/preprints/The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026/The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026.pdf}{OAI:The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026}},
+   year = {2026}
++}
++
++@misc{JLQ2023Fields,
++  author = {Jego, Antoine and Lupu, Titus and Qian, Wei},
++  title = {Conformally invariant fields out of {Brownian} loop soups},
++  year = {2023},
++  howpublished = {arXiv:2307.10740v2},
++  note = {Version of 5 October 2023},
++  doi = {10.48550/arXiv.2307.10740},
++  url = {https://arxiv.org/abs/2307.10740v2}
++}
++
++@article{ABJL2023,
++  author = {A{\"i}d{\'e}kon, {\'E}lie and Berestycki, Nathana{\"e}l
++            and Jego, Antoine and Lupu, Titus},
++  title = {Multiplicative chaos of the {Brownian} loop soup},
++  journal = {Proceedings of the London Mathematical Society},
++  volume = {126},
++  number = {4},
++  pages = {1254--1393},
++  year = {2023},
++  doi = {10.1112/plms.12511},
++  note = {Versioned source: arXiv:2107.13340v2, 20 October 2022},
++  url = {https://arxiv.org/abs/2107.13340v2}
++}
++
++@misc{BSS2020,
++  author = {Berestycki, Nathana{\"e}l and Sheffield, Scott and Sun, Xin},
++  title = {Equivalence of {Liouville} measure and {Gaussian} free field},
++  year = {2020},
++  howpublished = {arXiv:1410.5407v4},
++  note = {Version of 7 September 2020},
++  doi = {10.48550/arXiv.1410.5407},
++  url = {https://arxiv.org/abs/1410.5407v4}
++}
++
++@article{Lupu2016,
++  author = {Lupu, Titus},
++  title = {From loop clusters and random interlacement to the free field},
++  journal = {The Annals of Probability},
++  volume = {44},
++  number = {3},
++  pages = {2117--2146},
++  year = {2016},
++  doi = {10.1214/15-AOP1019},
++  note = {Versioned source: arXiv:1402.0298v7, 9 July 2020},
++  url = {https://arxiv.org/abs/1402.0298v7}
+ }
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/sections/03-spatial.tex /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/sections/03-spatial.tex
+--- /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/sections/03-spatial.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/sections/03-spatial.tex	2026-10-15 02:18:27
+@@ -774,7 +774,7 @@
+ has an exponential tail. Its constants depend on $b$ and the fixed
+ box geometry, not on the roughness of the surrounding walls or on
+ the number of chambers in the realization with a common fill.
+-\item For one chamber, let a rectangle and its joining buffer lie
++\item For one chamber, let a lattice-aligned rectangle and its joining buffer lie
+ wholly in the unprescribed accessible interior. Use the relative dual
+ restriction with separate side ports defined in the proof. The number of distinct
+ components of the restricted $N$ graph crossing between two specified
+@@ -854,8 +854,8 @@
+ lemma are absorbed by the deterministic number of vertices in the
+ fixed box.
+ 
+-For item~2 we adapt the crossing exploration underlying
+-\cite[Section~19.1, especially Lemmas~19.1 and~19.4]{DKLM2026}.
++For item~2 we use a crossing exploration followed by a finite-domain
++boundary comparison.
+ First fix the relative planar dual of the given restricted $N$
+ lattice quadrilateral. Its medial boundary follows the four sides
+ of the rectangle. In the auxiliary $W$ graph, truncate a dual edge
+@@ -896,85 +896,93 @@
+ region above $\gamma$ would first join $\gamma$ as well. This is
+ the stopping-line property for the enumeration.
+ 
+-After selecting $\gamma$, reveal the whole below envelope, with
+-endpoint spins before edge states. Calling the $W$ parity even,
+-extend endpoint half-edges only for the following geometric closure,
+-and close the envelope to an even domain $D_\gamma$ through the
+-unused side and bottom buffer outside the
+-central test balls. All earlier queried regions and their possibly
+-unfavorable frontiers are now inside $D_\gamma$; its boundary
+-segments in the central balls are exactly matching segments of
+-$\gamma$. The endpoint extensions are not edges of the counted
+-matched graph. The transcript is a cylinder measurable in $D_\gamma$.
+-Equivalently, one can disintegrate over that full cylinder after
+-the selection. The envelopes are nested as the search moves upward,
+-so the next transcript still has this form.
++After selecting $\gamma$, reveal its whole closed below envelope,
++with endpoint spins before edge states. Reflect the colors if necessary
++so that $\gamma$ is plus. We use test rectangles with sides parallel to
++the coordinate axes of the $W$ lattice; the primal and dual square
++lattices have the same axes. Complete only the two endpoint half-edges
++of $\gamma$ to their actual $W$ edges. Their states are already known:
++each half-edge inherited the state of that actual edge, and its being
++open forces the additional endpoint to have the same spin. Thus this
++operation assumes no unexamined connection. The actual endpoints of all
++left-exiting half-edges lie on one $W$-lattice column, and the analogous
++statement holds on the right. Let $B$ have these two columns as its
++lateral boundary and extend its top and bottom a fixed distance into
++the unprescribed joining buffer. The completed $\gamma$ is a proper
++crosscut of $B$: its only vertices on the lateral boundary are its two
++endpoints, because the matched graph contains no exterior side-column
++edges. Write $U_\gamma$ for the component above this crosscut and
++$F_\gamma$ for the closed region below it. All the earlier crossing-search
++transcripts in $B$ are below $\gamma$.
+ 
+-In a central vertical strip with a buffer continuing above the
+-rectangle, use the partial-circuit construction of
+-\cite[Lemma~19.4 and the proof of Lemma~19.1]{DKLM2026}. That lemma
+-is stated for the plane: it allows arbitrary same-parity data in
+-revealed even domains whose in-ball frontier is matching, and tests
+-a circuit in the matching graph augmented by those domains.
+-To transfer its bound to a finite conditional kernel, choose a
+-complete deterministic outer circuit $\Gamma_{\rm out}$ of the $W$
+-lattice, with its incident edge layer inside the unused buffer and
+-outside the test ball. Let $G^\circ$ be the graph induced by the $W$
+-vertices strictly inside $\Gamma_{\rm out}$, and let $V_\partial$ be
+-its vertices adjacent to that circuit. Analytically disintegrate the
+-old conditional law over the spins at $V_\partial$ and a complete
+-exterior and interface realization, fixing all endpoint spins before
+-edge states. For each fixed contact-spin vector, the positive exterior
+-fibers give laws on $G^\circ$ with identical retained interior pins
+-and local edge factors; only the same-color
+-partition of $V_\partial$ induced from outside varies. The interface
+-factors are constants once these endpoint spins are fixed. Every
+-exterior connection reaches $G^\circ$ through $V_\partial$. This
+-includes inherited abstract wires, whose terminals are outside the
+-unprescribed buffer.
++Analytically disintegrate the conditional law over the entire
++configuration outside $U_\gamma$, including the unused parts of the
++buffer, and over its boundary contact spins before interface edge
++states. This extra disintegration is used only for the estimate; it is
++not added to the next search transcript. On every positive exterior
++fiber the finite weight on $U_\gamma$ is the weight of
++\cref{prop:comparison}, with the exterior same-color connections
++retained. All contacts on $\gamma$ are plus and belong to a single
++class, since $\gamma$ itself is open. The other contacts lie on the
++upper boundary arc of $B$.
+ 
+-For a sought plus circuit, replace this exterior partition by one
+-class on all minus contacts and singleton exterior classes on plus
+-contacts, retaining every interior pin and wire. This is the adverse
+-ordered boundary condition of \cref{prop:comparison}: it preserves or
+-merges every old minus connection and removes only plus exterior
+-connections. Realize it by pinning the vertices of $\Gamma_{\rm out}$
+-minus and its edges open. Pin each inward incidence $vc$, with
+-$v\in V_\partial$ and $c\in\Gamma_{\rm out}$, open minus if $s_v=-$
+-and closed if $s_v=+$; pin any interior chord of $\Gamma_{\rm out}$
+-open minus as well. These are compatible states after the endpoint
+-spins are fixed. An old minus-open incidence remains open, an old
+-plus-open incidence is closed, and an old closed incidence is either
+-kept closed or opened minus. The comparison is between kernels on
+-the common graph $G^\circ$; it does not impose the old exterior pins
+-on this new realization. Reflect colors for a sought minus circuit.
++Replace this fiber's boundary condition by the following adverse one.
++Keep $\gamma$, including its endpoints, plus and open. Make all other
++contacts on the upper boundary arc minus and wire them together; retain
++only the one plus class supplied by $\gamma$. The two boundary edges
++at a change of spin are closed. This is an ordered decrease for the
++plus order: it retains every required lower plus connection, removes
++only additional plus connections, and merges all remaining minus
++connections. Changes of contact spins and their compatible incident
++edge states use the same order. Therefore the original fiber dominates
++this fixed adverse law on $U_\gamma$, by \cref{prop:comparison}.
++In particular, no event belonging to the original history has been
++removed from a conditional probability.
+ 
+-Under the complete cut $\Gamma_{\rm out}$, the finite interior
+-$(s,W)$ law and the plane law conditioned on the same cut have the
+-same flat kernel. Condition both on the identical retained interior
+-pins, contact spins, inward incidence states, and interior chords.
+-Cover the full added interface layer by finitely many small even
+-domains whose closures remain outside the test ball. Together with
+-$D_\gamma$, they make this conditioning measurable in the auxiliary
+-domain union, while adding no in-ball frontier segment or augmented
+-edge in the tested annulus. Lemma~19.4 applies in this plane
+-representation, with exactly the matching in-ball frontier of
+-$\gamma$, and gives the uniform positive partial-circuit bound.
+-The ordered comparison holds for every old fiber, so averaging with
+-its original probability introduces no factor. The original wired law
+-uses the same $(s,W)$ comparison before the cut. Multiple frontier
+-segments are handled by the finite-family conclusion of Lemma~19.4;
+-the polar Markov statement in Lemma~14.13 itself has only two arcs.
++Realize the adverse law on the full box $B$ by filling $F_\gamma$
++with plus spins and open $W$ edges, including the lower outer boundary
++arc, while keeping the upper outer boundary arc minus and wired as
++above. Every edge of the separating crosscut remains an actual open
++plus edge. The finite edge factors in \eqref{eq:spatial-edge-weight},
++or equivalently the component-count formula in
++\eqref{eq:spatial-euler}, show that this completion has exactly the
++adverse law as its $U_\gamma$ marginal: factors on the filled side
++cancel, the plus contacts form one class, and the other boundary
++contacts form the one minus class. There is no factor depending on
++the length or roughness of $\gamma$.
+ 
+-Intersect a fixed chain of these tests under the conditional pin
+-FKG law. With a fixed positive probability their augmented tube
+-joins the filled lower part to above the rectangle. It stays in
+-the central strip, where its last exit from $D_\gamma$ is on
+-$\gamma$ itself. The remaining connection is actual and lies in
+-the interior of the matched graph up to the top. A later parallel
+-crossing of the same color would meet it and join $\gamma$ within
+-that graph, while a crossing of the opposite color cannot cross it.
+-Thus the tube event rules out another distinct $W$ crossing.
++The completed law is obtained from the law in $B$ with the worst
++constant minus wired boundary by increasing the lower boundary data
++and imposing compatible plus pins in $F_\gamma$.
++\Cref{prop:comparison} therefore makes it dominate that constant-boundary
++law for every increasing plus-circuit event. The ordinary buffered
++circuit estimate used in \cref{prop:circuits}, namely
++\cite[Theorem~16.4]{DKLM2026}, now gives a uniform positive lower
++bound for each circuit test in a fixed central strip of $B$.
++In transferring a circuit to $U_\gamma$, edges in $F_\gamma$ are
++artificial matching edges; all its other edges are actual plus edges.
++The estimate holds on every original exterior fiber, so averaging
++over those fibers preserves the same lower bound. This argument uses
++only the ordinary full-circuit estimate, not the arbitrary-history
++partial-circuit assertion of \cite[Lemma~19.4]{DKLM2026}.
++
++Choose a fixed chain of buffered circuit tests in this central strip,
++starting below the counted rectangle and ending above it. All test
++buffers stay away from the lateral sides of $B$, and their number
++depends only on the fixed aspect and buffer ratios. The usual tube
++gluing from \cref{prop:circuits}, followed by positive association in
++the completed law, gives a uniform positive probability $p$ that
++the augmented matching graph joins the filled lower part to above
++the rectangle. This tube event is increasing, so the same boundary
++comparison and fiberwise averaging give probability at least $p$
++under the original search history. Its last exit from $F_\gamma$
++is on $\gamma$ in the central strip. From there until its first exit
++through the top of the counted rectangle the connection is actual
++and lies in the matched graph. A later parallel crossing of the
++same color would meet this connection and hence join $\gamma$
++inside that graph, whereas a crossing of the opposite color cannot
++cross it. The tube therefore rules out another distinct $W$
++crossing.
+ 
+ These tube tests are used to bound the conditional probability;
+ their upper data are not added to the next search transcript.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/sections/07-local-sets.tex /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/sections/07-local-sets.tex
+--- /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/sections/07-local-sets.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/sections/07-local-sets.tex	2026-10-15 02:18:27
+@@ -819,10 +819,12 @@
+ increasing union as the upper FPS of \(f\) at \(2a\). This last set
+ is generally nonthin; the preceding bounded-density argument is not
+ used as the barrier grows. Its metric approximants connect points to
+-the parent boundary by sublevel paths. Excursion and FPS convergence
+-joint with the field are supplied by \cite{ALS2018,ALS2023}.
+-The next section uses their connected paths between strict interior
+-hits. In the total field the two path levels are \(b\) and \(b+2a\).
++the parent boundary by sublevel paths, with coupled FPS convergence
++given by \cite[Proposition~4.7]{ALS2018}.
++For excursions, \cref{lem:soup-forcing} below proves directly the
++one-sided same-field approximation needed for connected paths between
++strict interior hits. In the total field the two path levels are
++\(b\) and \(b+2a\).
+ Reflection gives levels \(b\) and \(b-2a\) for a negative cluster.
+ 
+ For the sign assertion, let $\xi$ be the fair outer $\CLE_4$ sign.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/sections/08-local-kernel.tex /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/sections/08-local-kernel.tex
+--- /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026/build/sections/08-local-kernel.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/build/sections/08-local-kernel.tex	2026-10-15 02:18:27
+@@ -26,7 +26,7 @@
+ \(\widetilde\Phi_n\) has discrete GFF values at vertices and independent
+ Brownian bridges on the metric edges conditional on those values. Edge
+ resistances and the field scaling are fixed once for this normalization.
+-For planar pairings we always use the ALS harmonic extension of the
++For the metric-domain approximations below, planar pairings use the ALS harmonic extension of the
+ \emph{whole cable function} to the box, with zero data at the box boundary
+ \cite[Sections~2.1 and~4.1]{ALS2018}; denote it by
+ \(\widehat\Phi_n\). Thus
+@@ -64,7 +64,9 @@
+ and contain the prescribed \(\mathsf P_n\) for all sufficiently large
+ \(n\). Their complements converge in Hausdorff distance, and their
+ numbers of complementary components are uniformly bounded. These are
+-the admissible approximations in the rest of the section.
++the primary admissible approximations in this section.
++\Cref{lem:killed-graph-transfer} adds a second auxiliary class, with an
++explicit whole-cable embedding and the same local kernel.
+ 
+ Here are the tests used later. A collar choice consists of a compact
+ rational polygon \(Q\) and regular rational polygons
+@@ -440,72 +442,444 @@
+ \(\tfrac12\E[\min\{2,\|\chi H_r\|_\nabla\}]\). This tends to zero.
+ \end{proof}
+ 
++\subsection{Calibration on killed lattice graphs}
++
++\begin{lemma}[The source killed graphs and the common kernel]
++\label{lem:killed-graph-transfer}
++The conclusions of \cref{lem:reverse-buffer,lem:local-kernel}, with
++the same reference kernel \(k\), also hold for the following auxiliary
++approximations of a bounded simply connected domain \(D\).
++Choose a fixed dyadic point \(r\in D\) and put
++\[
++ V_n=\bigl\{v\in\varepsilon_n\mathbb Z^2\cap D:
++  \text{a lattice path from \(v\) to \(r\) stays at distance
++  at least \(\varepsilon_n\) from \(D^c\)}\bigr\}.
++\]
++For sufficiently large \(n\) this is the approximation of
++\cite[(2.6)]{JLQ2023Fields}, translated to \(r\).
++Use the cable realization of the vertex GFF killed on leaving \(V_n\):
++every edge incident to \(V_n\), including a full exit edge ending at an
++outside Dirichlet vertex, has its original resistance and its usual
++conditional Brownian bridge. Complete this cable function to the full
++grid in \(\mathcal B\) by setting missing vertices and missing edges
++identically to zero, and harmonically extend it into each grid face.
++Denote this extension by \(\widehat X_n\). The missing edges have
++deterministic zero traces, not additional Brownian bridges.
++
++For a simply connected regular polygon \(B\Subset D\), use the
++connected, hole-free complete-cell approximations \(B_n^\square\)
++and reveal all of \(C_{B,n}\), including its perimeter cables.
++Extend the residual, zero on \(C_{B,n}\), by the same completed-grid
++operator. Its covariance form \(\mathsf K_n^B\) and the full covariance
++form satisfy, for smooth tests \(f,g\) on the box,
++\begin{equation}
++ \operatorname{Cov}(\widehat X_n(f),\widehat X_n(g))
++       \longrightarrow G_D(f,g),\qquad
++ \mathsf K_n^B(f,g)
++       \longrightarrow G_{D\setminus\overline B}(f,g),
++ \label{eq:killed-graph-green}
++\end{equation}
++where the limiting kernels are zero-extended to \(\mathcal B\).
++The corresponding fields are tight in the fixed \(H^s(\mathcal B)\),
++\(s<-1\). For a constant parent label \(t\), add directly to
++\(\widehat X_n\) the chosen continuum ALS extension \(u_t\): it equals
++\(t\) on \(\overline D\), is harmonic on \(\mathcal B\setminus\overline D\), and is zero on
++\(\partial\mathcal B\).
++\end{lemma}
++
++\begin{proof}
++This is a second, explicit planar embedding convention for auxiliary
++fields. It preserves the entire source cable field, including its
++exit-edge bridges. On every fixed compact subset of \(D\), its face
++extension agrees with the earlier whole-cable convention for fine mesh.
++In particular every test on \(C_{K,n}\) is unchanged.
++
++Let \(F_n\) be the set of vertices in \(C_{B,n}\).
++The full vertex covariance is the killed random-walk Green kernel on
++\(V_n\); the residual vertex covariance after the revelation is the
++killed kernel on \(V_n\setminus F_n\). Conditional on endpoint values,
++revealing the bridges in \(C_{B,n}\) supplies no further information
++about vertices outside it. All unrevealed edge bridges remain present.
++In particular an unrevealed edge with two pinned endpoints still
++contributes its independent zero-endpoint bridge.
++
++The two killed vertex kernels converge off the diagonal to \(G_D\)
++and \(G_{D\setminus\overline B}\), respectively. We recall the
++boundary argument to specify its applicability to these full exit
++stubs. The active vertex sets exhaust compact subsets of the indicated
++open sets. Stop the walk in a compact inner domain; the invariance
++principle identifies its limiting interior walk and harmonic functions.
++The discrete Beurling estimate then bounds the probability that a walk
++which has entered a thin neighborhood of a killing boundary returns a
++fixed distance into the domain before being killed. This bound tends to
++zero uniformly in fine mesh. The outer complement is connected and
++nondegenerate; clamping \(B_n^\square\) adds the disjoint nondegenerate
++polygonal obstacle. Apply the estimate at the component approached by
++the walk. This identifies killing at the limiting boundary, and the
++potential-kernel representation gives Green convergence. This is the
++Green-convergence proof of \cite[Lemmas~4.1--4.2]{ALS2018}, applied to
++the killed vertex walk. Realizing its killing transition by a full
++cable stub does not change its vertex transition matrix.
++
++All these kernels are bounded by the killed Green kernel of one fixed
++containing square. The square-lattice potential-kernel estimate gives
++\begin{equation}
++ 0\le G_n(v,w)\le
++ C\left(1+\log_+\frac{R}{|v-w|\vee\varepsilon_n}\right),
++ \label{eq:killed-graph-log-bound}
++\end{equation}
++with fixed \(R,C\); see also the potential-kernel references in
++\cite[Appendix~B]{ABJL2023}. If \(v_n\) tends to a boundary point
++and \(w_n\) to a distinct point, Beurling applied before reaching a
++fixed neighborhood of \(w_n\), followed by
++\eqref{eq:killed-graph-log-bound}, gives \(G_n(v_n,w_n)\to0\).
++Thus the piecewise constant vertex kernels converge off the diagonal
++to the zero-extended continuum kernel even when the outer boundary has
++positive area. The logarithmic bound is integrable, and the integrated
++contribution of a shrinking neighborhood of the diagonal vanishes
++uniformly. Dominated convergence proves convergence of the paired
++vertex Green forms for smooth box tests.
++
++We next retain, rather than discard, the cable bridges. Split the
++completed cable field into the piecewise linear interpolation of its
++vertex values and its centered edge bridges, and extend both parts
++harmonically into the square faces. The harmonic basis function of a
++vertex is nonnegative, supported on its four incident faces, and has
++integral \(\varepsilon_n^2\). Hence its coefficient against \(f\)
++differs from \(\varepsilon_n^2 f(v)\) by
++\(O_f(\varepsilon_n^3)\), and the total absolute coefficient error is
++\(O_f(\varepsilon_n)\). The containing-square diagonal Green bound
++therefore bounds the variance of this error by
++\(O_f(\varepsilon_n^2\log(1/\varepsilon_n))\).
++A centered edge bridge contributes through at most two faces. Its
++paired variance is \(O_f(\varepsilon_n^4)\), since its covariance is
++bounded at the fixed resistance normalization and those faces have
++area \(O(\varepsilon_n^2)\). There are
++\(O(\varepsilon_n^{-2})\) independent retained bridges, independent
++also of the vertex field. Consequently, for the full field and for
++the clamped residual,
++\begin{equation}
++ \E\left|\widehat X_n(f)
++       -\varepsilon_n^2\sum_v f(v)X_{n,v}\right|^2
++ \le C_f\varepsilon_n^2
++             \bigl(1+\log(1/\varepsilon_n)\bigr)\longrightarrow0.
++ \label{eq:killed-graph-embedding}
++\end{equation}
++For the residual use its pinned vertex values in this display.
++Unrevealed bridges between two pinned endpoints are included in the
++bridge estimate. Thus no perimeter cable has been deleted or replaced.
++The use of the completed grid makes this estimate valid for global
++box tests, including boundary-adjacent faces. Together with the vertex
++Green convergence it proves \eqref{eq:killed-graph-green}.
++
++The nonnegative face basis also carries
++\eqref{eq:killed-graph-log-bound} to the planar covariance, with the
++logarithm truncated at mesh distance. The bridge covariance is bounded
++and supported on pairs of adjacent faces. Integrating against the
++logarithmic kernel for the \(H^{-1}\) norm gives a uniform bound on
++the expected squared \(H^{-1}\) norm. Compact inclusion into
++\(H^s\), \(s<-1\), proves the asserted tightness.
++
++Finally \(\overline P\subset D\) implies that a whole neighborhood
++of \(\overline P\) lies in \(V_n\) for all sufficiently fine mesh:
++its compact pieces have lattice connections to \(r\) with a fixed
++positive clearance. Subdivide the prescribed cables at
++\(\partial P_n^\diamond\). The reference \(\mathsf P_n\) is then
++literally the same graph, with the same inherited half-edge
++resistances and unpinned cut points in the ambient field. Conditioning
++on its exterior gives exactly the original reference residual.
++
++After covariance convergence, the proof of
++\cref{lem:reverse-buffer} uses Gaussian projection, the cable Markov
++decomposition, and measurability of compact interior face pairings.
++All these statements hold for the present extension, so that proof
++applies unchanged. The comparison proof of \cref{lem:local-kernel}
++uses the same reference \(\mathsf P_n\) and harmonic estimates on
++fixed interior buffers, where the operators and cables agree exactly.
++It therefore gives the same \(k\), including the conditional-parent
++conclusion by integrating the bounded mixed expectations.
++For a constant label the added deterministic function \(u_t\) is
++bounded, agrees exactly at every mesh with the prescribed full
++continuum mean, and is identically \(t\) near the buffers. Thus it
++has the required full-field and interior mean convergence, without
++altering any local threshold test.
++\end{proof}
++
+ \subsection{Forcing in the canonical parent}
+ 
+-We record precisely how the auxiliary test is used with the local-set
+-data of canonical ancestors, before revealing the parent remainder.
+-Let \(\Theta\) be that data, let \(\Phi_D\) be the
+-total field in the selected parent, and fix a collar with
+-\(\overline P\subset D\). Conditionally on \(\Theta\), sample the
+-auxiliary cable fields of \cref{lem:local-kernel}. For each deterministic
+-realization of the parent, the coupled convergence of excursion sets
+-\cite[Theorems~3 and~28]{ALS2023} and of FPSs
+-\cite[Proposition~4.7]{ALS2018} has the following consequence. In
+-every joint auxiliary limit along the already selected mesh subsequence,
+-the containing set is its canonical function of the auxiliary parent
+-field \(\Phi_D^{\mathrm{aux}}\). If
+-that set has the strict hits which force the chosen cable test, then
+-\(T=1\). For an excursion this assertion is made for each fixed
+-diameter rank; the countable union of these assertions handles an
+-excursion whose rank is random.
++We first establish the one-sided excursion approximation needed for
++calibration.  All fields in this argument have the normalization
++\eqref{eq:kernel-energy}.  Fix a bounded simply connected domain \(D\)
++and a dyadic rational point \(z_0\in D\).  For all sufficiently large
++\(n\), let \(D_n^{\mathrm{tr}}\) be the component of \(z_0\) in the
++\(\varepsilon_n\)-grid whose connecting paths stay at distance at least
++\(\varepsilon_n\) from \(\partial D\), as in
++\cite[(2.6)]{JLQ2023Fields}.  Use its killed cable graph, retaining
++full-resistance edges to outside Dirichlet vertices.  These auxiliary
++graphs contain every fixed interior reference \(\mathsf P_n\) for
++large \(n\); \cref{lem:killed-graph-transfer} makes
++\cref{lem:local-kernel} applicable to them.
+ 
+-Here is the finite-mesh implication. A connected excursion approximant
+-with one hit in \(\operatorname{int}Q\) and another in
+-\(K\setminus\overline V\) has a sign path crossing the collar.
+-Along a path between the hits, an exterior point of \(V\) is reached
+-before any exit from \(K\); take that initial portion. For an FPS,
+-a point in \(\operatorname{int}Q\) is joined to the artificial parent
+-boundary by its prescribed one-sign path. For fine mesh the parent
+-contains the fixed \(\mathsf P_n\), so that path must exit \(V\) while
+-still inside \(K\), regardless of where the rest of the parent boundary
+-lies. Strict hits persist under compact-set convergence and give the
+-claimed implication. No pointwise value is assigned to the continuum
+-distribution.
++\begin{lemma}[One-sided forcing by an outermost excursion]
++\label{lem:soup-forcing}
++Let \(\widehat\Phi_n\) be the completed-grid whole-cable extensions of
++zero-boundary GFFs on these graphs.  Fix a collar
++\(Q\Subset V\Subset K\Subset B\Subset P\Subset D\).
++In every joint subsequential limit
++\[
++ (\widehat\Phi_n,T_{n,0}^{+},T_{n,0}^{-})
++       \longrightarrow (\Phi,T^+,T^-),
++\]
++the following holds almost surely.  If an outermost canonical positive
++excursion of \(\Phi\) meets both
++\(\operatorname{int}Q\) and
++\(\operatorname{int}K\setminus\overline V\), then \(T^+=1\).
++The analogous negative excursion forces \(T^-=1\).
++\end{lemma}
+ 
+-For clarity, this conditional calibration does not require a measurable
+-family of Skorokhod representations over all possible parents. For a
+-fixed deterministic parent, take an arbitrary joint subsequence and
+-apply the cited coupled theorem and Skorokhod representation there.
+-A continuous hit-depth function
+-\(J_U(C)=\sup_{x\in C}\min\{1,\dist(x,U^c)\}\), with \(J_U(\varnothing)=0\), positive exactly
+-when \(C\) meets the strict open neighborhood \(U\), shows that the
+-product of the required hit depths with \(1-T\) is zero in every limit.
+-The resulting bounded
+-mixed-expectation conclusion holds along the selected subsequence.
+-Apply it pointwise to the measurable conditional auxiliary kernels
+-for \(\Theta=\theta\), and integrate by dominated convergence.
+-Together with item 3 of \cref{lem:local-kernel}, this gives
++\begin{proof}
++Fix one \(\gamma\in(0,2)\).  Couple the cable GFF to a critical
++cable loop soup \(\widetilde{\mathcal L}_n\) by the signed isomorphism
++\cite{Lupu2016}.  Write \(\mathcal L_n\) for the random-walk soup
++obtained by taking its vertex trace.  Vertex occupation times are
++preserved by this trace construction; see also
++\cite[Section~2.2]{ALS2018}.  Write
++\(\mathcal M_{\gamma,n}\) for the normalized unsigned thick-point
++measure at vertices and \(\mathcal M_{\gamma,n}^{\pm}\) for its
++restrictions to vertices with the indicated cable-field sign.
++Thus \(\mathcal M_{\gamma,n}
++=\mathcal M_{\gamma,n}^{+}+\mathcal M_{\gamma,n}^{-}\).
++We use exactly the source normalization
++\cite[(2.5), (2.10), Theorem~2.1]{JLQ2023Fields}, whose limiting expectations are
++\(\E\mathcal M_\gamma(\dd z)=2\dd z\) and
++\(\E\mathcal M_\gamma^+(\dd z)=\dd z\).
++All measure limits below may be read in the local weak topology on
++\(D\).  The deterministic conformal-radius factor in this
++normalization is continuous, positive and bounded with bounded inverse
++on each compact subset of \(D\), so that changing the GMC convention
++there causes no boundary reweighting issue.
++
++The cable version of \cite[Corollary~8.4 and the paragraph following
++it]{JLQ2023Fields}, in the vertex-trace coupling, gives
++\begin{equation}
++ (\widetilde{\mathcal L}_n,\mathcal M_{\gamma,n}^{+})
++       \longrightarrow(\widetilde{\mathcal L},
++                       \widetilde{\mathcal M}_\gamma^{+}),
++ \label{eq:soup-positive-chaos}
++\end{equation}
++where \(\widetilde{\mathcal L}\) is a Brownian loop soup and
++\(\widetilde{\mathcal M}_\gamma^{+}\) is its chaos restricted to
++independently positively marked clusters.  Retain separately the
++projected random-walk soup coordinate \(\mathcal L_n\), whose
++joint limits with unsigned and cluster-restricted chaos are given by
++\cite[Theorem~8.3]{JLQ2023Fields}.  Call its limiting soup
++\(\mathcal L\).  We will not need to identify the two limiting
++time parametrizations.
++
++Their multisets of individual loop ranges do agree.  Indeed, drawing
++each vertex-trace jump along its edge changes the range of a cable
++loop visiting vertices by at most \(2\varepsilon_n\) in Hausdorff
++distance.  Erased excursions stay on edges incident to visited
++vertices, and loops with no vertex have diameter at most
++\(\varepsilon_n\).  At every positive diameter cutoff which is
++not the diameter of a limiting loop, the limiting soups have finitely
++many loops.  The finite point-process matching in the loop-soup
++topology, followed by the range map, therefore passes this trace
++matching to the limit; compare \cite[Section~4.1.2]{ALS2018}.
++Exhausting such cutoffs gives equal multisets of individual ranges,
++and hence identical cluster closures.  This uses equality of the
++limiting range families, not continuity of a cluster-formation map.
++
++The positive and negative thick-point calculations in
++\cite[Section~9, proof of Theorem~1.5]{ABJL2023} also give convergence
++of each signed measure jointly with its underlying vertex GFF to
++the corresponding GMC of that same GFF.  Since both limiting GMCs
++are measurable functions of the field, this also identifies their
++joint limit.  In the source occupation-time normalization the vertex
++field is \(X_n(v)=\sigma_v\sqrt{4\pi\ell_v}\), so its logarithmic
++covariance coefficient is one, as required by
++\eqref{eq:kernel-energy}.
++The whole-cable estimate \eqref{eq:killed-graph-embedding}
++identifies this vertex-field limit with the completed-grid extension
++in \cref{lem:killed-graph-transfer}.
++
++In particular, every joint limit has
++\(\mathcal M_\gamma^{\pm}=\operatorname{GMC}_{\pm\gamma}(\Phi)\),
++where the GMC notation includes the stated deterministic normalization.
++The reconstruction theorem
++\cite[Theorem~1.1]{BSS2020} supplies a measurable map \(R_\gamma\)
++such that
+ \[
++                   \Phi=R_\gamma(\mathcal M_\gamma^{+})
++                   \quad\hbox{almost surely}.
++\]
++The deterministic conformal-radius factor between the GMC conventions
++is included in \(R_\gamma\).
++Thus \eqref{eq:soup-positive-chaos} and the same-field GMC limit
++identify the entire joint law
++\((\Phi,\widetilde{\mathcal L},\mathcal M_\gamma^+)\).
++This step uses measurability after passage to the limit, not continuity
++of the reconstruction map.
++
++There is also one common unsigned measure in the two soup coordinates.
++The exact prelimit identity and the two same-field limits give
++\[
++ \mathcal M_\gamma
++ =\operatorname{GMC}_{\gamma}(\Phi)
++  +\operatorname{GMC}_{-\gamma}(\Phi).
++\]
++In the just identified cable-soup coupling this is its unsigned chaos
++\(\widetilde{\mathcal M}_\gamma\), by
++\cite[Theorem~1.4]{JLQ2023Fields}; in the projected-soup coordinate it
++is the unsigned chaos supplied by \cite[Theorem~8.3]{JLQ2023Fields}.
++Thus the two limiting soups have both the same cluster geometry and
++the same unsigned measure.  Equality of the latter follows from
++their common vertex observable and the two GMC identities, without
++assuming that chaos is determined by unparametrized ranges.
++
++We next identify the cluster marks in this joint law as the canonical
++excursion signs.  The continuum results
++\cite[Theorems~1 and~2]{ALS2023} describe the joint law of the closed
++cluster supports, their Minkowski measures, their independent symmetric
++signs, and their signed sum.  The Minkowski construction in
++\cite[Theorems~1.9 and~1.10]{JLQ2023Fields} normalizes the same
++Euclidean neighborhood measures.  Since both normalizations have
++finite nonzero limits, their deterministic ratio converges to one
++positive constant, common to every cluster.  For example, compare
++the total masses for one cluster: the ratio can have neither zero
++nor infinite subsequential limits, and two distinct finite limits
++would give two different multiples of a nonzero limiting measure.
++The signed sums therefore differ by that same constant; their GFF
++covariance normalizations fix it.  The order of summation can be
++changed to a common sign-independent enumeration: Hilbert-space
++\(L^2\) convergence and independent-sign orthogonality give
++\(\E\sum_i\|\mu_i\|_{H^{-q}}^2<\infty\) for a sufficiently large
++\(q>1\), hence conditional square summability and unconditional
++convergence of the signed series.  Consequently the joint law just
++identified has precisely the canonical excursion supports and signs
++of \(\Phi\).  Only the continuum parts of \cite{ALS2023} are used here.
++
++For the fixed \(\gamma\), every soup cluster \(C\) selected by a
++rational-point label satisfies
++\begin{equation}
++                       \mathcal M_\gamma(C)>0
++                       \quad\hbox{almost surely}.
++ \label{eq:soup-cluster-chaos-positive}
++\end{equation}
++Here is a useful argument that does not presume positivity of a
++restriction to a random thin set.  Flip only the independent sign of
++\(C\), keeping the soup and all other signs fixed.  This transformation
++preserves the signed-soup law.  Hence the original and flipped samples
++both satisfy the same reconstruction identity with \(R_\gamma\), on
++the intersection of two full-probability events.  On
++\(\{\mathcal M_\gamma(C)=0\}\) the positive-chaos measure is unchanged,
++so the reconstructed field is unchanged.  Its signed-Minkowski
++representation, however, changes by a nonzero multiple of the
++nonzero positive measure of \(C\), by
++\cite[Theorems~1.4, 1.9 and~1.10]{JLQ2023Fields}.  This contradiction
++proves \eqref{eq:soup-cluster-chaos-positive}.
++
++Fix a rational \(x\in D\), and let \(C_n(x)\) be the outermost
++ordinary random-walk loop cluster surrounding \(x\), with projected
++loops drawn along the grid edges.  Its trace is contained in a cable
++sign cluster; call that sign \(\sigma_n(x)\).  If no such cluster
++exists, use the empty set and assign sign \(+1\); its restricted
++measure below is then zero.  When nonempty, it is a connected
++one-sign path witness.  Retain also
++\[
++           \mu_n(x)=\mathcal M_{\gamma,n}|_{C_n(x)}.
++\]
++The printed random-walk statement
++\cite[Theorem~8.3]{JLQ2023Fields} gives, jointly with the soup,
++\[
++        C_n(x)\longrightarrow C(x),\qquad
++        \mu_n(x)\longrightarrow\mathcal M_\gamma|_{C(x)},
++\]
++in the Hausdorff and weak-measure topologies, respectively.
++Take an arbitrary further joint limit including \(\sigma_n(x)\).
++At every mesh,
++\[
++ \begin{split}
++  \sigma_n(x)=+1&\ \Longrightarrow\
++       \mathcal M_{\gamma,n}^{+}\ge\mu_n(x),\\
++  \sigma_n(x)=-1&\ \Longrightarrow\
++       \mathcal M_{\gamma,n}-\mathcal M_{\gamma,n}^{+}\ge\mu_n(x).
++ \end{split}
++\]
++These inequalities pass to the limit because the positive-measure cone
++is closed.  In the identified continuum coupling, the positive chaos
++restricted to \(C(x)\) is either its entire unsigned chaos or zero,
++according to the canonical sign \(\tau(x)\).  By
++\eqref{eq:soup-cluster-chaos-positive}, the limiting inherited sign
++must therefore equal \(\tau(x)\).  No independence of the signs of
++different random-walk clusters is asserted: they may share a cable
++cluster.
++
++The rational labels cover every outermost continuum cluster.
++For each fixed label, strict hits in the two open target sets persist
++under Hausdorff convergence, and the inherited sign has just been
++identified.  A path in the projected cluster from its inner hit to
++its outer hit is a cable sign path.  Since
++\(\overline V\subset\operatorname{int}K\), an initial portion
++reaches a point outside \(\overline V\) before any exit from \(K\).
++This portion forces the corresponding test.  Applying Skorokhod
++representation to any further joint
++subsequence proves the assertion, first for each rational label and
++then simultaneously for all labels by countability.
++\end{proof}
++
++We now apply this deterministic-domain calibration to the canonical
++parent before revealing its remainder field.  Let \(\Theta\) be the
++local-set data of the canonical ancestors, let \(\Phi_D\) be the
++total field in the selected parent, and fix a collar with
++\(\overline P\subset D\).  Conditionally on \(\Theta\), choose the
++killed auxiliary graphs above for excursion calibration and subtract
++the constant parent label.  A retained cluster is treated in its own
++recursive parent, where its containing excursion is outermost.
++\Cref{lem:soup-forcing,lem:killed-graph-transfer} and the threshold
++identity in \cref{lem:local-kernel} apply along the already selected
++mesh subsequence.  For an FPS, use instead the admissible metric-domain
++approximations and \cite[Proposition~4.7]{ALS2018}.  Its inner hit is
++connected to the artificial parent boundary by the prescribed one-sign
++path.  Since the parent contains \(\mathsf P_n\), this path exits
++\(V\) while still inside \(K\).  Thus in either case the canonical
++strict-hit event forces \(T=1\) in every auxiliary joint limit.
++
++This conditional calibration does not require a measurable family of
++Skorokhod representations over all possible parents.  For each fixed
++parent, augment an arbitrary subsequence as in the proof above.
++The continuous hit-depth function
++\[
++ J_U(C)=\sup_{x\in C}\min\{1,\dist(x,U^c)\},
++ \qquad J_U(\varnothing)=0,
++\]
++shows that the product of the two required hit depths with \(1-T\)
++vanishes in every limit.  The resulting bounded mixed-expectation
++conclusion holds along the selected subsequence.  Apply it pointwise
++to the conditional auxiliary kernels for \(\Theta=\theta\), and
++integrate by dominated convergence.  Together with item~3 of
++\cref{lem:local-kernel}, this gives
++\[
+        \E[T\mid\Theta,\Phi_D^{\mathrm{aux}}]
+-                      =k(\Phi_D^{\mathrm{aux}}|_B).
++                    =k(\Phi_D^{\mathrm{aux}}|_B).
+ \]
+-If \(E^{\mathrm{aux}}\) is the corresponding canonical strict-hit event,
+-then \(E^{\mathrm{aux}}\in\sigma(\Theta,\Phi_D^{\mathrm{aux}})\) and
+-\(T=1\) on \(E^{\mathrm{aux}}\). Positivity gives
++If \(E^{\mathrm{aux}}\) is the corresponding canonical strict-hit
++event, then it belongs to
++\(\sigma(\Theta,\Phi_D^{\mathrm{aux}})\), and \(T=1\) on that event.
++Positivity gives
+ \(\ind_{E^{\mathrm{aux}}}(1-k(\Phi_D^{\mathrm{aux}}|_B))=0\).
+-The equality of the \((\Theta,\Phi_D^{\mathrm{aux}})\) and
+-\((\Theta,\Phi_D)\) marginals transfers this identity to the corresponding
+-canonical event \(E\) in the original parent:
++Equality of the \((\Theta,\Phi_D^{\mathrm{aux}})\) and
++\((\Theta,\Phi_D)\) marginals transfers this identity to the original
++parent:
+ \begin{equation}
+              \ind_E\bigl(1-k(\Phi_D|_B)\bigr)=0
+              \quad\hbox{almost surely}.
+  \label{eq:kernel-forcing}
+ \end{equation}
+-Canonical ancestor data are
+-functions of the original field, so the identity remains true in
+-any extension carrying the stopped exploration. The later upper
+-bound will condition only on that stop; it does not assert a formula
+-for \(\E[T\mid\Phi_D,\text{stop}]\).
++Canonical ancestor data are functions of the original field, so this
++identity remains true in any extension carrying the stopped exploration.
++The later upper bound conditions only on that stop; it does not assert
++a formula for \(\E[T\mid\Phi_D,\mathrm{stop}]\).
+ 
+ \begin{figure}[t]
+ \centering
+@@ -558,50 +932,67 @@
+  \label{eq:zero-boundary-collar}
+ \end{equation}
+ 
+-A one-sign path in an interior buffer is contained in the closure of
+-one cable sign component. Interior vertex values are almost surely
+-nonzero. On an edge, the nonnegative or nonpositive intervals are
+-closures of Brownian excursions; allowing their zero endpoints does
+-not join distinct interior sign components. Thus a crossing component
+-has a fixed positive lower diameter once the collar is sufficiently
+-far from \(Q\).
++We prove this estimate directly on the auxiliary metric graphs.
++Choose the inner approximating domains \(D_n\subset O\) to be simply
++connected unions of dual mesh cells, with their boundary cable
++intersection points adjoined as Dirichlet endpoints, as for the
++reference polygons above.  The approximations exhaust compact subsets
++of \(O\) and eventually contain every prescribed reference subgraph.
++Such a choice follows by first exhausting the simply connected \(O\)
++by regular simply connected polygons and then taking sufficiently fine
++inner cell approximations, along a diagonal sequence.  Their complements
++converge in Hausdorff distance, their connectivity is one, and they
++converge in the pointed Carath\'eodory sense.  Write
++\(\mathsf O_n=\Gamma_n\cap D_n\) for the resulting zero-boundary metric
++domains.  All distances below are ambient Euclidean distances.  In the
++metric-graph coupling
++\cite[Section~2.3 and Proposition~2.4, with zero boundary data]{ALS2018},
++the nonzero sign components of the cable GFF are the clusters of a
++metric-graph Brownian loop soup of intensity \(1/2\).  The constant
++field rescaling used for our normalization does not change these
++components.
+ 
+-We make the rank and limit order explicit. Let
+-\(\mathcal C_{r,n}\) be the cable excursion supports in decreasing
+-diameter order, with the ranking convention of \cite{ALS2023}, and
+-let \(\mathcal C_r\) be their continuum limits. Theorems 3 and 28
+-of that paper give joint Hausdorff convergence for every fixed finite
+-list of ranks. Theorem 1 gives finitely many positive-diameter supports
+-above any fixed size, and its CLE/FPS construction in Section 3 places
+-each support compactly inside \(O\). These facts hold for the rough
+-simply connected \(O\) and the regular complement-Hausdorff
+-approximations just chosen.
+-
+-Fix \(j_0\) and slightly enlarge \(Q\) within \(O_{j_0}\). Let
+-\(d>0\) be the distance of this enlargement from
+-\(O\setminus O_{j_0}\). For \(j\ge j_0\) and fine mesh, every crossing
+-component has diameter at least \(d\). If one has rank larger than \(N\),
+-then \(\diam\mathcal C_{N+1,n}\ge d\). Fixed-rank convergence gives
++Set
+ \[
+- \limsup_{n\to\infty}
+- \P(\text{a crossing component has rank}>N)
+- \le \P(\diam\mathcal C_{N+1}\ge d/2).
++ d=\tfrac12\dist(Q,\partial O)>0,\qquad
++ \eta_j=\sup_{z\in O\setminus O_j}\dist(z,\partial O).
+ \]
+-The right side tends to zero as \(N\to\infty\) by positive-diameter
+-finiteness. For the first \(N\) limiting supports, compact containment
+-implies that all lie in \(O_{j-1}\) with probability tending to one as
+-\(j\to\infty\). At fixed \(j\), their Hausdorff convergence then puts
+-the first \(N\) approximants inside \(O_j\), since
+-\(\overline O_{j-1}\Subset O_j\). Consequently
++Because \(O\) is bounded and the nested \(O_j\) exhaust every compact
++subset of \(O\), we have \(\eta_j\to0\).  A zero-threshold crossing
++has a supporting sign component whose closure meets \(Q\) and
++\(O\setminus O_j\).  Indeed, after erasing loops, the path uses finitely
++many cable intervals.  Interior vertex values are nonzero almost surely,
++and a Brownian bridge almost surely has no interior local minimum or
++maximum at the deterministic level zero.  Thus allowing zero endpoints
++does not concatenate distinct sign components.  In the loop-soup
++coupling, it supplies a cluster \(C\) with
+ \[
+- \limsup_{j\to\infty}\limsup_{n\to\infty}
+-       \P(T_{j,n}^{\pm}=1)
+- \le \P(\diam\mathcal C_{N+1}\ge d/2).
++ \dist(C,\partial\mathsf O_n)\le 3\eta_j,
++ \qquad \sup_{z\in C}\dist(z,\partial O)\ge d.
+ \]
+-Send \(N\to\infty\). This proves \eqref{eq:zero-boundary-collar}:
+-the mesh limit is first for each fixed collar, the collar moves next,
+-and the finite rank truncation is removed last.
++Here distances to a cluster may equivalently be taken to its closure.
++For each fixed \(j\), these bounds hold for all sufficiently fine
++meshes.  The first uses the inner approximation property: distance
++to the Euclidean boundary of \(D_n\) is at most distance to
++\(\partial O\), and every point of \(\partial D_n\) is within
++\(\varepsilon_n/2\) of a metric boundary cut point.  The extra margin also
++allows replacing an endpoint in the closure by a point of the cluster.
++The second bound follows from the hit on \(Q\).
+ 
++The boundary-avoidance estimate
++\cite[Lemma~4.13]{ALS2018}, at intensity \(1/2\), applies to the
++chosen complement-Hausdorff approximations, which also converge in
++the pointed Carath\'eodory sense and have the required bounded
++connectivity.  For the fixed \(d\), it bounds the probability of the
++last displayed event by a quantity tending to zero as
++\(\eta_j\to0\), uniformly in the mesh.  Therefore
++\[
++ \lim_{j\to\infty}\limsup_{n\to\infty}
++ \P(T_{j,n}^{\pm}=1)=0.
++\]
++This proof uses metric loop-soup boundary avoidance, without requiring
++convergence of diameter-ranked excursion clusters.
++
+ Let \(k_{j,0}^{\pm}\) be the common kernels selected for these
+ countably many collar choices. For fixed \(j\), the mixed-expectation
+ conclusion of \cref{lem:local-kernel} in \(O\) identifies its integral
+@@ -649,8 +1040,8 @@
+ at total level \(b\) and a containing upper FPS with sublevel paths at
+ total level \(b+2a\). For a negative cluster the containing paths are
+ below \(b\) and above \(b-2a\). The parent is the initial domain or a
+-canonical Jordan hole; its regular auxiliary approximations satisfy
+-the coupled convergence hypotheses used above.
++canonical Jordan hole; its auxiliary approximations are the source killed graphs for the
++excursion test and the regular metric domains for the FPS test.
+ 
+ Suppose \(C\) meets both \(O\) and \(\partial O\), and choose a rational
+ \(Q\Subset O\) whose interior it meets. In a regular inner exhaustion
+@@ -672,10 +1063,11 @@
+ 
+ Calibrate both tests at every fixed threshold in \(a\Z\) in the
+ canonical parent, conditional on its ancestor data. For the excursion,
+-use the forcing identity for each fixed containing rank and take their
+-countable union; for the FPS use the whole-set identity. The path
++use \cref{lem:soup-forcing} for each rational-point label and take
++the countable union; for the FPS use the whole-set identity. The path
+ implications and \eqref{eq:kernel-forcing} then hold simultaneously
+-for the countable choices of parent index, rank, threshold, and collar.
++for the countable choices of parent index, rational-point label,
++threshold, and collar.
+ They are identities on the original field space and survive adjoining
+ the stop. To state the bound globally, fix an indexed candidate \(C\)
+ and a rational \(Q\), and select the collar from the stopped state by

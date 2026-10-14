@@ -1,0 +1,55 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/build/main.tex	2026-10-15 02:18:26
+@@ -2,7 +2,7 @@
+ \input{preamble}
+ \title[Deforming hypersymplectic four-manifolds]{Deforming hypersymplectic four-manifolds to hyperk\"ahler triples}
+ \author{OpenAI}
+-\date{September 23, 2026}
++\date{October 7, 2026}
+ \begin{document}
+ \begin{abstract}
+ Every smooth normalized positive triple of closed two-forms on a closed
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/build/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/build/references.bib	2026-10-15 02:18:26
+@@ -622,7 +622,7 @@
+   author = {{OpenAI}},
+   title = {{Taming implies compatibility on four-manifolds}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/paper.pdf}{OAI:Taming-implies-compatibility-on-four-manifolds-September-23-2026}},
++                  OAI:Taming-implies-compatibility-on-four-manifolds-October-6-2026},
+   year = {2026}
+ }
+ 
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/build/sections/01-introduction.tex /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/build/sections/01-introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
+@@ -169,9 +169,7 @@
+ For controlling closed positive forms, Sullivan's structure currents
+ provide the cone-duality framework \cite{Sullivan1976}.
+ Harvey and Lawson developed the positive-current characterization of
+-K\"ahler geometry \cite{HarveyLawson1983}, and Li and Zhang compared
+-the taming and compatible cones in almost-complex geometry
+-assuming the compatible cone is nonempty \cite{LiZhang2009}.
++K\"ahler geometry \cite{HarveyLawson1983}.
+ A separate article proves that every tamed smooth
+ almost-complex structure on a closed connected real four-manifold admits a compatible
+ symplectic form \cite[Theorem~1.1]{OpenAITaming2026}. Its current
+@@ -179,11 +177,14 @@
+ needed proofs included in \Cref{sec:current-energy,sec:density-splitting}.
+ In particular, smooth density-weight closedness already appears in
+ the proof in Section~6 of that article. Its compatible class is
+-unrestricted. The additional class criterion below converts closed
++unrestricted. The prescribed taming class is obtained instead from
++\Cref{thm:taming-cone}, under its closed definite-pair and $b^+=3$
++hypotheses. Its proof uses the class separator and converts closed
+ normalized density thresholds into curves, using Preiss's
+ rectifiability theorem and Rivi\`ere--Tian's regularity theorem for
+ integral cycles \cite{Preiss1987,RiviereTian2009}. This supplies the
+-prescribed taming class needed along the deformation.
++prescribed taming class needed along the deformation, independently of
++a general comparison between the tame and compatible cones.
+ 
+ \subsection{The main ideas}
+ 

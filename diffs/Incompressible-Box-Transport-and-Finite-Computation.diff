@@ -1,0 +1,177 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/build/analysis.tex /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/build/analysis.tex
+--- /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/build/analysis.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/build/analysis.tex	2026-10-15 02:18:26
+@@ -162,32 +162,106 @@
+ is not identified with a differently normalized viscosity.
+ 
+ \begin{proposition}[Projection on a flat torus]\label{prop:projection-l2}
+-An effective smooth mean-zero force $g$ on $\T_L^3$ has an effective
+-mean-zero potential $\phi$ satisfying $\Delta\phi=\operatorname{div}g$.
+-Replacing $(g,p)$ by $(g-\nabla\phi,p-\phi)$ preserves velocity and makes
+-the force solenoidal. Uniform mixed-derivative bounds, temporal $L^2$
+-bounds of their spatial suprema, and separately imposed time periodicity,
+-eventual stationarity, or orderwise decay bounds are preserved.
++Let $g$ be a smooth force on $[0,\infty)\times\T_L^3$ with zero
++spatial mean at each time. There is a unique smooth mean-zero potential
++$\phi$ satisfying $\Delta\phi=\operatorname{div}g$. Put
++$Qg=\nabla\phi$ and $Pg=g-Qg$. Then $Pg$ is solenoidal and mean zero,
++and replacing $(g,p)$ by $(Pg,p-\phi)$ preserves the velocity and the
++pressure normalization.
++
++Use normalized spatial measure, frequencies $\xi_k=2\pi k/L$, and norms
++\[
++ \|G\|_{H^s}^2=\sum_{k\in\Z^3}(1+|\xi_k|^2)^s|\widehat G(k)|^2,
++ \qquad
++ \|G\|_{C^r}=\max_{|\beta|\le r}\|\partial_x^\beta G\|_\infty.
++\]
++For all integers $h,r\ge0$, at each time,
++\begin{equation}\label{eq:projection-estimate}
++ \begin{aligned}
++ \max\{\|\partial_t^h Pg\|_{C^r},\|\partial_t^h Qg\|_{C^r}\}
++     &\le S_L\|\partial_t^h g\|_{H^{r+2}},\\
++ \|\partial_t^h\phi\|_{C^{r+1}}
++     &\le S_Ld_L\|\partial_t^h g\|_{H^{r+2}},
++ \end{aligned}
++\end{equation}
++where $S_L=(1+52(L/(2\pi))^4)^{1/2}$ and
++$d_L=(1+(L/(2\pi))^2)^{1/2}$.
++
++Uniform bounds, temporal $L^2$ bounds on spatial suprema, and qualitative
++uniform decay of all mixed derivatives pass from $g$ to $Pg,Qg,\phi$.
++A quantitative envelope for time order $h$ and output spatial order $r$
++passes to $Pg,Qg$ through order $r$ and to $\phi$ through order $r+1$
++when the input derivatives through spatial order $r+2$ satisfy that
++envelope. The constants may depend on the derivative order.
++Periodicity and stationarity, including either property on a time tail,
++are preserved on their respective intervals.
++
++For computable $L>0$, effective mixed-derivative evaluation and effective
++derivative bounds for $g$ on finite time slabs give effective evaluation
++and such bounds for $Pg,Qg,\phi$. Corresponding supplied global input
++bounds give effective global bounds in each assertion above.
+ \end{proposition}
+ \begin{proof}
+-In frequencies $\xi_k=2\pi k/L$, set
+-$\widehat\phi(k)=-i\xi_k\cdot\widehat g(k)/|\xi_k|^2$ for $k\ne0$
+-and zero for $k=0$. The multiplier from $g$ to $\nabla\phi$ is
+-$\xi_k\xi_k^{\mathsf T}/|\xi_k|^2$. For a spatial derivative order $r$,
+-integrate each Fourier coefficient $r+5$ times in a coordinate with largest
+-$|k_i|$. There are $O(n^2)$ lattice points on the shell $\|k\|_\infty=n$,
+-so the derivative series and its tail converge absolutely, with
++For $k\ne0$ define
+ \[
+- \|\partial_t^h\partial_x^\alpha\nabla\phi\|_\infty
+- \le C_{\alpha,L}\max_i
+-       \|\partial_t^h\partial_{x_i}^{|\alpha|+5}g\|_\infty.
++ \widehat\phi(t,k)=-\frac{i\xi_k\cdot\widehat g(t,k)}{|\xi_k|^2},
++ \qquad \widehat\phi(t,0)=0.
+ \]
+-This bound is pointwise in time, and proves each asserted norm or weighted
+-time estimate. Derivative bounds give effective Fourier tails; coefficient
+-integrals can be computed by Riemann sums with derivative error estimates.
+-The formula gives the Poisson identity, divergence cancellation, and the
+-pressure sign by substitution. Linearity preserves the time symmetries.
++The nonzero-frequency symbols of $Q$ and $P$ are complementary orthogonal
++projections. Their $H^s$ operator norms are at most one, while the
++multiplier for $\phi$ has norm at most $d_L$ from $H^s$ to $H^{s+1}$.
++For $|\beta|\le r$, Cauchy--Schwarz bounds the absolute sum of the
++Fourier series for $\partial_x^\beta G$ by
++\[
++ \left(\sum_{k\in\Z^3}(1+|\xi_k|^2)^{-2}\right)^{1/2}
++ \|G\|_{H^{r+2}}.
++\]
++The shell $|k|_\infty=n\ge1$ contains $24n^2+2\le26n^2$ points.
++Since $\sum_{n\ge1}n^{-2}\le2$, the factor is at most $S_L$.
++For the tail $|k|_\infty>N\ge1$, it is at most
++\begin{equation}\label{eq:projection-tail}
++ \left(26(L/(2\pi))^4/N\right)^{1/2}.
++\end{equation}
++Applying these estimates to the multipliers proves
++\eqref{eq:projection-estimate}, including the estimate for $\phi$ with
++one additional spatial derivative. On compact time slabs these tails
++converge uniformly for every mixed derivative. Thus the series define
++smooth fields and may be differentiated term by term. The Fourier
++identities give the Poisson equation, uniqueness of its mean-zero
++solution, and $\operatorname{div}Pg=0$. Also
++$-\nabla(p-\phi)+Pg=-\nabla p+g$.
++
++For every integer $n\ge0$, the multinomial expansion and Parseval give
++\begin{equation}\label{eq:projection-derivative-bounds}
++ \|G\|_{H^n}^2
++ \le\sum_{|\beta|\le n}
++       \frac{n!}{(n-|\beta|)!\,\beta!}
++       \|\partial_x^\beta G\|_\infty^2.
++\end{equation}
++Use $n=r+2$ and $G=\partial_t^h g$. This finite sum proves the uniform
++bounds and qualitative decay assertions. If its input suprema are
++bounded by $C_{h,\beta}a_h(t)$, it gives the same envelope $a_h$ for
++the output, with the constants specified by
++\eqref{eq:projection-estimate}--\eqref{eq:projection-derivative-bounds}.
++Integrating the squared estimates proves the temporal $L^2$ assertion
++from the corresponding input norms. The operators act at each time,
++so they preserve the stated temporal symmetries.
++
++For effective evaluation, the supplied derivative bounds and
++\eqref{eq:projection-tail} give a computable Fourier truncation on each
++finite time slab. The finitely many coefficient integrals are computed
++by Riemann sums. After scaling the torus to $[0,1]^3$, the integrand
++for $\widehat G(k)$ has Lipschitz bound
++\[
++ L\sqrt3\max_j\|\partial_{x_j}G\|_\infty
++       +2\pi|k|\|G\|_\infty.
++\]
++This gives an effective quadrature error and hence evaluation of every
++mixed derivative of all three fields. The displayed finite sums also
++compute output bounds from the supplied input bounds.
+ \end{proof}
++The estimates apply to the pressure shift $\phi$; in the constructions
++with original pressure zero, the projected pressure is $-\phi$.
+ Projection generally changes pressure. It supplies no compact-support
+ conclusion on Euclidean space and is distinct from the direct zero-pressure
+ solenoidal shear construction.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/build/clocks.tex /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/build/clocks.tex
+--- /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/build/clocks.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/build/clocks.tex	2026-10-15 02:18:26
+@@ -115,8 +115,26 @@
+ the dummy start. The first force is stationary after one. In the second,
+ the coefficient orders are respectively $(1+t)^{-2},(1+t)^{-2}$ and
+ $(1+t)^{-1}$; each time derivative gives an additional inverse power.
+-This proves all the asserted bounded and temporal $L^2$ norms. The two
+-profiles are separate choices. Torus projection may be applied to either
+-with its corresponding changed pressure, as in
+-Proposition~\ref{prop:projection-l2}.
++The spatial factors in \eqref{bc:input-offset-force} have effective
++bounds at every order. Thus for every $h,r\ge0$,
++\begin{equation}\label{bc:input-offset-common-rate}
++ \|\partial_t^h U_{\alpha_1}(t)\|_{C^r}
++ +\|\partial_t^h f_{\alpha_1}(t)\|_{C^r}
++ \le C_{h,r}(1+t)^{-1-h}.
++\end{equation}
++The constant is effective; increasing it over $[0,1]$ makes the estimate
++valid for all $t\ge0$. The exponent is common to all spatial orders,
++and the square of the envelope has integral $(1+2h)^{-1}$.
++This proves the asserted bounded and temporal $L^2$ norms.
++
++For the stationary profile, Proposition~\ref{prop:projection-l2}
++preserves stationarity after time one and every mixed-derivative bound.
++For the slow profile, \eqref{eq:projection-estimate} and
++\eqref{eq:projection-derivative-bounds} apply to
++\eqref{bc:input-offset-common-rate} through spatial order $r+2$.
++They retain the rate $(1+t)^{-1-h}$ for the projected force through
++order $r$ and for its pressure through order $r+1$, with effective
++constants and temporal $L^2$ bounds. In either projection choice the
++velocity and event are unchanged and the mean-zero pressure is
++$-\phi$. The stationary and slow profiles remain separate choices.
+ \end{proof}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/build/main.tex	2026-10-15 02:18:26
+@@ -18,7 +18,7 @@
+ \hypersetup{pdftitle={Incompressible Box Transport and Finite Computation},pdfauthor={OpenAI}}
+ \title{Incompressible Box Transport and Finite Computation}
+ \author{OpenAI}
+-\date{September 27, 2026}
++\date{October 6, 2026}
+ \begin{document}\maketitle
+ \begin{abstract}
+ We realize finite positive diagonal affine maps of determinant one by

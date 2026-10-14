@@ -1,0 +1,64 @@
+name: refresh
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Clone the corpus without PDFs
+        run: |
+          git clone --depth 1 --filter=blob:none --no-checkout \
+            https://github.com/openai/math.git "$OAI_AUDIT_ROOT/repo"
+          cd "$OAI_AUDIT_ROOT/repo"
+          git sparse-checkout init --no-cone
+          git sparse-checkout set '/*.md' '/*.tex' '/lean/formalization.yaml' \
+                                  '/preprints/*/README.md' '/preprints/*/build/**'
+          git checkout
+
+      - name: Rebuild the ledger
+        env:
+          OAI_AUDIT_ROOT: ${{ github.workspace }}
+        run: |
+          python tools/build_ledger.py
+          python tools/make_site_data.py
+          python tools/diff_versions.py
+          python tools/classify_revisions.py
+
+      - name: Render the page
+        env:
+          OAI_AUDIT_ROOT: ${{ github.workspace }}
+        run: |
+          python - <<'PY'
+          import pathlib, re
+          tpl = pathlib.Path("tools/page_template.html").read_text(encoding="utf-8")
+          data = pathlib.Path("out/site_data.json").read_text(encoding="utf-8")
+          safe = data.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
+          pathlib.Path("index.html").write_text(tpl.replace("/*__DATA__*/", safe), encoding="utf-8")
+          PY
+
+      - name: Commit what changed
+        run: |
+          cp out/ledger.json out/edges.json out/version-diffs.json \
+             out/revision-classes.json out/site_data.json out/version-diffs.md data/
+          mkdir -p diffs && cp out/diffs/*.diff diffs/
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data diffs index.html
+          git diff --cached --quiet || git commit -m "refresh: rebuild from openai/math @ $(date -u +%Y-%m-%d)"
+          git push

@@ -1,0 +1,125 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/main.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/main.tex	2026-10-15 02:18:27
+@@ -47,7 +47,7 @@
+ 
+ \title[Generalized log canonical flips on K\"ahler fourfolds]{Termination of generalized log canonical flips\newline on compact K\"ahler fourfolds}
+ \author{OpenAI}
+-\date{October 5, 2026}
++\date{October 7, 2026}
+ 
+ \begin{document}
+ \begin{abstract}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/references.tex /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/references.tex
+--- /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/references.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/references.tex	2026-10-15 02:18:27
+@@ -119,7 +119,7 @@
+ OpenAI,
+ \emph{Finite ordinary minimal model programs on compact K\"ahler fourfolds},
+ OpenAI Math Release preprint
+-\href{https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/paper.pdf}{OAI:Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026},
++\href{https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/paper.pdf}{OAI:Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026},
+ 2026.
+ 
+ \bibitem{ProjectiveLCFourfolds}
+@@ -133,7 +133,7 @@
+ OpenAI,
+ \emph{Termination of generalized-canonical flips on compact K\"ahler fourfolds},
+ OpenAI Math Release preprint
+-\href{https://github.com/openai/math/blob/main/preprints/Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/termination-generalized-terminal-flips-compact-kahler-fourfolds.pdf}{OAI:Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026},
++\href{https://github.com/openai/math/blob/main/preprints/Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026/termination-generalized-terminal-flips-compact-kahler-fourfolds.pdf}{OAI:Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026},
+ 2026.
+ 
+ \bibitem{RaynaudSGA1XII}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/sections/02-preliminaries.tex /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/sections/02-preliminaries.tex
+--- /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/sections/02-preliminaries.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/sections/02-preliminaries.tex	2026-10-15 02:18:27
+@@ -235,3 +235,27 @@
+ This is \cite[Theorem~11.3]{KahlerAuxiliary}.  We use it for the elementary
+ sequences on strong models.  Full termination for four-dimensional gdlt
+ data will be deduced in Section~\ref{sec:completion}.
++
++\paragraph{Scope of the auxiliary inputs.}
++The results recalled above use the projective relative arguments in
++\cite[Sections~9--11]{KahlerAuxiliary}, together with its low-place
++calculation.  Relative continuation is Proposition~9.7 there; the finite
++run over a fixed bimeromorphic base in Proposition~9.9 uses the local
++finite-generation argument of Lemma~9.8, and exact extraction in
++Proposition~9.11 uses that finite run.  The special-termination and gdlt
++modification arguments in Section~11 form an induction on dimension,
++using the threefold termination theorem of Section~10.  These proofs do
++not invoke the canonical bundle formula or the absolute
++supporting-contraction induction of Section~6.  Indeed, Section~6 uses
++the threefold termination theorem as an input to its good-model
++construction; the dependency is in that direction.  Thus the use of
++\cite{KahlerAuxiliary} here does not require its absolute contraction or
++minimal-model theorems.
++
++The imports from \cite{CanonicalKahler} are likewise restricted to its
++common-model construction (Proposition~2.1), analytic negativity
++(Lemma~2.2), and terminal smoothness in codimension two (Lemma~2.3).
++Its fourfold termination theorem is not an input.  All relative
++constructions above retain their stated strong-factoriality hypotheses;
++these are not additional hypotheses on the given sequence in
++Theorem~\ref{thm:main}.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/termination-generalized-lc-kahler-fourfolds.tex /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/termination-generalized-lc-kahler-fourfolds.tex
+--- /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/build/termination-generalized-lc-kahler-fourfolds.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/build/termination-generalized-lc-kahler-fourfolds.tex	2026-10-15 02:18:27
+@@ -47,7 +47,7 @@
+ 
+ \title[Generalized log canonical flips on K\"ahler fourfolds]{Termination of generalized log canonical flips\newline on compact K\"ahler fourfolds}
+ \author{OpenAI}
+-\date{October 5, 2026}
++\date{October 7, 2026}
+ 
+ \begin{document}
+ \begin{abstract}
+@@ -358,6 +358,30 @@
+ sequences on strong models.  Full termination for four-dimensional gdlt
+ data will be deduced in Section~\ref{sec:completion}.
+ 
++\paragraph{Scope of the auxiliary inputs.}
++The results recalled above use the projective relative arguments in
++\cite[Sections~9--11]{KahlerAuxiliary}, together with its low-place
++calculation.  Relative continuation is Proposition~9.7 there; the finite
++run over a fixed bimeromorphic base in Proposition~9.9 uses the local
++finite-generation argument of Lemma~9.8, and exact extraction in
++Proposition~9.11 uses that finite run.  The special-termination and gdlt
++modification arguments in Section~11 form an induction on dimension,
++using the threefold termination theorem of Section~10.  These proofs do
++not invoke the canonical bundle formula or the absolute
++supporting-contraction induction of Section~6.  Indeed, Section~6 uses
++the threefold termination theorem as an input to its good-model
++construction; the dependency is in that direction.  Thus the use of
++\cite{KahlerAuxiliary} here does not require its absolute contraction or
++minimal-model theorems.
++
++The imports from \cite{CanonicalKahler} are likewise restricted to its
++common-model construction (Proposition~2.1), analytic negativity
++(Lemma~2.2), and terminal smoothness in codimension two (Lemma~2.3).
++Its fourfold termination theorem is not an input.  All relative
++constructions above retain their stated strong-factoriality hypotheses;
++these are not additional hypotheses on the given sequence in
++Theorem~\ref{thm:main}.
++
+ \section{Birational comparisons}
+ \label{sec:comparisons}
+ 
+@@ -3695,7 +3719,7 @@
+ OpenAI,
+ \emph{Finite ordinary minimal model programs on compact K\"ahler fourfolds},
+ OpenAI Math Release preprint
+-\href{https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/paper.pdf}{OAI:Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026},
++\href{https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/paper.pdf}{OAI:Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026},
+ 2026.
+ 
+ \bibitem{ProjectiveLCFourfolds}
+@@ -3709,7 +3733,7 @@
+ OpenAI,
+ \emph{Termination of generalized-canonical flips on compact K\"ahler fourfolds},
+ OpenAI Math Release preprint
+-\href{https://github.com/openai/math/blob/main/preprints/Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/termination-generalized-terminal-flips-compact-kahler-fourfolds.pdf}{OAI:Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026},
++\href{https://github.com/openai/math/blob/main/preprints/Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026/termination-generalized-terminal-flips-compact-kahler-fourfolds.pdf}{OAI:Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026},
+ 2026.
+ 
+ \bibitem{RaynaudSGA1XII}

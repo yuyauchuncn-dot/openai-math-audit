@@ -1,0 +1,186 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/main.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/main.tex	2026-10-15 02:18:27
+@@ -2,13 +2,15 @@
+ \input{preamble}
+ \title{Taming implies compatibility on four-manifolds}
+ \author{OpenAI}
+-\date{September 23, 2026}
++\date{October 6, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+ We prove that every smooth almost complex structure on a closed four-manifold
+ which is tamed by a symplectic form is compatible with a symplectic form.
+ This gives a positive solution to Donaldson's tamed-to-compatible conjecture.
++We also characterize the compatible cone by strict intersection positivity
++on the closure of the invariant part of the taming cone.
+ \end{abstract}
+ \input{sections/01-introduction}
+ \input{sections/02-currents}
+@@ -17,6 +19,7 @@
+ \input{sections/05-density}
+ \input{sections/06-splitting}
+ \input{sections/07-conclusion}
++\input{sections/08-cones}
+ \begingroup
+ \small
+ \bibliographystyle{plain}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/preamble.tex /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/preamble.tex
+--- /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/preamble.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/preamble.tex	2026-10-15 02:18:27
+@@ -17,6 +17,7 @@
+ \newtheorem{corollary}[theorem]{Corollary}
+ \theoremstyle{remark}
+ \newtheorem{remark}[theorem]{Remark}
++\newtheorem{example}[theorem]{Example}
+ \numberwithin{equation}{section}
+ \newcommand{\R}{\mathbb R}
+ \newcommand{\vol}{\,dV_g}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/references.bib	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/references.bib	2026-10-15 02:18:27
+@@ -290,6 +290,6 @@
+   author = {{OpenAI}},
+   title = {{Deforming hypersymplectic four-manifolds to hyperk{\"a}hler triples}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026/paper.pdf}{OAI:Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026/paper.pdf}{OAI:Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026}},
+   year = {2026}
+ }
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/sections/01-introduction.tex /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/sections/01-introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-September-23-2026/build/sections/01-introduction.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/sections/01-introduction.tex	2026-10-15 02:18:27
+@@ -31,33 +31,50 @@
+ the compatible form. In particular, it does not assert that an
+ arbitrary taming class contains a compatible representative.
+ 
+-Combining Theorem~\ref{thm:main} with Li and Zhang's cone comparison
+-gives the following cohomological refinement.
++There is also an intrinsic description of the compatible cone in terms
++of the taming cone and the intersection pairing.
+ 
+-\begin{corollary}[Taming and compatible cones]\label{cor:taming-cones}
++\begin{theorem}[Taming and compatible cones]\label{thm:taming-cones}
+ Let \(X,J\) satisfy the hypotheses of Theorem~\ref{thm:main}, and give
+ \(X\) the orientation induced by \(J\). Let
+-\(\mathcal K_J^t,\mathcal K_J^c\subset H^2(X;\R)\) be the real de Rham
+-classes represented by \(J\)-taming and \(J\)-compatible symplectic
+-forms, respectively. Let \(H_J^-\) be the subspace represented by
+-smooth closed real two-forms \(\alpha\) satisfying
+-\(\alpha(Ju,Jv)=-\alpha(u,v)\). Then
++\(\mathcal K_J^t,\mathcal K_J^c\subset H^2(X;\R)\) be the classes
++represented by taming and compatible symplectic forms, respectively.
++Let \(H_J^-\) be the subspace represented by smooth closed real
++anti-invariant two-forms. Set
+ \[
+- \mathcal K_J^t=\mathcal K_J^c+H_J^-,
++ \mathcal V=(H_J^-)^\perp,\qquad
++ \mathcal C=\mathcal K_J^t\cap\mathcal V,
+ \]
+-where the right side is a Minkowski sum. Write \(b_2^+(X)\) for
+-the positive index of the intersection form. If \(b_2^+(X)=1\), then
+-\(\mathcal K_J^t=\mathcal K_J^c\). In that case, every \(J\)-taming
+-symplectic form \(\omega\) has a smooth \(J\)-compatible symplectic
+-representative \(\eta\) with \([\eta]=[\omega]\) in \(H^2(X;\R)\).
++where orthogonality is for the intersection pairing. Then
++\begin{align}
++ \mathcal K_J^t&=\mathcal C+H_J^-,\label{eq:tame-decomposition}\\
++ \mathcal K_J^c&=
++ \{a\in\mathcal C:\ a\cdot y>0
++   \text{ for every }0\ne y\in\overline{\mathcal C}\}.
++ \label{eq:compatible-duality}
++\end{align}
++The closure is taken in \(\mathcal V\), and the sum in
++\eqref{eq:tame-decomposition} is a Minkowski sum.
++\end{theorem}
++
++\begin{corollary}\label{cor:taming-cones}
++Under the same hypotheses, write \(h_J^-=\dim H_J^-\) and let
++\(b_2^+(X)\) be the positive index of the intersection form.
++If \(h_J^-=b_2^+(X)-1\), then
++\[
++ \mathcal K_J^t=\mathcal K_J^c+H_J^-.
++\]
++In particular, if \(b_2^+(X)=1\), then
++\(\mathcal K_J^t=\mathcal K_J^c\): every taming class has a smooth
++compatible symplectic representative.
+ \end{corollary}
+ 
+-\begin{proof}
+-Theorem~\ref{thm:main} makes \(\mathcal K_J^c\) nonempty. Li and Zhang's
+-four-dimensional cone comparison \cite[Corollary~1.1]{LiZhang2009}
+-therefore gives the cone identity and, when \(b_2^+=1\), equality of
+-the two cones. This equality gives the claimed representative.
+-\end{proof}
++The proofs are given in Section~\ref{sec:cones}. They use separation
++in a prescribed cohomology class and the current estimates below.
++The inclusion
++\(\mathcal K_J^c+H_J^-\subseteq\mathcal K_J^t\)
++can be strict when \(h_J^-<b_2^+-1\), even if \(H_J^-=0\);
++Example~\ref{ex:strict-cones} gives an explicit four-torus.
+ 
+ The integrable case belongs to the theory of compact complex surfaces.
+ Buchdahl \cite[Theorem~11]{Buchdahl1999} and Lamari
+@@ -65,10 +82,9 @@
+ that even first Betti number implies the existence of a K\"ahler metric.
+ Lamari's positive exact current on a surface with odd first Betti number
+ also obstructs a taming form \cite[Theorem~6.1]{Lamari1999}.
+-Li and Zhang proved the equivalence of taming and compatibility for
+-complex surfaces and compared the two cohomology cones under the
+-assumption that a compatible form already exists
+-\cite[Theorem~1.2 and Corollary~1.1]{LiZhang2009}.
++Li and Zhang proved the equivalence between the existence of taming
++and compatible symplectic forms on complex surfaces
++\cite[Theorem~1.2]{LiZhang2009}.
+ 
+ The pseudoholomorphic-curve approach has a different starting point.
+ For structures on \(\mathbb{CP}^2\) tamed by the standard symplectic
+@@ -77,9 +93,8 @@
+ Taubes developed integration over curve moduli spaces to obtain
+ compatibility for a residual subset of the smooth almost complex
+ structures tamed by a fixed symplectic form when \(b_2^+=1\)
+-\cite[Theorem~1]{Taubes2011}; a later correction addresses the
+-\(b_1=2\) case \cite[Section~1]{Taubes2017}.
+-His original Theorem~1 also states preservation of the taming
++\cite{Taubes2011,Taubes2017}.
++Theorem~1 of \cite{Taubes2011} also states preservation of the taming
+ form's cohomology class when that class is rational.
+ Li and Zhang extended this approach to every tamed structure on
+ \(S^2\times S^2\) and
+@@ -91,18 +106,11 @@
+ \(\alpha(Ju,Jv)=\alpha(u,v)\); an anti-invariant one satisfies
+ \(\alpha(Ju,Jv)=-\alpha(u,v)\).
+ Write \(h_J^-=\dim H_J^-\), where \(H_J^-\) is the anti-invariant
+-cohomology space defined in Corollary~\ref{cor:taming-cones}.
+-Tan, Wang, Zhou and Zhu published an affirmative result under
+-\(h_J^-=b_2^+-1\), using a strategy related to Buchdahl's
+-complex-surface argument \cite[Theorem~1.1]{TWZZ2022}.
+-Lin and Zhou subsequently identified difficulties in specific local
+-estimates and connection formulas in that approach
+-\cite[Remarks~3.4 and~3.6, Section~3.2]{LinZhou2025}; their note gives no counterexample
+-to the geometric theorem.
+-The same cohomological restriction remains in the compatibility
+-criteria of Wang, Wang and Zhu
+-\cite[Theorems~4.3 and~5.1]{WangWangZhu2023}, and in the taming
+-corollary of Wang, Zhang, Zheng and Zhu
++cohomology space defined in Theorem~\ref{thm:taming-cones}.
++The condition \(h_J^-=b_2^+-1\) occurs in Buchdahl-type approaches
++\cite{TWZZ2022,LinZhou2025}, in the compatibility criteria of
++Wang, Wang and Zhu \cite[Theorems~4.3 and~5.1]{WangWangZhu2023},
++and in the taming corollary of Wang, Zhang, Zheng and Zhu
+ \cite[Corollary~1.3]{WangZhangZhengZhu2025}.
+ The latter paper's generalized Monge--Amp\`ere theorem starts with
+ an almost K\"ahler structure.
+@@ -192,7 +200,9 @@
+ existence and the planar tangent description;
+ Section~\ref{sec:splitting} uses them to control cutoff boundaries
+ and prove closedness of \(P_E\).
+-Section~\ref{sec:conclusion} completes the compatibility argument.
++Section~\ref{sec:conclusion} completes the existence argument.
++Section~\ref{sec:cones} develops the prescribed-class separation
++and proves the cone description.
+ 
+ A triple of closed two-forms on an oriented four-manifold is
+ \emph{hypersymplectic} if every nonzero real linear combination is
+Only in /Users/dereky/oai-math/repo/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/build/sections: 08-cones.tex

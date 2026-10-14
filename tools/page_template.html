@@ -1,0 +1,469 @@
+<title>OpenAI Math Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* ------------------------------------------------------------------
+   Layout: an audit sheet. One thesis chart up top, findings under it,
+   then the full 372-row ledger you can filter.
+   ------------------------------------------------------------------ */
+:root{
+  --bg:#eef1f5; --surface:#ffffff; --surface-2:#f6f8fa;
+  --ink:#0f151c; --ink-2:#4d5a68; --ink-3:#78859a;
+  --rule:#d5dce4; --rule-strong:#b6c1cd;
+  --accent:#1d4e79; --accent-soft:#e3ecf5;
+  --ok:#0d6e56; --ok-soft:#dff0ea;
+  --gap:#9a5b06; --gap-soft:#f7ebd8;
+  --bad:#9c2129; --bad-soft:#f8e2e3;
+  --shadow:0 1px 2px rgba(15,21,28,.06),0 6px 18px -8px rgba(15,21,28,.14);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c1118; --surface:#141b24; --surface-2:#101720;
+  --ink:#e7edf4; --ink-2:#9aa8b8; --ink-3:#6d7c8d;
+  --rule:#25303c; --rule-strong:#3a4856;
+  --accent:#84b6e2; --accent-soft:#17293a;
+  --ok:#41c295; --ok-soft:#102c25;
+  --gap:#dda24a; --gap-soft:#2c2413;
+  --bad:#e8747c; --bad-soft:#301a1c;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px -8px rgba(0,0,0,.6);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0c1118; --surface:#141b24; --surface-2:#101720;
+  --ink:#e7edf4; --ink-2:#9aa8b8; --ink-3:#6d7c8d;
+  --rule:#25303c; --rule-strong:#3a4856;
+  --accent:#84b6e2; --accent-soft:#17293a;
+  --ok:#41c295; --ok-soft:#102c25;
+  --gap:#dda24a; --gap-soft:#2c2413;
+  --bad:#e8747c; --bad-soft:#301a1c;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px -8px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--sans); font-size:15px; line-height:1.55;
+  padding-inline:20px; padding-block:0;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:34px;padding-block:36px 72px}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.01em}
+a{color:var(--accent)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---- masthead ---- */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:20px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+h1{font-family:var(--serif);font-size:clamp(30px,5.2vw,46px);line-height:1.06;font-weight:600}
+.standfirst{font-size:16px;color:var(--ink-2);max-width:62ch;margin:0}
+.standfirst b{color:var(--ink);font-weight:600}
+.stats{display:flex;flex-wrap:wrap;gap:0;margin-top:6px;border:1px solid var(--rule);border-radius:3px;overflow:hidden;background:var(--surface)}
+.stat{flex:1 1 118px;min-width:0;padding:11px 14px;border-right:1px solid var(--rule)}
+.stat:last-child{border-right:0}
+.stat dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0}
+.stat dd{margin:2px 0 0;font-size:23px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat dd small{font-size:12px;font-weight:400;color:var(--ink-3);margin-left:3px}
+
+/* ---- findings ---- */
+.findings{display:flex;flex-direction:column;gap:26px}
+.finding{border-top:1px solid var(--rule);padding-top:16px}
+.finding-head{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--surface);background:var(--ink);padding:3px 7px;border-radius:2px;white-space:nowrap}
+h2{font-family:var(--serif);font-size:clamp(20px,2.7vw,27px);line-height:1.2;flex:1 1 300px;min-width:0}
+.finding p{margin:9px 0 0;color:var(--ink-2);max-width:74ch}
+.finding p.lede{color:var(--ink)}
+.finding code{font-family:var(--mono);font-size:.9em;background:var(--surface-2);border:1px solid var(--rule);border-radius:2px;padding:1px 4px}
+
+/* ---- chart ---- */
+.chart{margin-top:18px;border:1px solid var(--rule);border-radius:3px;background:var(--surface);padding:16px 18px 14px;box-shadow:var(--shadow)}
+.chart-title{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.chart-title span:last-child{letter-spacing:0;text-transform:none;font-size:11px;font-family:var(--sans)}
+.bars{display:flex;flex-direction:column;gap:5px;margin-top:14px}
+.bar-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;min-width:0}
+.bar-label{font-size:12.5px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.bar-label i{font-family:var(--mono);font-style:normal;font-size:10.5px;color:var(--ink-3);margin-right:6px}
+.bar-track{grid-column:1/-1;display:flex;align-items:center;gap:8px;min-width:0;margin-top:-3px}
+.bar{height:9px;border-radius:1px;background:var(--gap);flex:0 0 auto;min-width:2px}
+.bar.has-lean{background:var(--ok)}
+.bar-n{font-family:var(--mono);font-size:11px;color:var(--ink-2);flex:0 0 auto}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;padding-top:11px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-2)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:1px;margin-right:6px;vertical-align:baseline}
+.sw-ok{background:var(--ok)} .sw-gap{background:var(--gap)} .sw-bad{background:var(--bad)}
+
+/* ---- ledger tool ---- */
+.ledger{border-top:2px solid var(--ink);padding-top:20px;display:flex;flex-direction:column;gap:14px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 260px;min-width:0;position:relative;display:flex}
+.search input{
+  width:100%;font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:9px 11px;
+}
+.search input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{
+  font-family:var(--sans);font-size:13px;color:var(--ink-2);background:var(--surface);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:8px 12px;cursor:pointer;
+}
+.chip:hover{border-color:var(--ink-2);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.chip .c{font-family:var(--mono);font-size:11px;opacity:.72;margin-left:5px}
+.count-line{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+
+.table-scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:13.5px}
+thead th{
+  position:sticky;top:0;background:var(--surface-2);text-align:left;font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+  padding:9px 10px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;z-index:1;
+}
+thead th.sortable{cursor:pointer;user-select:none}
+thead th.sortable:hover{color:var(--ink)}
+thead th .arw{opacity:.45;margin-left:4px}
+tbody td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr.fam{cursor:pointer}
+tbody tr.fam:hover{background:var(--surface-2)}
+tbody tr.fam:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+td.fid{font-family:var(--mono);font-size:12px;color:var(--ink-3);white-space:nowrap}
+td.r-title{min-width:220px;color:var(--ink)}
+td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok);border:1px solid var(--ok)}
+.pill.gap{background:var(--gap-soft);color:var(--gap);border:1px solid var(--gap)}
+.pill.bad{background:var(--bad-soft);color:var(--bad);border:1px solid var(--bad)}
+.pill.none{background:transparent;color:var(--ink-3);border:1px solid var(--rule-strong)}
+.sub td{background:var(--surface-2);padding-top:0;padding-bottom:10px}
+.sub-inner{display:flex;flex-direction:column;gap:4px;padding-left:4px}
+.sub-paper{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2);min-width:0}
+.sub-paper .pname{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);word-break:break-all;min-width:0}
+.sub-paper .deg{font-family:var(--mono);font-size:11px;color:var(--ink-3);white-space:nowrap}
+tr.hidden,tr.sub.hidden{display:none}
+.toggle{font-family:var(--mono);font-size:11px;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-align:left}
+.empty{padding:22px 12px;color:var(--ink-3);font-size:14px}
+
+/* ---- notes ---- */
+.notes{border-top:1px solid var(--rule);padding-top:18px;display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.note h3{font-size:14px;margin-bottom:7px}
+.note ul{margin:0;padding-left:17px;color:var(--ink-2);font-size:13.5px}
+.note li{margin-bottom:5px}
+.note p{margin:0;color:var(--ink-2);font-size:13.5px}
+footer{border-top:1px solid var(--rule);padding-top:14px;font-size:12.5px;color:var(--ink-3);font-family:var(--mono);line-height:1.7}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:560px){
+  body{padding-inline:16px}
+  .stat{flex-basis:50%;border-bottom:1px solid var(--rule)}
+  .stat:nth-child(2n){border-right:0}
+  table{min-width:520px}
+}
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div class="kicker">openai/math &middot; independent audit &middot; 2026-10-15</div>
+    <h1>The Lean coverage misses the load&#8209;bearing papers</h1>
+    <p class="standfirst">OpenAI's 719&#8209;manuscript release is 42% formalized. But formalization and <b>structural load</b> are nearly disjoint: of the twenty most&#8209;cited manuscripts in the corpus, <b id="hub-lean-count">1</b> has a Lean entry. If a result here is wrong, the damage tracks the citation graph, and the citation graph is unverified.</p>
+    <dl class="stats" id="stat-strip"></dl>
+  </header>
+
+  <section class="findings">
+    <article class="finding">
+      <div class="finding-head"><span class="tag">Finding 1</span><h2>Citations concentrate on papers the Lean library skips</h2></div>
+      <p class="lede">Cross&#8209;references were extracted from the LaTeX sources of all 746 manuscripts that ship a <code>build/</code> tree, using two independent signals: the full <code>preprints/&lt;dir&gt;/&lt;file&gt;.pdf</code> URL and the <code>OAI:&lt;dir&gt;</code> citation key. Cross-references pointing at a superseded revision are redirected to the revision that replaced it. That gives 719 manuscripts joined by 591 citations. The graph is mostly empty and a few papers carry it: 223 manuscripts cite nothing in the collection and are cited by nothing, while one paper is cited 16 times and two more are cited 7 and 6.</p>
+      <div class="chart">
+        <div class="chart-title"><span>Most-cited manuscripts &mdash; times cited by other manuscripts in the collection</span><span>bar length = in&#8209;degree, to scale</span></div>
+        <div class="bars" id="hub-bars"></div>
+        <div class="legend">
+          <span><i class="sw-ok"></i>has a Lean entry</span>
+          <span><i class="sw-gap"></i>no Lean entry</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="finding">
+      <div class="finding-head"><span class="tag">Finding 2</span><h2>The catalogue grades its own work "unchecked"</h2></div>
+      <p class="lede"><code>lean/formalization.yaml</code> is the machine-readable catalogue of what has been formalized. Its own metadata reads <code>review: status: unchecked</code> and <code>status.scope: "Partial progress."</code>, with <code>automation.methods: [agent]</code>. A Lean entry means a compiler accepted a declaration pointed at by a comparator config. It does not mean anyone checked that the declaration states the theorem the paper claims. "Formalized" and "verified" are two different claims, and only the weaker one is being made.</p>
+    </article>
+
+    <article class="finding">
+      <div class="finding-head"><span class="tag">Finding 3</span><h2>Three different denominators for one coverage number</h2></div>
+      <p class="lede">The README and <code>history.md</code> both say 300/719 top-line results formalized, about 42%. The catalogue enumerates 173 <code>sources</code> plus 30 <code>related_formalizations</code>. And the family map resolves to 135 of 372 families containing at least one formalized member. All three are defensible readings of the same corpus, and none of them is stated anywhere alongside the others. Until they reconcile, "42%" is not a quantity you can reason with.</p>
+    </article>
+
+    <article class="finding">
+      <div class="finding-head"><span class="tag">Finding 4</span><h2>The three withdrawals were scrubbed clean</h2></div>
+      <p class="lede">A sign error in a stabilization&#8209;trace argument took down three manuscripts on 6 October. Searching every <code>.tex</code>, <code>.bib</code> and <code>.md</code> file in the tree finds <b>zero</b> references to them from any surviving manuscript, and they are absent from <code>CONTENTS.md</code> and <code>overview.tex</code>. The removal is tidy; the trail is not. A reader browsing the manuscript map cannot tell the Hodge/K3 line lost three results, because only the flat changelog in <code>history.md</code> records it.</p>
+      <p>The withdrawn proofs remain recoverable, though. Their sources are gone from the working tree but present at the archived revision the notices cite, which is reachable in the repository's object store &mdash; <span class="mono">git ls-tree -r adc7f124 -- preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026</span> lists the full section files. The withdrawal reasoning itself is therefore checkable against the text, and nobody appears to have done it.</p>
+    </article>
+
+    <article class="finding">
+      <div class="finding-head"><span class="tag">Finding 5</span><h2>Version history is on disk but unlabelled</h2></div>
+      <p class="lede" id="superseded-lede">&nbsp;</p>
+    </article>
+  </section>
+
+  <section class="ledger">
+    <div class="finding-head" style="border:0;padding:0"><span class="tag">The ledger</span><h2>All 372 result families</h2></div>
+    <div class="controls">
+      <div class="search"><input id="q" type="search" placeholder="Search family titles and manuscript directories&hellip;" aria-label="Search the ledger"></div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="count-line" id="count-line"></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>
+          <th class="sortable" data-sort="id">Family<span class="arw"></span></th>
+          <th class="sortable" data-sort="title">Result<span class="arw"></span></th>
+          <th class="n sortable" data-sort="papers">Papers<span class="arw"></span></th>
+          <th class="n sortable" data-sort="maxdeg">Max cited<span class="arw"></span></th>
+          <th class="sortable" data-sort="lean">Lean<span class="arw"></span></th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden>No family matches that.</div>
+  </section>
+
+  <section class="notes">
+    <div class="note">
+      <h3>How this was built</h3>
+      <ul>
+        <li>Sparse clone of <span class="mono">openai/math</span> at revision <span class="mono">main</span>, PDFs excluded &mdash; 746 <span class="mono">build/</span> trees, 8,007 <span class="mono">.tex</span> files.</li>
+        <li>Families and membership parsed from <span class="mono">CONTENTS.md</span>.</li>
+        <li>Formalization status from <span class="mono">lean/formalization.yaml</span>.</li>
+        <li>Withdrawals from per-paper <span class="mono">README.md</span> notices and <span class="mono">history.md</span>.</li>
+        <li>Edges from cross-references in LaTeX sources; both URL and citation-key forms are counted.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h3>What this does not tell you</h3>
+      <ul>
+        <li>Whether any theorem is true. Nothing here is a proof check.</li>
+        <li>Whether a Lean declaration matches its paper's stated theorem &mdash; the catalogue says that review is unchecked.</li>
+        <li>Whether citations are load&#8209;bearing. A paper cited 18 times may be cited once and referenced afterwards.</li>
+        <li>A manuscript that cites nothing else in the collection may still be well connected to the external literature.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script id="ledger-data" type="application/json">/*__DATA__*/</script>
+<script>
+(function(){
+  "use strict";
+  var D = JSON.parse(document.getElementById("ledger-data").textContent);
+  var fmt = function(n){ return n.toLocaleString("en-US"); };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+
+  /* flatten: one record per paper, plus family rollups */
+  var fams = D.fams.map(function(f){
+    var maxdeg = 0, anyLean = false, anyWd = false, papers = f.m.length;
+    f.m.forEach(function(p){
+      if (p.i > maxdeg) maxdeg = p.i;
+      var fl = D.flags[p.d] || {};
+      if (fl.lean) anyLean = true;
+      if (fl.wd) anyWd = true;
+    });
+    return { id:f.id, title:f.t, papers:papers, maxdeg:maxdeg,
+             lean:anyLean, wd:anyWd, members:f.m };
+  });
+
+  var papers = [];
+  fams.forEach(function(f){ f.members.forEach(function(p){
+    var fl = D.flags[p.d] || {};
+    papers.push({ d:p.d, fam:f.id, i:p.i||0, o:p.o||0, lean:!!fl.lean, wd:!!fl.wd });
+  }); });
+  papers.sort(function(a,b){ return b.i - a.i || a.d.localeCompare(b.d); });
+
+  var nLeanDir = papers.filter(function(p){ return p.lean; }).length;
+  var nHub = 20;
+  var hubs = papers.slice(0, nHub);
+  var hubLean = hubs.filter(function(p){ return p.lean; }).length;
+  var famLean = fams.filter(function(f){ return f.lean; }).length;
+  var famGap  = fams.filter(function(f){ return !f.lean && !f.wd; }).length;
+  var famWd   = fams.filter(function(f){ return f.wd; }).length;
+
+  /* ---- stat strip ---- */
+  document.getElementById("stat-strip").innerHTML = [
+    ["Result families", fmt(D.counts.families_in_contents), ""],
+    ["Manuscripts", fmt(D.counts.manuscript_dirs), ""],
+    ["Cross-references", fmt(D.counts.edges), ""],
+    ["Papers with a Lean entry", fmt(nLeanDir), "of " + fmt(D.counts.manuscript_dirs)],
+    ["Withdrawn", fmt(D.counts.withdrawn_dirs), ""]
+  ].map(function(s){
+    return '<div class="stat"><dt>'+s[0]+'</dt><dd>'+s[1]+(s[2]?'<small>'+s[2]+'</small>':'')+'</dd></div>';
+  }).join("");
+  document.getElementById("hub-lean-count").textContent = hubLean;
+
+  /* ---- hub chart ---- */
+  var max = hubs.length ? hubs[0].i : 1;
+  document.getElementById("hub-bars").innerHTML = hubs.map(function(p){
+    var w = Math.max(2, Math.round(p.i / max * 1000) / 10);
+    var tall = p.d.replace(/-(January|February|March|April|May|June|July|August|September|October|November|December)-\d{1,2}-\d{4}$/,"")
+                   .replace(/-/g," ");
+    var cls = p.wd ? "bar" : (p.lean ? "bar has-lean" : "bar");
+    var style = p.wd ? ' style="width:'+w+'%;background:var(--bad)"' : ' style="width:'+w+'%"';
+    return '<div class="bar-row">'
+      + '<div class="bar-label" title="'+esc(p.d)+'"><i>'+esc(p.fam||"&mdash;")+'</i>'+esc(tall)+'</div>'
+      + '<div class="bar-n">'+p.i+'</div>'
+      + '<div class="bar-track"><div class="'+cls+'"'+style+'></div></div>'
+      + '</div>';
+  }).join("");
+
+  /* ---- finding 5 ---- */
+  var S = D.superseded || [];
+  document.getElementById("superseded-lede").innerHTML =
+    "Every correction lands as a new dated directory beside the old one, so the working tree carries "
+    + "<b>" + S.length + "</b> superseded revisions next to their replacements &mdash; for example "
+    + "<span class='mono'>" + esc((S[0]||{}).current||"") + "</span> sits alongside its earlier "
+    + "<span class='mono'>" + esc(((S[0]||{}).older_versions||[""])[0]) + "</span>. "
+    + "The base names match; only the date suffix differs. Nobody has published a diff, which means the "
+    + "cheapest possible evidence about what the model got wrong &mdash; what a sign error, a repaired "
+    + "crossing argument or a corrected hypothesis actually looked like on the page &mdash; is a "
+    + "<span class='mono'>diff -r</span> away and unread.";
+
+  /* ---- ledger table ---- */
+  var FILTERS = [
+    { k:"all",  label:"All",           test:function(){ return true; } },
+    { k:"gap",  label:"No Lean",       test:function(f){ return !f.lean; } },
+    { k:"lean", label:"Has Lean",      test:function(f){ return f.lean; } },
+    { k:"hub",  label:"Cited ≥ 3", test:function(f){ return f.maxdeg >= 3; } },
+    { k:"wd",   label:"Withdrawn",     test:function(f){ return f.wd; } }
+  ];
+  var state = { q:"", filter:"all", sort:"id", dir:1, open:{} };
+
+  try {
+    var saved = localStorage.getItem("oai-ledger-state");
+    if (saved) { var s = JSON.parse(saved);
+      if (s && typeof s.filter === "string") state.filter = s.filter; }
+  } catch(e){}
+
+  document.getElementById("chips").innerHTML = FILTERS.map(function(f){
+    var n = fams.filter(f.test).length;
+    return '<button class="chip" type="button" data-f="'+f.k+'" aria-pressed="false">'
+      + f.label + '<span class="c">'+n+'</span></button>';
+  }).join("");
+
+  var rowsEl = document.getElementById("rows");
+  var countEl = document.getElementById("count-line");
+  var emptyEl = document.getElementById("empty");
+
+  function paperLine(p){
+    var bits = [];
+    if (p.lean) bits.push('<span class="pill ok">Lean</span>');
+    if (p.wd)   bits.push('<span class="pill bad">Withdrawn</span>');
+    return '<div class="sub-paper"><span class="pname">'+esc(p.d)+'</span>'
+      + '<span class="deg">cited '+p.i+' &middot; cites '+p.o+'</span>'
+      + bits.join("") + '</div>';
+  }
+
+  function render(){
+    var f = FILTERS.filter(function(x){ return x.k === state.filter; })[0] || FILTERS[0];
+    var q = state.q.trim().toLowerCase();
+    var list = fams.filter(f.test).filter(function(x){
+      if (!q) return true;
+      if (x.title.toLowerCase().indexOf(q) >= 0) return true;
+      if (x.id.indexOf(q) >= 0) return true;
+      return x.members.some(function(m){ return m.d.toLowerCase().indexOf(q) >= 0; });
+    });
+
+    var key = state.sort, dir = state.dir;
+    list.sort(function(a,b){
+      var va, vb;
+      if (key === "title") { va = a.title.toLowerCase(); vb = b.title.toLowerCase(); }
+      else { va = a[key]; vb = b[key]; }
+      if (va < vb) return -1 * dir;
+      if (va > vb) return 1 * dir;
+      return 0;
+    });
+
+    var html = list.map(function(x){
+      var open = !!state.open[x.id];
+      var badge = x.wd ? '<span class="pill bad">Withdrawn</span>'
+                : x.lean ? '<span class="pill ok">Formalized</span>'
+                : '<span class="pill gap">No Lean</span>';
+      var out = '<tr class="fam" tabindex="0" data-fam="'+esc(x.id)+'">'
+        + '<td class="fid">'+esc(x.id)+'</td>'
+        + '<td class="r-title">'+badge+' '+esc(x.title)+'</td>'
+        + '<td class="n">'+x.papers+'</td>'
+        + '<td class="n">'+x.maxdeg+'</td>'
+        + '<td><button class="toggle" type="button" aria-expanded="'+open+'">'
+        + (open ? "Hide " : "Show ") + x.papers + (x.papers === 1 ? " paper" : " papers") + '</button></td>'
+        + '</tr>';
+      if (open) {
+        out += '<tr class="sub" data-sub="'+esc(x.id)+'"><td></td><td colspan="4"><div class="sub-inner">'
+          + x.members.map(function(p){
+              var fl = D.flags[p.d] || {};
+              return paperLine({ d:p.d, i:p.i||0, o:p.o||0, lean:!!fl.lean, wd:!!fl.wd });
+            }).join("")
+          + '</div></td></tr>';
+      }
+      return out;
+    }).join("");
+
+    rowsEl.innerHTML = html;
+    emptyEl.hidden = list.length > 0;
+    countEl.textContent = "Showing " + list.length + " of " + fams.length
+      + " families · sorted by " + state.sort + " " + (state.dir === 1 ? "ascending" : "descending");
+    Array.prototype.forEach.call(document.querySelectorAll("#chips .chip"), function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.f === state.filter));
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("thead th"), function(th){
+      var a = th.querySelector(".arw");
+      if (a) a.textContent = (th.dataset.sort === state.sort) ? (state.dir === 1 ? "↑" : "↓") : "";
+    });
+  }
+
+  rowsEl.addEventListener("click", function(e){
+    var tr = e.target.closest ? e.target.closest("tr.fam") : null;
+    if (!tr) return;
+    var id = tr.dataset.fam;
+    state.open[id] = !state.open[id];
+    render();
+  });
+  rowsEl.addEventListener("keydown", function(e){
+    if (e.key !== "Enter" && e.key !== " ") return;
+    var tr = e.target.closest ? e.target.closest("tr.fam") : null;
+    if (!tr) return;
+    e.preventDefault();
+    state.open[tr.dataset.fam] = !state.open[tr.dataset.fam];
+    render();
+  });
+  document.getElementById("chips").addEventListener("click", function(e){
+    var b = e.target.closest ? e.target.closest(".chip") : null;
+    if (!b) return;
+    state.filter = b.dataset.f;
+    try { localStorage.setItem("oai-ledger-state", JSON.stringify({ filter: state.filter })); } catch(err){}
+    render();
+  });
+  var qi = document.getElementById("q");
+  var t = null;
+  qi.addEventListener("input", function(){
+    clearTimeout(t);
+    t = setTimeout(function(){ state.q = qi.value; render(); }, 90);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("thead th.sortable"), function(th){
+    th.addEventListener("click", function(){
+      var k = th.dataset.sort;
+      if (state.sort === k) state.dir = -state.dir; else { state.sort = k; state.dir = 1; }
+      render();
+    });
+  });
+
+  document.getElementById("foot").textContent =
+    "Source: github.com/openai/math (Apache-2.0), revision read 2026-10-15 · "
+    + D.counts.manuscript_dirs + " manuscript directories · "
+    + D.counts.families_in_contents + " families · "
+    + D.counts.members_mapped + " manuscripts · "
+    + D.counts.edges + " directed citations";
+
+  render();
+})();
+</script>

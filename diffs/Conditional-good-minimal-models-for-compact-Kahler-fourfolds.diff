@@ -1,0 +1,128 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/appendices/projective_exclusions.tex /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/appendices/projective_exclusions.tex
+--- /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/appendices/projective_exclusions.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/appendices/projective_exclusions.tex	2026-10-15 02:18:26
+@@ -217,11 +217,10 @@
+ birational base whose good-minimal-model existence is equivalent.
+ Here the total space is the smooth graph, the boundary is zero,
+ and the base has dimension less than \(n\). The required numerical
+-dimension is \(\kappa_\sigma\), which is zero by the good model of
+-\(F\); thus the numerical-dimension qualification, with the
+-corrected convention discussed in
+-\cite[Section~3 and Theorem~3.2]{Proj-Fujino2019Numerical},
+-causes no issue. The induction hypothesis supplies the base good
++dimension is \(\kappa_\sigma\), following the convention in
++\cite[Section~3 and Theorem~3.2]{Proj-Fujino2019Numerical}. It is
++zero by the good model of \(F\), so the numerical-dimension
++hypothesis holds. The induction hypothesis supplies the base good
+ model, hence nonvanishing upstairs, contradicting
+ \eqref{proj:ex:counterexample}.
+ \end{proof}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/main.tex	2026-10-15 02:18:26
+@@ -2,17 +2,16 @@
+ \input{preamble}
+ \title{Conditional good minimal models\\for compact K\"ahler fourfolds}
+ \author{OpenAI}
+-\date{October 5, 2026}
++\date{October 6, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+-Assuming orbifold Iitaka subadditivity, the specified pseudo-effective
+-fourfold minimal model program, and abundance for nef fourfold adjoints
++Assuming orbifold Iitaka subadditivity and abundance for nef fourfold adjoints
+ of nonnegative Kodaira dimension, we prove the existence of good minimal
+ models for globally strongly \(\Q\)-factorial compact K\"ahler klt
+ fourfold pairs with effective rational boundary and analytically
+-pseudo-effective actual \(\Q\)-Cartier adjoint. The additional step
+-is nonvanishing. We prove it by
++pseudo-effective actual \(\Q\)-Cartier adjoint. The ordinary fourfold
++minimal model program supplies the nef endpoint. We prove nonvanishing by
+ fibration arguments and, in algebraic dimension zero, by singular
+ metrics, holomorphic foliations, and extension from a reduced boundary.
+ The projective abundance argument used in the proof is included in full.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/references.bib	2026-10-15 02:18:26
+@@ -12,9 +12,9 @@
+   author = {{OpenAI}},
+   title = {{Finite ordinary minimal model programs on compact K\"ahler fourfolds}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/paper.pdf}{OAI:Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/paper.pdf}{OAI:Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026}},
+   year = {2026},
+-  note = {Theorem 6.20; Proposition 3.4 and its proof}
++  note = {Theorem 6.24, Lemma 3.2, and Propositions 3.4 and 6.23}
+ }
+ 
+ @misc{GrantEffectiveAbundance,
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/sections/introduction.tex /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/sections/introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/sections/introduction.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/sections/introduction.tex	2026-10-15 02:18:26
+@@ -21,13 +21,16 @@
+ pseudo-effective fourfold MMP and abundance after nonvanishing are
+ available.
+ 
+-We make three explicit hypotheses, stated in
+-Section~\ref{sec:premises}: full orbifold Iitaka subadditivity in
+-Fujiki class \(\mathcal C\), the specified pseudo-effective klt
+-fourfold MMP conditional on that subadditivity, and abundance for nef
+-klt fourfold adjoints of nonnegative Kodaira dimension. Under these
+-premises we resolve positively the good-minimal-model assertion in
+-the following category.
++Section~\ref{sec:premises} records three inputs: full orbifold
++Iitaka subadditivity in Fujiki class \(\mathcal C\), the specified
++pseudo-effective klt fourfold MMP, and abundance for nef klt fourfold
++adjoints of nonnegative Kodaira dimension. The MMP input is supplied
++by \cite[Theorem~6.24 and Proposition~3.4]{GrantMMP}, independently
++of subadditivity, as detailed after Assumption~\ref{hyp:mmp}.
++Assumption~\ref{hyp:mmp} records the precise program used below;
++the remaining conditional premises are orbifold Iitaka subadditivity
++and effective fourfold abundance. We prove the good-minimal-model
++assertion in the following category.
+ 
+ \begin{theorem}[Conditional good minimal models]\label{thm:main}
+ Assume Assumptions~\ref{hyp:campana}, \ref{hyp:mmp}, and
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/sections/premises.tex /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/sections/premises.tex
+--- /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/build/sections/premises.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/build/sections/premises.tex	2026-10-15 02:18:26
+@@ -1,4 +1,4 @@
+-\section{Conventions and the three hypotheses}\label{sec:premises}
++\section{Conventions and the three inputs}\label{sec:premises}
+ 
+ All spaces are over \(\C\), unless a statement in the projective
+ appendices explicitly specifies another field of characteristic zero.
+@@ -232,10 +232,19 @@
+ contracted.
+ \end{assumption}
+ 
+-Assumption~\ref{hyp:mmp} is supplied by
+-\cite[Theorem~6.20; Proposition~3.4 and its proof]{GrantMMP}
+-in the stated pseudo-effective subcase, without an orbifold Iitaka
+-hypothesis. The assumption gives neither a first plurisection
++Assumption~\ref{hyp:mmp} follows from
++\cite[Theorem~6.24; Lemma~3.2; Propositions~3.4 and~6.23]{GrantMMP}
++in the intrinsic canonical-sheaf formulation and the
++pseudo-effective case. Global strong \(\Q\)-factoriality supplies
++the global Weil \(\Q\)-factoriality and the canonical rational
++line bundle required there. The program starts on the given pair,
++allows every negative extremal ray, and preserves the strong
++factoriality condition. The cited ordinary-step proposition identifies
++its flips with the canonical relative Proj models, and the
++finite-program theorem gives termination for every choice of rays
++and the stated discrepancy inequalities.
++This input is independent of Assumption~\ref{hyp:campana}.
++The assumption gives neither a first plurisection
+ nor semiampleness. It includes no non-pseudo-effective program and
+ no dlt or generalized-pair extension. Fiber-type contractions are
+ not stopping outcomes in this program. The Cartier index may change
+@@ -263,7 +272,7 @@
+ when \(\kappa=0\). Its nonvanishing premise is explicit. No
+ auxiliary statement from its proof is granted separately.
+ 
+-The proof uses all three hypotheses. Apart from them, established
++The proof uses these three inputs. Apart from them, established
+ literature is invoked at its stated scope. The separate projective
+ abundance theorem used in the Moishezon branch is proved in
+ Appendices~\ref{proj:sec:introduction}--\ref{proj:sec:completion};

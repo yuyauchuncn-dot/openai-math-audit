@@ -1,0 +1,23 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026/build/paper.tex /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/build/paper.tex
+--- /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026/build/paper.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/build/paper.tex	2026-10-15 02:18:26
+@@ -53,7 +53,7 @@
+ \hypersetup{pdftitle={A pointwise 2-converse for elliptic curves with rational two-torsion},pdfsubject={Selmer coranks, integral interpolation, and pointwise quadratic-twist constructions},pdfauthor={OpenAI}}
+ \title{A pointwise $2$-converse\\for elliptic curves with rational two-torsion}
+ \author{OpenAI}
+-\date{September 24, 2026}
++\date{October 7, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026/build/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/build/references.bib	2026-10-15 02:18:26
+@@ -350,6 +350,6 @@
+  author={{OpenAI}},
+  title={{Goldfeld's analytic density conjecture and the $2$-converse for elliptic curves}},
+  howpublished={OpenAI Math Release preprint
+-               \href{https://github.com/openai/math/blob/main/preprints/Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-September-23-2026/paper.pdf}{OAI:Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-September-23-2026}},
++               \href{https://github.com/openai/math/blob/main/preprints/Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-October-7-2026/paper.pdf}{OAI:Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-October-7-2026}},
+  year={2026}
+ }

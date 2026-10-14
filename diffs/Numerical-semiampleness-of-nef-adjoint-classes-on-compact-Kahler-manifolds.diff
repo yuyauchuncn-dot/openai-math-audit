@@ -1,0 +1,99 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/companions.bib /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/companions.bib
+--- /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/companions.bib	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/companions.bib	2026-10-15 02:18:27
+@@ -2,8 +2,9 @@
+   author = {{OpenAI}},
+   title = {{Log abundance for compact K{\"a}hler spaces under logarithmic Iitaka subadditivity}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/main.pdf}{OAI:Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026}},
+-  year = {2026}
++                  \href{https://github.com/openai/math/blob/main/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/main.pdf}{OAI:Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026}},
++  year = {2026},
++  note = {Theorem 2.13, Lemma 3.6, Proposition 3.8, Proposition 3.30, and Theorem 3.55}
+ }
+ 
+ @misc{LI,
+@@ -11,7 +12,8 @@
+   title = {{Orbifold and logarithmic Iitaka subadditivity}},
+   howpublished = {OpenAI Math Release preprint
+                   \href{https://github.com/openai/math/blob/main/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf}{OAI:Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026}},
+-  year = {2026}
++  year = {2026},
++  note = {Corollary 6.2; Lemmas 4.1 and 4.3 and Proposition 4.5}
+ }
+ 
+ @misc{P,
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/main.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/main.tex	2026-10-15 02:18:27
+@@ -2,7 +2,7 @@
+ \input{preamble}
+ \title{Numerical semiampleness of nef adjoint classes\\on compact K\"ahler manifolds}
+ \author{OpenAI}
+-\date{October 4, 2026}
++\date{October 6, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/sections/01-introduction.tex /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/sections/01-introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/sections/01-introduction.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/sections/01-introduction.tex	2026-10-15 02:18:27
+@@ -55,15 +55,15 @@
+ The compact K\"ahler minimal model program has developed alongside
+ these abundance questions. H\"oring and Peternell constructed minimal
+ models for compact K\"ahler threefolds \cite{HoeringPeternell2016}.
+-The threefold abundance results and their corrections
+-\cite{CHP2016,CHP2023}, and the log abundance theorem of Das and Ou
+-\cite{DasOu2024,DasOu2026}, establish important cases of the ordinary problem.
++The threefold abundance theorems
++\cite{CHP2016,CHP2023} and the log abundance theorem of Das and Ou
++\cite{DasOu2024,DasOu2026} establish important cases of the ordinary problem.
+ Hacon and Xie's analytic cone theorem \cite{HX} supplies the rational
+ curve length bound. The restricted K\"ahler model constructions and
+ ordinary scaling in \cite[Section~3]{K} supply the detected projective
+ steps used here. For ordinary adjoints in arbitrary dimension, we use
+-that paper's divisorial decomposition theorem, with its logarithmic
+-Iitaka hypothesis supplied by \cite{LI}.
++that paper's divisorial decomposition theorem, with its precise
++logarithmic Iitaka hypothesis supplied by \cite[Corollary~6.2]{LI}.
+ 
+ These are substantial inputs. Section~\ref{sec:preliminaries} states
+ their precise forms, retaining the distinction between actual
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/sections/02-preliminaries.tex /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/sections/02-preliminaries.tex
+--- /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026/build/sections/02-preliminaries.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/build/sections/02-preliminaries.tex	2026-10-15 02:18:27
+@@ -151,7 +151,16 @@
+ 
+ The first substantial input is ordinary log abundance, in its
+ divisorial form. We state the full line-bundle information needed
+-in the proof.
++in the proof. The restricted model and contraction package of
++\cite[Theorem~3.55]{K} uses the base presentations of
++\cite[Proposition~3.30]{K} for the whole descended adjoint class.
++At its generalized klt (gklt) contraction and relative-model steps,
++these presentations give gklt base data with a globally nef carrier
++datum and modified-big
++total boundary. At the non-klt contraction step, the multiplier-ideal
++inclusion, projective descent, and restriction supply the required
++contraction on the full non-klt closed subspace. The ordinary adjoint
++induction then yields the following actual rational-line statement.
+ 
+ \begin{theorem}[Ordinary divisorial decomposition]\label{pre:ordinary}
+ Let \(X\) be a smooth compact K\"ahler manifold, and let \(B\) be a
+@@ -174,10 +183,12 @@
+ \]
+ for a surjective morphism \(f:X\to Y\) with connected fibers between
+ smooth connected projective varieties, a very general smooth fiber
+-\(F\), reduced simple normal crossing boundaries \(D_X,D_Y\), and
+-\(\Supp(f^*D_Y)\subseteq\Supp(D_X)\). Thus the boundary condition in
+-the input is retained. We use Theorem~\ref{pre:ordinary} in every
+-dimension. It implies ordinary nonvanishing: a sufficiently divisible
++\(F\), reduced simple normal crossing boundaries \(D_X,D_Y\),
++allowing zero, and \(\Supp(f^*D_Y)\subseteq\Supp(D_X)\).
++The conventions are \((-\infty)+b=-\infty\) and Iitaka dimension
++zero for a point. This is precisely \cite[Assumption~1.1]{K}, so
++\cite[Corollary~6.2]{LI} supplies the hypothesis in every finite
++dimension. We use Theorem~\ref{pre:ordinary} in every dimension. It implies ordinary nonvanishing: a sufficiently divisible
+ multiple of \(J\) has a nonzero section. If \(a(X)=0\), its semiample
+ part is rationally trivial, and hence \(\mu^*J\qsim R\).
+ 

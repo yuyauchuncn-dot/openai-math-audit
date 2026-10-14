@@ -1,0 +1,24 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-4-2026/build/source/main.tex /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026/build/source/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-4-2026/build/source/main.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026/build/source/main.tex	2026-10-15 02:18:27
+@@ -50,7 +50,7 @@
+ \DeclareMathOperator{\coker}{coker}
+ \title{Unrestricted pro-modularity at the prime two}
+ \author{OpenAI}
+-\date{October 4, 2026}
++\date{October 6, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-4-2026/build/source/refs.bib /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026/build/source/refs.bib
+--- /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-4-2026/build/source/refs.bib	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026/build/source/refs.bib	2026-10-15 02:18:27
+@@ -231,7 +231,7 @@
+   author = {{OpenAI}},
+   title = {{Fontaine--Mazur modularity at the prime 2}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/paper.pdf}{OAI:Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/paper.pdf}{OAI:Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026}},
+   year = {2026}
+ }
+ 

@@ -1,0 +1,565 @@
+[
+  {
+    "base": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice",
+    "old": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-September-25-2026",
+    "current": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-October-6-2026",
+    "add_prose": 2693,
+    "del_prose": 606,
+    "add_bib_lines": 0,
+    "new_bib_entries": 0,
+    "repointed_cites": 0,
+    "hunks": 40,
+    "envs": {
+      "(top level)": 15,
+      "proof": 20,
+      "thebibliography": 2,
+      "lemma": 2,
+      "proposition": 1
+    },
+    "files": [
+      "paper.tex",
+      "sections/cell.tex",
+      "sections/foundations.tex",
+      "sections/geometry.tex",
+      "sections/interface.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "The-joint-scaling-limit-of-critical-Ashkin-Teller-currents",
+    "old": "The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026",
+    "current": "The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026",
+    "add_prose": 583,
+    "del_prose": 181,
+    "add_bib_lines": 48,
+    "new_bib_entries": 4,
+    "repointed_cites": 1,
+    "hunks": 13,
+    "envs": {
+      "(top level)": 5,
+      "enumerate": 1,
+      "proof": 6,
+      "equation": 1
+    },
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/03-spatial.tex",
+      "sections/07-local-sets.tex",
+      "sections/08-local-kernel.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds",
+    "old": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026",
+    "add_prose": 523,
+    "del_prose": 63,
+    "add_bib_lines": 25,
+    "new_bib_entries": 3,
+    "repointed_cites": 2,
+    "hunks": 19,
+    "envs": {
+      "(top level)": 13,
+      "proof": 5,
+      "corollary": 1
+    },
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/01-introduction.tex",
+      "sections/03-steps.tex",
+      "sections/04-terminal.tex",
+      "sections/06-perturbation.tex",
+      "sections/08-resolutions.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data",
+    "old": "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026",
+    "current": "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-October-6-2026",
+    "add_prose": 297,
+    "del_prose": 103,
+    "add_bib_lines": 3,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 12,
+    "envs": {
+      "(top level)": 7,
+      "lemma": 1,
+      "proof": 4
+    },
+    "files": [
+      "paper.tex",
+      "references.bib",
+      "sections/01-introduction.tex",
+      "sections/03-cuts.tex",
+      "sections/04-moments.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Incompressible-Box-Transport-and-Finite-Computation",
+    "old": "Incompressible-Box-Transport-and-Finite-Computation-September-27-2026",
+    "current": "Incompressible-Box-Transport-and-Finite-Computation-October-6-2026",
+    "add_prose": 118,
+    "del_prose": 26,
+    "add_bib_lines": 0,
+    "new_bib_entries": 0,
+    "repointed_cites": 0,
+    "hunks": 3,
+    "envs": {
+      "(top level)": 2,
+      "proof": 1
+    },
+    "files": [
+      "analysis.tex",
+      "clocks.tex",
+      "main.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity",
+    "old": "Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026",
+    "current": "Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026",
+    "add_prose": 102,
+    "del_prose": 57,
+    "add_bib_lines": 28,
+    "new_bib_entries": 2,
+    "repointed_cites": 1,
+    "hunks": 15,
+    "envs": {
+      "(top level)": 9,
+      "proof": 6
+    },
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/01-introduction.tex",
+      "sections/03a-program-foundations.tex",
+      "sections/03c-restricted-induction.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Taming-implies-compatibility-on-four-manifolds",
+    "old": "Taming-implies-compatibility-on-four-manifolds-September-23-2026",
+    "current": "Taming-implies-compatibility-on-four-manifolds-October-6-2026",
+    "add_prose": 55,
+    "del_prose": 41,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 9,
+    "envs": {
+      "(top level)": 9
+    },
+    "files": [
+      "main.tex",
+      "preamble.tex",
+      "references.bib",
+      "sections/01-introduction.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds",
+    "old": "Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026",
+    "add_prose": 52,
+    "del_prose": 4,
+    "add_bib_lines": 2,
+    "new_bib_entries": 0,
+    "repointed_cites": 2,
+    "hunks": 8,
+    "envs": {
+      "(top level)": 4,
+      "thebibliography": 4
+    },
+    "files": [
+      "main.tex",
+      "references.tex",
+      "sections/02-preliminaries.tex",
+      "termination-generalized-lc-kahler-fourfolds.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Conditional-good-minimal-models-for-compact-Kahler-fourfolds",
+    "old": "Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026",
+    "add_prose": 33,
+    "del_prose": 23,
+    "add_bib_lines": 2,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 7,
+    "envs": {
+      "proof": 1,
+      "(top level)": 5,
+      "assumption": 1
+    },
+    "files": [
+      "appendices/projective_exclusions.tex",
+      "main.tex",
+      "references.bib",
+      "sections/introduction.tex",
+      "sections/premises.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds",
+    "old": "Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026",
+    "current": "Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026",
+    "add_prose": 22,
+    "del_prose": 11,
+    "add_bib_lines": 5,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 6,
+    "envs": {
+      "(top level)": 6
+    },
+    "files": [
+      "companions.bib",
+      "main.tex",
+      "sections/01-introduction.tex",
+      "sections/02-preliminaries.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights",
+    "old": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026",
+    "current": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026",
+    "add_prose": 8,
+    "del_prose": 6,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 6,
+    "envs": {
+      "(top level)": 6
+    },
+    "files": [
+      "main.tex",
+      "references/references.bib",
+      "sections/01-introduction.tex",
+      "sections/02-discrete.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples",
+    "old": "Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026",
+    "current": "Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026",
+    "add_prose": 7,
+    "del_prose": 6,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 4,
+    "envs": {
+      "(top level)": 4
+    },
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/01-introduction.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds",
+    "old": "Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026",
+    "add_prose": 6,
+    "del_prose": 1,
+    "add_bib_lines": 0,
+    "new_bib_entries": 0,
+    "repointed_cites": 0,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "build/paper.tex",
+      "build/sections/01-introduction.tex"
+    ],
+    "kind": "substantive"
+  },
+  {
+    "base": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers",
+    "old": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-September-30-2026",
+    "current": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-October-6-2026",
+    "add_prose": 3,
+    "del_prose": 3,
+    "add_bib_lines": 0,
+    "new_bib_entries": 0,
+    "repointed_cites": 0,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 1,
+      "thebibliography": 1
+    },
+    "files": [
+      "paper.tex"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Weil-classes-and-Hodge-classes-on-abelian-powers",
+    "old": "Weil-classes-and-Hodge-classes-on-abelian-powers-September-30-2026",
+    "current": "Weil-classes-and-Hodge-classes-on-abelian-powers-October-6-2026",
+    "add_prose": 3,
+    "del_prose": 3,
+    "add_bib_lines": 0,
+    "new_bib_entries": 0,
+    "repointed_cites": 0,
+    "hunks": 3,
+    "envs": {
+      "(top level)": 2,
+      "thebibliography": 1
+    },
+    "files": [
+      "paper.tex"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank",
+    "old": "Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-3-2026",
+    "current": "Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-7-2026",
+    "add_prose": 2,
+    "del_prose": 2,
+    "add_bib_lines": 3,
+    "new_bib_entries": 0,
+    "repointed_cites": 3,
+    "hunks": 3,
+    "envs": {
+      "(top level)": 2,
+      "thebibliography": 1
+    },
+    "files": [
+      "main.tex",
+      "references.tex",
+      "sections/01-introduction.tex"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves",
+    "old": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-September-23-2026",
+    "current": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-October-7-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 3,
+    "new_bib_entries": 0,
+    "repointed_cites": 3,
+    "hunks": 4,
+    "envs": {
+      "(top level)": 4
+    },
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Hilberts-tenth-problem-over-the-rational-numbers",
+    "old": "Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026",
+    "current": "Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 3,
+    "new_bib_entries": 0,
+    "repointed_cites": 3,
+    "hunks": 4,
+    "envs": {
+      "(top level)": 4
+    },
+    "files": [
+      "main.tex",
+      "references/references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one",
+    "old": "The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one-September-24-2026",
+    "current": "The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 2,
+    "new_bib_entries": 0,
+    "repointed_cites": 2,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 1,
+      "thebibliography": 1
+    },
+    "files": [
+      "paper.tex",
+      "references.tex"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion",
+    "old": "A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026",
+    "current": "A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "paper.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Fontaine-Mazur-modularity-at-the-prime-2",
+    "old": "Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026",
+    "current": "Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Milnes-rationality-conjecture-for-abelian-varieties",
+    "old": "Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026",
+    "current": "Milnes-rationality-conjecture-for-abelian-varieties-October-7-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 1,
+      "thebibliography": 1
+    },
+    "files": [
+      "main.tex",
+      "references.tex"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "The-Selmer-converse-for-elliptic-curves-at-every-prime",
+    "old": "The-Selmer-converse-for-elliptic-curves-at-every-prime-September-24-2026",
+    "current": "The-Selmer-converse-for-elliptic-curves-at-every-prime-October-7-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves",
+    "old": "The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-September-23-2026",
+    "current": "The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "The-p-adic-section-conjecture",
+    "old": "The-p-adic-section-conjecture-September-24-2026",
+    "current": "The-p-adic-section-conjecture-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "The-rational-Hodge-conjecture-for-CM-abelian-varieties",
+    "old": "The-rational-Hodge-conjecture-for-CM-abelian-varieties-September-30-2026",
+    "current": "The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "kind": "citation-bump"
+  },
+  {
+    "base": "Unrestricted-pro-modularity-at-the-prime-two",
+    "old": "Unrestricted-pro-modularity-at-the-prime-two-October-4-2026",
+    "current": "Unrestricted-pro-modularity-at-the-prime-two-October-6-2026",
+    "add_prose": 1,
+    "del_prose": 1,
+    "add_bib_lines": 1,
+    "new_bib_entries": 0,
+    "repointed_cites": 1,
+    "hunks": 2,
+    "envs": {
+      "(top level)": 2
+    },
+    "files": [
+      "source/main.tex",
+      "source/refs.bib"
+    ],
+    "kind": "citation-bump"
+  }
+]

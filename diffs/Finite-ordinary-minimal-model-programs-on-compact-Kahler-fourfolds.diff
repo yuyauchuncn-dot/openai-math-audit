@@ -1,0 +1,786 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/main.tex	2026-10-15 02:18:26
+@@ -66,7 +66,7 @@
+ \hypersetup{pdftitle={Finite ordinary minimal model programs on compact Kähler fourfolds},pdfauthor={OpenAI}}
+ \title[Minimal model programs on Kähler fourfolds]{Finite ordinary minimal model programs\\on compact Kähler fourfolds}
+ \author{OpenAI}
+-\date{October 5, 2026}
++\date{October 6, 2026}
+ \begin{document}
+ \begin{abstract}
+ We prove that every maximal ordinary negative-ray program starting from a compact Kähler klt fourfold pair with effective rational boundary in the global Weil-divisor $\Q$-factorial category terminates. It ends at a nef model when the adjoint is pseudo-effective and at a projective Mori fibre space otherwise.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/references.bib	2026-10-15 02:18:26
+@@ -1,4 +1,16 @@
+ 
++@misc{HP2024,
++  author        = {Hacon, Christopher and P{\u{a}}un, Mihai},
++  title         = {On the Canonical Bundle Formula and Adjunction for Generalized {K{\"a}hler} Pairs},
++  year          = {2024},
++  eprint        = {2404.12007v1},
++  archivePrefix = {arXiv},
++  primaryClass  = {math.AG},
++  doi           = {10.48550/arXiv.2404.12007},
++  url           = {https://arxiv.org/abs/2404.12007v1},
++  note          = {Preprint, \href{https://arxiv.org/abs/2404.12007v1}{arXiv:2404.12007v1}, 18 April 2024; theorem numbering follows this version}
++}
++
+ @misc{HX2026,
+   author        = {Hacon, Christopher and Xie, Lingyao},
+   title         = {On the {K{\"a}hler} {MMP} and the transcendental base-point-free theorem},
+@@ -599,10 +611,21 @@
+   note          = {Preprint, \href{https://arxiv.org/abs/2404.13927}{arXiv:2404.13927}}
+ }
+ 
+-@misc{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026,
++@misc{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026,
+   author = {{OpenAI}},
+   title = {{Termination of generalized log canonical flips on compact K{\"a}hler fourfolds}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026/termination-generalized-lc-kahler-fourfolds.pdf}{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026/termination-generalized-lc-kahler-fourfolds.pdf}{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026}},
+   year = {2026}
++}
++
++@article{Grauert1962,
++  author  = {Grauert, Hans},
++  title   = {{\"U}ber Modifikationen und exzeptionelle analytische Mengen},
++  journal = {Mathematische Annalen},
++  volume  = {146},
++  year    = {1962},
++  pages   = {331--368},
++  doi     = {10.1007/BF01441136},
++  url     = {https://doi.org/10.1007/BF01441136}
+ }
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/01-introduction.tex /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/01-introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
+@@ -142,7 +142,7 @@
+ gives a global algebra for its flip.
+ 
+ The companion theorem on generalized log canonical flips
+-\cite[Theorem~1.1]{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026}
++\cite[Theorem~1.1]{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026}
+ proves termination for the resulting existing rational flip sequences.
+ Compact analytic cycle classes bound the number of divisorial steps.
+ The companion uses the independent low-place, relative-program,
+@@ -155,7 +155,7 @@
+ ordinary terminal fourfold flips terminate with effective \emph{real}
+ boundary in our compact Kähler setting. The proof adapts the
+ discrepancy and homology methods of Kawamata--Matsuda--Matsuki and
+-Fujino, including the corrected treatment of low-discrepancy places
++Fujino, including the treatment of low-discrepancy places in his addendum
+ \cite{KMM1987,Fujino2004,Fujino2005Addendum}.
+ 
+ \subsection{Proof outline}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/03-steps.tex /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/03-steps.tex
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/03-steps.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/03-steps.tex	2026-10-15 02:18:26
+@@ -188,7 +188,7 @@
+ We can now perform each step and preserve the category.  The next
+ proposition records both the numerical ranks of the negative contraction
+ and the actual canonical algebra of a flip.  The latter description will
+-also be used in the conditional arbitrary-termination argument.
++also be used in the termination argument for arbitrary choices of negative rays.
+ 
+ \begin{proposition}[Ordinary negative steps]\label{prop:ordinary-step}
+ Let $(T,B)$ be an ordinary rational klt pair on a normal compact K\"ahler
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/04-terminal.tex /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/04-terminal.tex
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/04-terminal.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/04-terminal.tex	2026-10-15 02:18:26
+@@ -308,9 +308,9 @@
+ 
+ The terminal termination argument must allow many places of discrepancy
+ below two above a moving boundary surface.  The next lemma identifies
+-exactly the infinite families that will be harmless.  Excluding only
+-the first blowup above each surface would be incorrect; the correction
+-in \cite[Proposition~3.1 and Lemma~3.2]{Fujino2005Addendum} is essential.
++exactly the infinite families that will be harmless. We use the treatment
++of successive blowups above each surface in
++\cite[Proposition~3.1 and Lemma~3.2]{Fujino2005Addendum}.
+ 
+ \begin{lemma}\label{lem:terminal-codim-two}
+ Let $(T,\Phi)$ be an ordinary klt pair on a normal complex fourfold,
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/06-perturbation.tex /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/06-perturbation.tex
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/06-perturbation.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/06-perturbation.tex	2026-10-15 02:18:26
+@@ -9,7 +9,7 @@
+ Bott--Chern equality. Equalities of line bundles are actual isomorphisms
+ after clearing the stated denominators.
+ 
+-The proof uses Theorem~1.1 of \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026} only for existing
++The proof uses Theorem~1.1 of \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026} only for existing
+ rational flip sequences. That theorem uses the low-place, relative-program,
+ extraction, and special-termination results proved in
+ Lemma~\ref{lem:low-places} and
+@@ -1591,11 +1591,317 @@
+ \end{proof}
+ 
+ 
++\subsubsection{Positive carriers and the non-klt closed subspace}
++
++The following preparations separate positivity on a carrier from
++positivity of its trace. All structure equations in this subsection
++are equalities of Bott--Chern classes, with actual structure
++subboundaries on the chosen resolutions.
++
++\begin{lemma}[A K\"ahler margin with the adjoint fixed]
++\label{repair:lem:carrier-margin}
++Let $(X,B+\mathbf M)$ be a generalized pair on a globally strongly
++$\Q$-factorial compact K\"ahler space, with adjoint $A$.
++The trace $\mathbf M_X$ is pseudo-effective; if the nef datum is
++big on a carrier, its trace is big. If
++$Q=A-c_1(K_X)$ is big, one can replace the generalized pair,
++without changing $A$, so that its nef datum is K\"ahler on a
++projective log resolution and
++\[
++ \mathcal J(X,B+\mathbf M)\subseteq
++ \mathcal J(X,B^{\rm new}+\mathbf M^{\rm new}).
++\]
++The new trace boundary is effective. A gklt input remains gklt.
++\end{lemma}
++
++\begin{proof}
++On a projective log resolution $p:W\to X$ carrying the nef datum,
++write
++\[
++ [K_W+B_W]+\mathbf M_W=p^*A.
++\]
++Strong $\Q$-factoriality makes $K_X+B$ real Cartier. Thus
++\[
++ p^*\mathbf M_X=\mathbf M_W+[J],\qquad
++ J=B_W-\bigl(p^*(K_X+B)-K_W\bigr)
++\]
++with $J$ an actual exceptional real divisor. The divisor $-J$ is
++$p$-nef, so negativity gives $J\geq0$. Exceptional descent of
++positive currents proves that $\mathbf M_X$ is pseudo-effective.
++If $\mathbf M_W$ is big, subtract a small pullback of a K\"ahler
++class on $X$ first; the same argument proves bigness of the trace.
++This comparison also shows that a generalized klt pair on a
++strongly $\Q$-factorial space has ordinary klt underlying space.
++
++Suppose now that $Q$ is big. Regularization of a K\"ahler current
++with analytic singularities, followed by a projective log resolution,
++gives
++\[
++                         p^*Q=H+[G],
++ \qquad H\ \text{K\"ahler},\qquad G\geq0.
++\]
++Choose $p$ also to carry the original nef datum and to resolve all
++divisors involved. The K\"ahler correction on a further blowup is
++obtained by subtracting a small effective exceptional divisor from
++the pulled-back positive part and adding it to $G$.
++Put $B_W^*=G-K_{W/X}$. Its pushforward is effective, and
++\[
++                         [K_W+B_W^*]+H=p^*A.
++\]
++For sufficiently small $t>0$, the structure data
++\[
++ B_W^{\rm new}=(1-t)B_W+tB_W^*,\qquad
++ \mathbf M_W^{\rm new}=(1-t)\mathbf M_W+tH
++\]
++have K\"ahler nef part and effective trace boundary. There are only
++finitely many coefficients to check; choose $t$ so that
++$\lfloor B_W^{\rm new}\rfloor\leq\lfloor B_W\rfloor$.
++The resolution formula
++$\mathcal J=p_*\cO_W(-\lfloor B_W\rfloor)$ proves the ideal
++inclusion. If the input is gklt, choose $t$ also so that every new
++coefficient is less than one. On higher carriers these data are
++always taken by log pullback.
++\end{proof}
++
++In particular, if $X\to S$ is a morphism to a compact K\"ahler
++space, a sufficiently small pullback of a K\"ahler class on $S$
++can be subtracted from the new nef datum on its K\"ahler carrier.
++This changes the adjoint by that pullback and leaves every structure
++boundary, hence every discrepancy and multiplier ideal, unchanged.
++
++For brevity, say that a class has \emph{EMC} if it is endowed with
++a Moishezon contraction in the sense of
++\cite[Definitions~2.32 and~2.34]{HX2026}: the contraction has
++pushforward structure sheaf equal to the structure sheaf of its
++target, contracts exactly the curves of degree zero, and admits a
++projective surjective witness whose map to the target is projective.
++This definition applies to nonreduced compact complex spaces.
++
++\begin{lemma}[EMC under projective contractions and restriction]
++\label{repair:lem:emc-transfer}
++Let $r:L\to M$ be a projective contraction of compact complex
++spaces, possibly nonreduced. A class on $M$ has EMC if and only if
++its pullback to $L$ has EMC. A class with EMC restricts to a class
++with EMC on every closed analytic subspace.
++\end{lemma}
++
++\begin{proof}
++For ascent, compose the contraction of $M$ with $r$. A Moishezon
++witness is obtained by base change of the witness over $M$; both
++required maps are projective. A curve has zero pullback degree
++precisely when it is vertical over $M$ or its image is a
++zero-degree curve on $M$.
++
++For descent, the EMC map of $L$ is constant on each $r$-fibre.
++Indeed the reduced connected projective fibre is connected by
++chains of curves, and all those curves have degree zero. The map
++therefore factors through $M$ as a map of underlying spaces. It
++factors holomorphically, including on structure sheaves, because
++$r_*\cO_L=\cO_M$: locally embed the target in a polydisc and
++descend its coordinate functions using this equality. The
++factorization has the contraction property. A projective witness
++upstairs remains a projective witness over $M$ by composition.
++Every curve of $M$ is dominated by a curve of $L$: base-change to
++the normalization of the curve and use a multisection of the
++resulting projective family. The projection formula then gives
++the required characterization of contracted curves on $M$.
++
++For a closed subspace, restrict the EMC map and take its Stein
++factorization. Its finite second map changes neither the contracted
++curves nor their degree test. Restrict the projective witness too;
++its map to the Stein target is projective by fibrewise relative
++ampleness. This proves the assertion for the full closed-subspace
++structure.
++\end{proof}
++
++\begin{lemma}[The multiplier-ideal scheme on a resolution]
++\label{repair:lem:multiplier-scheme-transfer}
++Let $p:W\to T$ be a projective log resolution of a generalized
++pair with effective trace boundary, carrying its nef datum.
++Write $[K_W+B_W]+\mathbf M_W=p^*A$ and
++\[
++                \lfloor B_W\rfloor=F-P,
++ \qquad F,P\geq0,\qquad \Supp F\cap\Supp P
++       \ \text{has no divisorial component}.
++\]
++Let $N\subset T$ be the closed subspace defined by the generalized
++multiplier ideal. Then $F\to T$ factors through a projective
++contraction $F\to N$, and
++\[
++                              p_*\cO_F=\cO_N.
++\]
++Consequently EMC on $N$ transports across a projective crepant
++comparison of generalized pairs with effective trace boundaries.
++\end{lemma}
++
++\begin{proof}
++The negative part $P$ is $p$-exceptional, and
++$\mathcal J=p_*\cO_W(P-F)$. Relative Kawamata--Viehweg vanishing
++gives
++\[
++                        R^1p_*\cO_W(P-F)=0.
++\]
++Indeed the difference between the actual line bundle $P-F$ and
++$K_W+\{B_W\}$ has class $\mathbf M_W-p^*A$, which is nef over
++$T$ and big over $T$ since $p$ is birational. This is the usual
++projective-relative vanishing statement, applied locally over the
++base; the fractional-part boundary is ordinary klt.
++Because $p_*\cO_W(P)=\cO_T$, the divisor exact sequence yields
++\[
++ 0\longrightarrow\mathcal J\longrightarrow\cO_T
++   \longrightarrow p_*\cO_F(P)\longrightarrow0.
++\]
++The last map factors through $p_*\cO_F$. Multiplication by the
++canonical section of $P$ gives an injection
++$\cO_F\hookrightarrow\cO_F(P)$: in the SNC coordinates no
++component of $P$ is a component of $F$, even with their respective
++multiplicities. Surjectivity in the displayed sequence therefore
++identifies $p_*\cO_F$ with $\cO_T/\mathcal J=\cO_N$ as an
++algebra, not only as a module. Its support is $p(\Supp F)$, so the
++induced map $F\to N$ is surjective and is a projective contraction.
++
++For a crepant comparison take a common projective log resolution.
++The actual structure subboundary there is the same on both sides,
++and the classes whose curves are tested have equal pullbacks.
++Apply Lemma~\ref{repair:lem:emc-transfer} to the two contractions
++from the same divisor scheme $F$. This also applies one step at a
++time across flips. If $F$ is empty, the assertion is vacuous.
++\end{proof}
++
++\begin{lemma}[Positivity on a surface Mori base]
++\label{repair:lem:surface-base-positivity}
++Let $f:X\to Z$ be a projective contraction from a normal compact
++K\"ahler threefold to a normal compact K\"ahler surface. Suppose that
++$X$ is klt and globally strongly $\Q$-factorial and that $-K_X$ is
++$f$-ample. Let $\gamma\in\BC(Z)$ and $\alpha=f^*\gamma$. Assume that
++$\alpha$ is the adjoint class of a generalized pair with effective
++boundary, that $\alpha-[K_X]$ is big, and that its generalized
++non-klt locus does not dominate $Z$. Then $Z$ is klt and globally
++strongly $\Q$-factorial, and $\gamma-[K_Z]$ is big.
++\end{lemma}
++
++\begin{proof}
++First establish the singularities of the base, independently of the
++pair defining $\alpha$. Fix a K\"ahler class $\omega_Z$ on $Z$.
++Relative ampleness gives a sufficiently large $t>0$ for which
++\[
++                  -[K_X]+t f^*\omega_Z
++\]
++is K\"ahler. With zero boundary and this descending nef datum, $X$
++is generalized klt and its adjoint is $t f^*\omega_Z$. The projective
++canonical bundle formula \cite[Theorem~2.3]{HP2024} makes $Z$
++generalized klt. Take its projective small strong factorialization.
++A small proper bimeromorphic morphism of normal surfaces is an
++isomorphism, so $Z$ is globally strongly $\Q$-factorial. The
++comparison in Lemma~\ref{repair:lem:carrier-margin} then makes
++$Z$ klt. In particular $K_Z$ is $\Q$-Cartier.
++
++Apply Lemma~\ref{repair:lem:carrier-margin} to the pair defining
++$\alpha$. This keeps the adjoint class and an effective boundary
++trace, and does not enlarge the non-klt locus. On a projective log
++resolution $r:W_0\to X$ carrying the new data, write
++\[
++ [K_{W_0}+B_{W_0}]+M_{W_0}=(fr)^*\gamma,
++                  \qquad M_{W_0}\ \text{K\"ahler}.
++\]
++The pair is generalized klt over a nonempty open subset of $Z$.
++Choose $\varepsilon>0$ small enough that
++$M_{W_0}-\varepsilon(fr)^*\omega_Z$ remains K\"ahler. This changes
++the adjoint to $f^*(\gamma-\varepsilon\omega_Z)$ without changing
++any boundary coefficient.
++
++Choose a projective resolution $\tau:S\to Z$, and resolve the main
++component of the corresponding base change together with $W_0$.
++After a further log resolution there are projective morphisms
++\[
++ \mu:W\to X,\qquad l:W\to S,\qquad \tau l=f\mu,
++\]
++with $W,S$ smooth compact K\"ahler, $B_W$ having simple normal
++crossings support, and
++\begin{equation}\label{repair:eq:surface-base-adjoint}
++ [K_W+B_W]+M'_W
++       =l^*\tau^*(\gamma-\varepsilon\omega_Z),
++                         \qquad M'_W\ \text{nef}.
++\end{equation}
++Here $B_W$ is the log-pullback boundary of the replaced pair. The
++map $l$ has connected fibres: its Stein factor is finite and
++bimeromorphic over the normal surface $S$, hence is $S$.
++
++Put $E=B_W^-$, the effective negative part of the divisor $B_W$.
++Since the boundary trace on $X$ is effective, $E$ is
++$\mu$-exceptional. Each of its components has image of dimension at
++most one in $X$, and consequently cannot dominate $S$. Choose an
++effective rational divisor $E'\geq E$ with the same support, and set
++\[
++                  \widehat B=B_W+E'
++                       =B_W^++(E'-E)\geq0.
++\]
++The pair $(W,\widehat B+M'_W)$ is generalized klt over an open
++subset of $S$: the horizontal coefficients are unchanged and the
++added divisor is vertical. Moreover $\mathcal O_W(E')$ is a
++$\Q$-line bundle with a nonzero section in every sufficiently
++divisible positive power on a general fibre of $l$; on such a
++fibre it is trivial. Thus \cite[Theorem~2.2]{HP2024}, applied to
++\[
++ [K_W+\widehat B]+M'_W
++       =l^*\tau^*(\gamma-\varepsilon\omega_Z)+[E'],
++\]
++shows that
++\begin{equation}\label{repair:eq:surface-relative-positive}
++ l^*\bigl(\tau^*(\gamma-\varepsilon\omega_Z)-[K_S]\bigr)+[E']
++                     \quad\text{is pseudo-effective}.
++\end{equation}
++
++We remove the resolution errors before descending this positivity.
++Choose a K\"ahler form $\omega_X$ on $X$, in the local smooth-potential
++sense, and put
++$\Omega=\mu^*\omega_X$, a smooth closed semipositive form on $W$.
++Fibre integration gives the positive constant
++\[
++ c=l_*\Omega=\int_{W_s}\Omega
++               =\int_{X_z}\omega_X>0
++\]
++for general $s\in S$ and $z=\tau(s)$; the maps defining the
++birational modifications are isomorphisms along a general fibre.
++Let $T$ be a closed positive current representing
++\eqref{repair:eq:surface-relative-positive}. The current
++$U=l_*(T\wedge\Omega)$ is closed and positive, and the projection
++formula gives
++\[
++ [U]=c\bigl(\tau^*(\gamma-\varepsilon\omega_Z)-[K_S]\bigr)+[P],
++                \qquad [P]=l_*([E']\wedge\Omega).
++\]
++The current on the right defining $[P]$ is positive, closed, and
++supported on the finitely many curves and points in $l(E')$.
++The support theorem therefore identifies it with the integration
++current of an effective real divisor $P$ on $S$. Furthermore,
++\[
++ \tau_*[P]
++   =f_*\mu_*([E']\wedge\mu^*\omega_X)
++   =f_*(\mu_*[E']\wedge\omega_X)=0,
++\]
++since $E'$ is $\mu$-exceptional. Hence $P$ is $\tau$-exceptional.
++Write $K_S=\tau^*K_Z+K_{S/Z}$, with $K_{S/Z}$ an actual
++$\tau$-exceptional rational divisor. Dividing the class of $U$ by
++$c$ shows that
++\[
++ \tau^*(\gamma-\varepsilon\omega_Z-[K_Z])
++                    +[c^{-1}P-K_{S/Z}]
++                         \quad\text{is pseudo-effective}.
++\]
++Lemma~\ref{lem:positive-descent} applies to the signed exceptional
++divisor $c^{-1}P-K_{S/Z}$ and yields pseudo-effectivity of
++$\gamma-\varepsilon\omega_Z-[K_Z]$. Adding
++$\varepsilon\omega_Z$ proves that $\gamma-[K_Z]$ is big.
++\end{proof}
++
++
+ \subsection{Closing the contraction induction}
+ \begin{proposition}[The restricted induction]
+ \label{repair:prop:restricted-bpf-induction}
+-Let $\mathsf T_d$ denote termination of ordinary rational klt
+-programs in dimension at most $d$. The following implications hold:
++Let $\mathsf T_d$ denote termination of existing ordinary rational
++klt programs in dimension at most $d$, including the bound on
++divisorial steps. The following implications hold:
+ \begin{align*}
+  \mathsf C_{d-1}&\Longrightarrow\mathsf C_{d,\mathrm{big}},\\
+  \mathsf C_{d,\mathrm{big}}+\mathsf B_{d-1}+\mathsf G_{d-1}
+@@ -1610,13 +1916,14 @@
+ \end{proposition}
+ 
+ \begin{proof}
+-We specify the inputs from \cite{HX2026,HLX2026} and the arguments
+-used below. The inputs are the cone theorem, projective
+-relative vanishing and minimal-model theory, projective small
+-factorializations and dlt modifications, the projective canonical
+-bundle formula, and the nef-and-big K\"ahler criterion. None is
+-used to promote an arbitrary map from a globally strongly
+-$\Q$-factorial space to a projective map.
++The inputs are the cone theorem, projective relative vanishing and
++minimal-model theory, projective small factorializations and dlt
++modifications, and the nef-and-big K\"ahler criterion from
++\cite{HX2026,HLX2026}. The higher-carrier canonical bundle formula
++\cite[Theorem~2.3]{HP2024} is applied to globally gklt pairs;
++\cite[Theorem~2.2]{HP2024} supplies the relative positivity used
++in Lemma~\ref{repair:lem:surface-base-positivity}. Each application
++below starts with a projective morphism.
+ 
+ \smallskip\noindent
+ \emph{The big non-klt contraction.}
+@@ -1648,8 +1955,8 @@
+ construction. Lemma~\ref{repair:lem:actual-line-polarization} then supplies
+ precisely the relative ampleness needed in place of
+ \cite[Lemma~2.42]{HX2026}, including the common-resolution step in its
+-Claim~3.5. The uncorrected pullback $q^*\eta_U$ is not being treated
+-as a K\"ahler class.
++Claim~3.5. The exceptional correction $-\varepsilon[E]$ makes the
++positive part $\eta^{\prime\prime}$ K\"ahler on the common resolution.
+ 
+ The exact sequences of multiplier ideals, relative vanishing,
+ finite pushouts, and extension from sufficiently thickened
+@@ -1858,27 +2165,72 @@
+ an ample bundle on every fibre of $g$, and hence is $g$-ample.
+ The argument of \cite[Theorem~4.1, Claim~4.2]{HX2026}, using
+ projective relative semipositivity, gives $\dim S<d$.
+-The projective canonical bundle formula
+-\cite[Theorem~2.53]{HX2026} provides
++The class $D_V$ is the adjoint of a gklt generalized pair with
++effective trace boundary. Its nef datum on a common carrier is the
++pullback of $\mathbf M_U+a\alpha_U$, hence is nef and big.
++The ordinary relative steps preserve the generalized klt condition
++by their negative discrepancy comparison, and preserve the nef
++b-datum. The space $V$ is globally strongly $\Q$-factorial.
++Let $F_V$ be the effective transform of $F_U$ and put $c=a+1$.
++On a common resolution $p:W\to U$, $q:W\to V$,
+ \[
+- D_S=K_S+B_S+\mathbf N_S+a\alpha_S,
+- \qquad D_V=g^*D_S,
++ p^*D_U=q^*D_V+[L],\qquad L\geq0,
++ \qquad p^*\alpha_U=q^*\alpha_V,
+ \]
+-with a gklt pair on $S$ and modified-big nef data.
+-The class $\alpha_S$ is nef by descent of nefness through the
+-surjective projective map $g$.
+-Thus adding $a\overline{\alpha_S}$ to the nef datum preserves the
+-gklt condition and modified bigness: on a common carrier this
+-addition is a nef pullback and preserves the existing big class.
++where $L$ is $q$-exceptional. The divisor
++$p^*F_U-L-q^*F_V$ is exceptional over $V$ and numerically trivial
++over $V$; applying negativity in both directions makes it zero.
++Consequently $D_V=c\alpha_V+[F_V]$, with $F_V$ real Cartier.
++Put $D_S=\lambda_1$, so $D_V=g^*D_S$ is the exact Bott--Chern
++pullback furnished by the relative ample model. The class
++$\alpha_S$ is nef by descent through the surjective morphism $g$.
+ 
+-Take a projective small factorialization $s:S^{\mathrm q}\to S$
+-and resolve the main component of $V\times_S S^{\mathrm q}$.
++Lemma~\ref{repair:lem:carrier-margin} shows that
++$D_V-c_1(K_V)$ is big. Apply its fixed-adjoint replacement to the
++pair on $V$, and choose a K\"ahler class $\omega_S$ and
++$\varepsilon>0$ so small that the pullback of
++$\varepsilon\omega_S$ can be subtracted from the K\"ahler nef
++datum. The resulting pair is globally gklt, its trace boundary is
++effective, and its adjoint is
++$g^*(D_S-\varepsilon\omega_S)$. On a projective log resolution
++$r:P\to V$ its structure equation is
++\[
++ [K_P+B_P]+\mathbf M_P^{\rm new}
++             =(gr)^*(D_S-\varepsilon\omega_S),
++ \qquad \mathbf M_P^{\rm new}\ \text{nef}.
++\]
++All hypotheses of \cite[Theorem~2.3]{HP2024} now hold: $g$ is a
++projective contraction of normal compact K\"ahler spaces, the pair
++is globally generalized klt, and the adjoint equality is a
++Bott--Chern pullback. The theorem gives generalized klt data on
++$S$ with effective trace boundary and adjoint exactly
++$D_S-\varepsilon\omega_S$. On a sufficiently high smooth
++carrier $u:S_1\to S$ these satisfy
++\[
++ u^*(D_S-\varepsilon\omega_S)
++            =[K_{S_1}+B_{S_1}]+\mathbf N_{S_1},
++ \qquad \mathbf N_{S_1}\ \text{nef}.
++\]
++The subboundary $B_{S_1}$ can have negative coefficients.
++Add $\varepsilon\overline{\omega_S}$ to the nef b-datum.
++This restores the exact adjoint $D_S$ and preserves every boundary
++and discrepancy. Its carrier trace
++$\mathbf N_{S_1}+\varepsilon u^*\omega_S$ is nef and big.
++Consequently the effective trace boundary plus nef trace on $S$
++is modified big: lift the effective boundary by strict transform
++to a common carrier and push down the resulting big class.
++The nef datum throughout is a datum on the carrier.
++
++Take a projective small strong $\Q$-factorialization
++$s:S^{\mathrm q}\to S$ and resolve the main component of $V\times_S S^{\mathrm q}$.
+ The resulting maps $\pi:\widetilde V\to V$ and
+ $\widetilde g:\widetilde V\to S^{\mathrm q}$ are projective,
+ and $\widetilde V$ is compact K\"ahler. Pull back $D_V$,
+ $\alpha_V$ and $F_V$ to $\widetilde V$, and $D_S$ and
+ $\alpha_S$ to $S^{\mathrm q}$. The pair on $S^{\mathrm q}$ is
+-gklt and its boundary-plus-nef class remains modified big.
++gklt and its boundary-plus-nef class remains modified big: smallness
++preserves the effective boundary trace, and on a common carrier
++the nef datum is still nef and big.
+ Lemma~\ref{repair:lem:negative-part-relative-program} first gives
+ $N_\sigma(D_V)=F_V$. Lemma~\ref{repair:lem:negative-part-nef-pullback} then gives
+ $N_\sigma(\pi^*D_V)=\pi^*F_V$. The new total space is used only as a
+@@ -1909,8 +2261,8 @@
+ $\alpha$-trivial initial program gives semiampleness of
+ $\alpha$ on $X$. The target is compact K\"ahler, and the
+ resulting map is Moishezon, as follows by taking common projective
+-modifications of the maps just constructed. This proves the required descent without lifting a lower-dimensional
+-program to $V$.
++modifications of the maps just constructed. The holomorphic descent and the Moishezon witness are those of
++Proposition~\ref{repair:prop:negative-part-good-model}.
+ 
+ \smallskip\noindent
+ \emph{Selected good models in dimensions at most three.}
+@@ -1937,32 +2289,140 @@
+ 
+ \smallskip\noindent
+ \emph{The non-big non-klt contraction in dimensions at most three.}
+-Take the projective dlt modification used in
+-\cite[Section~6]{HX2026}; its source is globally strongly
+-$\Q$-factorial and its underlying space is klt. On this source
++Assume $\mathsf B_d$, $\mathsf C_{d-1}$ and termination of
++existing ordinary rational klt programs in dimensions at most $d$,
++where $2\leq d\leq3$. The big case having been proved, let
++$\alpha$ be non-big. Take a projective dlt modification and a
++projective small strong factorialization, as in
++\cite[Theorems~2.26 and~2.27]{HX2026}. Denote their composite by
++$p:T\to X$ and use the full crepant generalized boundary on $T$.
++The underlying space $T$ is klt, compact K\"ahler and globally
++strongly $\Q$-factorial. The crepant boundary is effective:
++its nonexceptional coefficients are the original ones, and each
++extracted prime has log discrepancy at most zero. The pulled-back
++class $\alpha_T$ remains nef, weakly NQC and non-big.
++Lemma~\ref{repair:lem:multiplier-scheme-transfer} transports the
++EMC hypothesis on the multiplier-ideal closed subspace to $T$.
++
++We verify the bigness needed for the ordinary program. On $T$ put
+ \[
+- Q=\alpha-c_1(K_X)=B+\mathbf M_X
++                    Q_T=\alpha_T-c_1(K_T)=B_T+\mathbf M_T.
+ \]
+-is a Bott--Chern class. Its modified bigness therefore implies
+-bigness, as in \cite[Definition~2.8]{HX2026}. Apply
+-Lemma~\ref{repair:lem:adaptive-nqc-program}. It gives a finite ordinary
+-$K$-negative program, crepant for $\alpha$, ending in an
+-$\alpha$-trivial Mori fibre space $f:X'\to Z$. Each step exists
+-by $\mathsf B_d$ and is projective by its canonical rational
+-line-bundle detector. The auxiliary number $t_i$ is chosen anew
+-at each model; no uniform denominator claim is used.
++The modified-bigness resolution lemma
++\cite[Lemma~2.10]{HX2026} gives bigness after adding an effective
++exceptional divisor $E$ whose support contains all modification
++exceptional primes. Each of these primes already occurs in $B_T$
++with positive coefficient. Since $\mathbf M_T$ is pseudo-effective
++by Lemma~\ref{repair:lem:carrier-margin}, for sufficiently small
++$s>0$ the identity
++\[
++ Q_T=s(Q_T+[E])+(1-s)\mathbf M_T+
++                         [(1-s)B_T-sE]
++\]
++expresses $Q_T$ as a big class plus a pseudo-effective class.
++For the small factorialization alone the exceptional divisor is
++empty. Hence $Q_T$ is big.
+ 
+-All remaining steps of
+-\cite[Section~6]{HX2026} concern this already projective map:
+-relative vanishing transports the non-klt closed subspace;
+-$\alpha$ descends to a nef NQC class on $Z$; if the non-klt
+-subspace dominates $Z$, its contraction descends by the equality
+-$\mathcal O_Z=f_*\mathcal O_{\operatorname{Nklt}}$; otherwise
+-the projective canonical bundle formula and the multiplier-ideal
+-calculation identify its image with the non-klt subspace on the
+-base. The assertion $\mathsf C_{d-1}$ then applies to $Z$.
+-This proves $\mathsf C_d$ without invoking a generalized termination theorem.
++Lemma~\ref{repair:lem:adaptive-nqc-program} gives a finite ordinary
++$K$-negative, $\alpha_T$-trivial program ending in a projective Mori
++fibre contraction
++\[
++                              f:Y\to Z.
++\]
++Its class descends in Bott--Chern cohomology:
++$\alpha_Y=f^*\gamma$, with $\gamma$ nef and weakly NQC on the
++normal compact K\"ahler base. Transport the generalized nef
++b-datum and the full crepant boundary along the program. On common
++resolutions the adjoints and structure subboundaries agree; since
++no step extracts a divisor, the boundary remains effective.
++The ordinary discrepancy comparison gives
++\[
++ q^*(\alpha_{i+1}-c_1(K_{Y_{i+1}}))
++       =p^*(\alpha_i-c_1(K_{Y_i}))+[F_i],\qquad F_i\geq0,
++\]
++so $Q_Y=\alpha_Y-c_1(K_Y)$ remains big.
++Lemmas~\ref{repair:lem:emc-transfer}
++and~\ref{repair:lem:multiplier-scheme-transfer} transport both the
++EMC hypothesis on the multiplier-ideal scheme and, once obtained,
++the EMC conclusion across these projective comparisons.
++It therefore suffices to prove EMC for $\gamma$ on $Z$.
+ 
++If $\dim Z\leq1$, this follows from degree on a normal compact
++curve, using the identity for positive degree and the map to a
++point for degree zero. The only remaining case is
++$\dim Y=3$, $\dim Z=2$. The auxiliary application of
++\cite[Theorem~2.3]{HP2024} in
++Lemma~\ref{repair:lem:surface-base-positivity} shows that $Z$ is
++klt and globally strongly $\Q$-factorial.
++
++Apply Lemma~\ref{repair:lem:carrier-margin} on $Y$ with adjoint
++$\alpha_Y$. The multiplier ideal can only increase, so its new
++closed subspace $N$ is a closed subspace of the previous one.
++It has EMC for $\alpha_Y|_N$ by
++Lemma~\ref{repair:lem:emc-transfer}. On a projective log resolution
++$r:W_0\to Y$ the new data satisfy
++\[
++ [K_{W_0}+B_{W_0}]+\mathbf M_{W_0}=(fr)^*\gamma,
++ \qquad \mathbf M_{W_0}\ \text{K\"ahler}.
++\]
++
++Suppose first that $N$ dominates $Z$. Write
++$\mathcal J=r_*\cO_{W_0}(-\lfloor B_{W_0}\rfloor)$.
++Relative Kawamata--Viehweg vanishing for $fr$ gives
++\[
++ R^1(fr)_*\cO_{W_0}(-\lfloor B_{W_0}\rfloor)=0:
++\]
++the difference with $K_{W_0}+\{B_{W_0}\}$ is the relatively
++nef and big class $\mathbf M_{W_0}-(fr)^*\gamma$.
++The low-degree Leray sequence implies $R^1f_*\mathcal J=0$.
++The exact sequence of the actual multiplier-ideal scheme therefore
++gives a surjection
++\[
++                         \cO_Z\longrightarrow f_*\cO_N.
++\]
++It is injective because $Z$ is reduced and $N$ dominates it.
++Thus $N\to Z$ is a projective contraction, including on structure
++sheaves. EMC on $N$ descends to $Z$ by
++Lemma~\ref{repair:lem:emc-transfer}.
++
++Suppose next that $N$ does not dominate $Z$. The pair is gklt
++over a nonempty open subset of $Z$.
++Lemma~\ref{repair:lem:surface-base-positivity}, applied to these
++data, gives
++\[
++                             \gamma-c_1(K_Z)\ \text{big}.
++\]
++If $\gamma$ is not big, apply
++Lemma~\ref{repair:lem:adaptive-nqc-program} in dimension two to
++$(Z,\gamma)$. Its klt, factoriality, nefness, NQC and bigness
++hypotheses have all been verified; $\mathsf B_2$ and termination
++of existing ordinary surface programs are available. Its
++class-trivial Mori contraction has base of dimension at most one.
++EMC there, followed by the projective comparisons of
++Lemma~\ref{repair:lem:emc-transfer}, gives EMC on $Z$.
++
++Finally suppose $\gamma$ is big. Take a projective resolution
++$\tau:S\to Z$ with $S$ smooth and compact K\"ahler.
++The class $\tau^*\gamma$ is big and nef. Its
++null curves are finite: a K\"ahler current with analytic
++singularities in this class has positive degree on every curve
++not contained in its singular locus. Their intersection matrix is
++negative definite. Indeed Hodge index is negative definite on the
++orthogonal complement of $\tau^*\gamma$, whose square is positive.
++The null-curve classes are independent: a relation can be written
++as equality of classes of two effective real divisors with disjoint
++component supports; their mutual intersection is nonnegative,
++contradicting negative definiteness unless the common class is
++zero, which its positive K\"ahler degree excludes.
++Grauert's contraction criterion \cite{Grauert1962} gives a
++contraction of precisely these curves onto a normal compact complex
++surface. The contraction is projective: solve
++using their negative-definite matrix for an integral combination
++having positive degree on every contracted curve, and apply
++fibrewise relative ampleness. This is EMC on $S$, and it descends
++to $Z$ by Lemma~\ref{repair:lem:emc-transfer}.
++Thus $\mathsf C_d$ holds in all required dimensions.
++
+ \smallskip\noindent
+ \emph{Order of the induction.}
+ The assertions in dimensions zero and one are immediate from
+@@ -1980,7 +2440,7 @@
+ \subsection{Termination of ordinary programs}\label{repair:sec:reduction}
+ 
+ \begin{corollary}\label{repair:cor:existing}
+-Using Theorem~1.1 of \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026}, every existing sequence of ordinary
++Using Theorem~1.1 of \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026}, every existing sequence of ordinary
+ rational klt flips in the global Weil $\Q$-factorial compact K\"ahler
+ fourfold category terminates, provided both sides of every small
+ diagram are projective and the ordinary adjoints have the specified
+@@ -1990,7 +2450,7 @@
+ have connected fibres.
+ \end{corollary}
+ \begin{proof}
+-Take the fixed nef b-divisor in \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026} to be zero, represented on
++Take the fixed nef b-divisor in \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026} to be zero, represented on
+ any projective log resolution of the initial space. Its class is nef.
+ Klt implies log canonical;
+ the boundary is rational and is transported by strict transform. All
+@@ -1999,7 +2459,7 @@
+ \end{proof}
+ 
+ \subsubsection{The intrinsic canonical-sheaf formulation}
+-The printed theorem in \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026} specifies actual canonical divisors.
++The printed theorem in \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026} specifies actual canonical divisors.
+ For zero nef part, its proof also has the following intrinsic
+ formulation; this observation is necessary to preserve the intrinsic
+ formulation of Theorem~\ref{thm:finite}.
+@@ -2038,13 +2498,13 @@
+ and monodromy steps use constant sheaves and ordinary line bundles;
+ they do not require a global canonical form.
+ 
+-The fixed denominator in the corrected difficulty clears the finitely
++The fixed denominator in the difficulty clears the finitely
+ many initial boundary coefficients and the fixed extracted-label
+-coefficients, exactly as in \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026}. It is separate from the
++coefficients, exactly as in \cite{OAI:Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026}. It is separate from the
+ diagram-dependent adjoint indices above. In the smooth-centre
+ positive-surface witness calculation with zero nef part, the formula
+ $a^+=2-\operatorname{ord}_E(B)$ needs only the initial boundary
+-denominators. Neither that calculation nor the corrected difficulty
++denominators. Neither that calculation nor the difficulty
+ requires a uniform canonical Cartier index along the sequence.
+ Replacing the canonical representatives by these canonical local
+ comparisons therefore leaves that proof unchanged and proves the
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/08-resolutions.tex /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/08-resolutions.tex
+--- /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/build/sections/08-resolutions.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/build/sections/08-resolutions.tex	2026-10-15 02:18:26
+@@ -120,7 +120,7 @@
+ together with \cite[Theorem~1.2]{CT2023} with zero nef part, give
+ termination; pseudo-effectivity excludes a Mori fiber space.  The
+ projective log abundance theorem
+-\cite[Theorem~1.1]{KMMAbundance1994}, with the correction
++\cite[Theorem~1.1]{KMMAbundance1994}, together with
+ \cite[\S6.1]{MatsukiCorrection2003}, gives a nonzero section of a
+ multiple of the nef adjoint.  Dimensions one and two use the classical
+ log abundance theorem.  The effective pullback comparison on a common

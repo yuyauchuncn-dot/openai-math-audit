@@ -1,0 +1,24 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/main.tex	2026-10-15 02:18:26
+@@ -56,7 +56,7 @@
+ \setcounter{tocdepth}{2}
+ \title{Fontaine--Mazur modularity at the prime 2}
+ \author{OpenAI}
+-\date{September 23, 2026}
++\date{October 6, 2026}
+ 
+ \hypersetup{pdftitle={Fontaine--Mazur modularity at the prime 2},pdfauthor={OpenAI},pdfsubject={Odd regular two-dimensional Fontaine--Mazur modularity at 2}}
+ 
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026/build/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/build/references.bib	2026-10-15 02:18:26
+@@ -724,7 +724,7 @@
+   author = {{OpenAI}},
+   title = {{Hilbert's tenth problem over the rational numbers}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026/main.pdf}{OAI:Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026/main.pdf}{OAI:Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026}},
+   year = {2026},
+   note = {Section~4}
+ }

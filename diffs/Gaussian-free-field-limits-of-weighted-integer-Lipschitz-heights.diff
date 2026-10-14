@@ -1,0 +1,74 @@
+Only in /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/figures: annulus-stepped-domain.tex
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/main.tex	2026-10-15 02:18:26
+@@ -39,7 +39,7 @@
+ 
+ \title{Gaussian free-field limits\\of weighted integer Lipschitz heights}
+ \author{OpenAI}
+-\date{September 25, 2026}
++\date{October 6, 2026}
+ 
+ \begin{document}
+ \maketitle
+@@ -66,6 +66,7 @@
+ 
+ \appendix
+ \input{sections/08-scalar-spectra}
++\input{sections/09-annulus}
+ 
+ \bibliographystyle{plain}
+ \bibliography{references/references}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/references/references.bib /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/references/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/references/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/references/references.bib	2026-10-15 02:18:26
+@@ -80,7 +80,7 @@
+   author = {{OpenAI}},
+   title = {{The Gaussian free field limit of integer Lipschitz heights with two-arc boundary data}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026/paper.pdf}{OAI:The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-October-6-2026/paper.pdf}{OAI:The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-October-6-2026}},
+   year = {2026},
+   note = {Sections~5, 7, 9, and 10}
+ }
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/sections/01-introduction.tex /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/sections/01-introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
+@@ -189,7 +189,7 @@
+ 
+ Reflection positivity provides a classical route from spatial symmetries
+ to positive transfer operators; see Fr\"ohlich--Israel--Lieb--Simon
+-\cite{FILS1978} and the scalar spectral discussion of Usui
++\cite{FILS1978} and the spectral discussion of Usui
+ \cite[Sections~3--4]{Usui2012}.  Here the original edge interaction
+ factorizes across a row of sites.  We prove the associated positive
+ normal transfer, including its phase-augmented form, directly.
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/sections/02-discrete.tex /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/sections/02-discrete.tex
+--- /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026/build/sections/02-discrete.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/sections/02-discrete.tex	2026-10-15 02:18:26
+@@ -148,10 +148,11 @@
+ \end{figure}
+ 
+ \begin{samepage}
+-Here is the only crossing estimate imported into the discrete argument.
++Here is the crossing estimate used throughout the discrete argument.
++Appendix~\ref{sec:annulus} gives its annulus proof.
+ The boundary convention in its statement is part of the theorem.
+ 
+-\begin{theorem}[Glazman--Lammers circuit input]\label{thm:circuit-input}
++\begin{theorem}[Annulus circuit estimate]\label{thm:circuit-input}
+ For $r\ge0$, let $\Lambda_r$ be the ball of radius $r$ in the triangular
+ graph metric, with its bounding honeycomb contour; thus
+ $\Lambda_r=\Lambda_{\lfloor r\rfloor}$. For $a>1$ and an integer
+@@ -167,8 +168,8 @@
+ \end{theorem}
+ \end{samepage}
+ 
+-This is equation (55) in Appendix A of the third arXiv version of
+-\cite{GL2025}, with Definitions 3.2 and 3.5. Its augmentation includes a
++The conclusion is equation (55) in Appendix A of the third arXiv version
++of \cite{GL2025}, with Definitions 3.2 and 3.5.  Its augmentation includes a
+ cell whenever $W$ is nonconstant, excludes it whenever $B$ is nonconstant,
+ and otherwise includes it with probability $x^2$. It is therefore exactly
+ \eqref{discrete:cell-table}. The source uses
+Only in /Users/dereky/oai-math/repo/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/build/sections: 09-annulus.tex

@@ -1,0 +1,24 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-October-7-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026/build/main.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-October-7-2026/build/main.tex	2026-10-15 02:18:27
+@@ -50,7 +50,7 @@
+ \DeclareMathOperator{\Spec}{Spec}
+ \title{Milne's rationality conjecture\protect\\ for abelian varieties}
+ \author{OpenAI}
+-\date{September 23, 2026}
++\date{October 7, 2026}
+ \begin{document}
+ \maketitle
+ \vspace{-1em}
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026/build/references.tex /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-October-7-2026/build/references.tex
+--- /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026/build/references.tex	2026-10-15 02:18:27
++++ /Users/dereky/oai-math/repo/preprints/Milnes-rationality-conjecture-for-abelian-varieties-October-7-2026/build/references.tex	2026-10-15 02:18:27
+@@ -237,7 +237,7 @@
+ OpenAI,
+ \emph{The rational Hodge conjecture for CM abelian varieties},\newline
+ OpenAI Math Release preprint
+-\href{https://github.com/openai/math/blob/main/preprints/The-rational-Hodge-conjecture-for-CM-abelian-varieties-September-30-2026/paper.pdf}{OAI:The-rational-Hodge-conjecture-for-CM-abelian-varieties-September-30-2026},
++\href{https://github.com/openai/math/blob/main/preprints/The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026/paper.pdf}{OAI:The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026},
+ 2026.
+ 
+ \bibitem[PR24]{PappasRapoport2024}

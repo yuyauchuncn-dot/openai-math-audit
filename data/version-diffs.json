@@ -1,0 +1,600 @@
+[
+  {
+    "base": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice",
+    "old": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-September-25-2026",
+    "current": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-October-6-2026",
+    "files": [
+      "paper.tex",
+      "sections/cell.tex",
+      "sections/foundations.tex",
+      "sections/geometry.tex",
+      "sections/interface.tex"
+    ],
+    "added": 2693,
+    "removed": 606,
+    "hunks": 40,
+    "categories": {
+      "body": 15,
+      "proof": 20,
+      "citation": 2,
+      "statement": 3
+    },
+    "unified_bytes": 216555,
+    "envs": {
+      "(top level)": 15,
+      "proof": 20,
+      "thebibliography": 2,
+      "lemma": 2,
+      "proposition": 1
+    }
+  },
+  {
+    "base": "The-joint-scaling-limit-of-critical-Ashkin-Teller-currents",
+    "old": "The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026",
+    "current": "The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/03-spatial.tex",
+      "sections/07-local-sets.tex",
+      "sections/08-local-kernel.tex"
+    ],
+    "added": 631,
+    "removed": 182,
+    "hunks": 13,
+    "categories": {
+      "body": 5,
+      "citation": 2,
+      "proof": 6
+    },
+    "unified_bytes": 53823,
+    "envs": {
+      "(top level)": 5,
+      "enumerate": 1,
+      "proof": 6,
+      "equation": 1
+    }
+  },
+  {
+    "base": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds",
+    "old": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/01-introduction.tex",
+      "sections/03-steps.tex",
+      "sections/04-terminal.tex",
+      "sections/06-perturbation.tex",
+      "sections/08-resolutions.tex"
+    ],
+    "added": 548,
+    "removed": 65,
+    "hunks": 19,
+    "categories": {
+      "body": 11,
+      "citation": 2,
+      "proof": 5,
+      "statement": 1
+    },
+    "unified_bytes": 42598,
+    "envs": {
+      "(top level)": 13,
+      "proof": 5,
+      "corollary": 1
+    }
+  },
+  {
+    "base": "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data",
+    "old": "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026",
+    "current": "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-October-6-2026",
+    "files": [
+      "paper.tex",
+      "references.bib",
+      "sections/01-introduction.tex",
+      "sections/03-cuts.tex",
+      "sections/04-moments.tex"
+    ],
+    "added": 300,
+    "removed": 105,
+    "hunks": 12,
+    "categories": {
+      "body": 6,
+      "citation": 1,
+      "statement": 1,
+      "proof": 4
+    },
+    "unified_bytes": 32327,
+    "envs": {
+      "(top level)": 7,
+      "lemma": 1,
+      "proof": 4
+    }
+  },
+  {
+    "base": "Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity",
+    "old": "Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026",
+    "current": "Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/01-introduction.tex",
+      "sections/03a-program-foundations.tex",
+      "sections/03c-restricted-induction.tex"
+    ],
+    "added": 130,
+    "removed": 58,
+    "hunks": 15,
+    "categories": {
+      "body": 7,
+      "citation": 2,
+      "proof": 6
+    },
+    "unified_bytes": 19691,
+    "envs": {
+      "(top level)": 9,
+      "proof": 6
+    }
+  },
+  {
+    "base": "Incompressible-Box-Transport-and-Finite-Computation",
+    "old": "Incompressible-Box-Transport-and-Finite-Computation-September-27-2026",
+    "current": "Incompressible-Box-Transport-and-Finite-Computation-October-6-2026",
+    "files": [
+      "analysis.tex",
+      "clocks.tex",
+      "main.tex"
+    ],
+    "added": 118,
+    "removed": 26,
+    "hunks": 3,
+    "categories": {
+      "body": 2,
+      "proof": 1
+    },
+    "unified_bytes": 10309,
+    "envs": {
+      "(top level)": 2,
+      "proof": 1
+    }
+  },
+  {
+    "base": "Taming-implies-compatibility-on-four-manifolds",
+    "old": "Taming-implies-compatibility-on-four-manifolds-September-23-2026",
+    "current": "Taming-implies-compatibility-on-four-manifolds-October-6-2026",
+    "files": [
+      "main.tex",
+      "preamble.tex",
+      "references.bib",
+      "sections/01-introduction.tex"
+    ],
+    "added": 56,
+    "removed": 42,
+    "hunks": 9,
+    "categories": {
+      "body": 8,
+      "citation": 1
+    },
+    "unified_bytes": 10883,
+    "envs": {
+      "(top level)": 9
+    }
+  },
+  {
+    "base": "Conditional-good-minimal-models-for-compact-Kahler-fourfolds",
+    "old": "Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026",
+    "files": [
+      "appendices/projective_exclusions.tex",
+      "main.tex",
+      "references.bib",
+      "sections/introduction.tex",
+      "sections/premises.tex"
+    ],
+    "added": 35,
+    "removed": 25,
+    "hunks": 7,
+    "categories": {
+      "proof": 1,
+      "body": 5,
+      "citation": 1
+    },
+    "unified_bytes": 9603,
+    "envs": {
+      "proof": 1,
+      "(top level)": 5,
+      "assumption": 1
+    }
+  },
+  {
+    "base": "Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds",
+    "old": "Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-7-2026",
+    "files": [
+      "main.tex",
+      "references.tex",
+      "sections/02-preliminaries.tex",
+      "termination-generalized-lc-kahler-fourfolds.tex"
+    ],
+    "added": 54,
+    "removed": 6,
+    "hunks": 8,
+    "categories": {
+      "body": 4,
+      "citation": 4
+    },
+    "unified_bytes": 9726,
+    "envs": {
+      "(top level)": 4,
+      "thebibliography": 4
+    }
+  },
+  {
+    "base": "Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds",
+    "old": "Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026",
+    "current": "Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026",
+    "files": [
+      "companions.bib",
+      "main.tex",
+      "sections/01-introduction.tex",
+      "sections/02-preliminaries.tex"
+    ],
+    "added": 27,
+    "removed": 14,
+    "hunks": 6,
+    "categories": {
+      "citation": 2,
+      "body": 4
+    },
+    "unified_bytes": 7776,
+    "envs": {
+      "(top level)": 6
+    }
+  },
+  {
+    "base": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights",
+    "old": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026",
+    "current": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026",
+    "files": [
+      "main.tex",
+      "references/references.bib",
+      "sections/01-introduction.tex",
+      "sections/02-discrete.tex"
+    ],
+    "added": 9,
+    "removed": 7,
+    "hunks": 6,
+    "categories": {
+      "body": 5,
+      "citation": 1
+    },
+    "unified_bytes": 6061,
+    "envs": {
+      "(top level)": 6
+    }
+  },
+  {
+    "base": "Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples",
+    "old": "Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026",
+    "current": "Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-October-7-2026",
+    "files": [
+      "main.tex",
+      "references.bib",
+      "sections/01-introduction.tex"
+    ],
+    "added": 8,
+    "removed": 7,
+    "hunks": 4,
+    "categories": {
+      "body": 3,
+      "citation": 1
+    },
+    "unified_bytes": 4465,
+    "envs": {
+      "(top level)": 4
+    }
+  },
+  {
+    "base": "Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank",
+    "old": "Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-3-2026",
+    "current": "Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-7-2026",
+    "files": [
+      "main.tex",
+      "references.tex",
+      "sections/01-introduction.tex"
+    ],
+    "added": 5,
+    "removed": 5,
+    "hunks": 3,
+    "categories": {
+      "body": 2,
+      "citation": 1
+    },
+    "unified_bytes": 4656,
+    "envs": {
+      "(top level)": 2,
+      "thebibliography": 1
+    }
+  },
+  {
+    "base": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves",
+    "old": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-September-23-2026",
+    "current": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-October-7-2026",
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "added": 4,
+    "removed": 4,
+    "hunks": 4,
+    "categories": {
+      "body": 1,
+      "citation": 3
+    },
+    "unified_bytes": 3973,
+    "envs": {
+      "(top level)": 4
+    }
+  },
+  {
+    "base": "Hilberts-tenth-problem-over-the-rational-numbers",
+    "old": "Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026",
+    "current": "Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026",
+    "files": [
+      "main.tex",
+      "references/references.bib"
+    ],
+    "added": 4,
+    "removed": 4,
+    "hunks": 4,
+    "categories": {
+      "body": 1,
+      "citation": 3
+    },
+    "unified_bytes": 3647,
+    "envs": {
+      "(top level)": 4
+    }
+  },
+  {
+    "base": "Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds",
+    "old": "Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026",
+    "current": "Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-6-2026",
+    "files": [
+      "build/paper.tex",
+      "build/sections/01-introduction.tex"
+    ],
+    "added": 6,
+    "removed": 1,
+    "hunks": 2,
+    "categories": {
+      "body": 2
+    },
+    "unified_bytes": 2352,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers",
+    "old": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-September-30-2026",
+    "current": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-October-6-2026",
+    "files": [
+      "paper.tex"
+    ],
+    "added": 3,
+    "removed": 3,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2037,
+    "envs": {
+      "(top level)": 1,
+      "thebibliography": 1
+    }
+  },
+  {
+    "base": "The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one",
+    "old": "The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one-September-24-2026",
+    "current": "The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one-October-6-2026",
+    "files": [
+      "paper.tex",
+      "references.tex"
+    ],
+    "added": 3,
+    "removed": 3,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2970,
+    "envs": {
+      "(top level)": 1,
+      "thebibliography": 1
+    }
+  },
+  {
+    "base": "Weil-classes-and-Hodge-classes-on-abelian-powers",
+    "old": "Weil-classes-and-Hodge-classes-on-abelian-powers-September-30-2026",
+    "current": "Weil-classes-and-Hodge-classes-on-abelian-powers-October-6-2026",
+    "files": [
+      "paper.tex"
+    ],
+    "added": 3,
+    "removed": 3,
+    "hunks": 3,
+    "categories": {
+      "body": 2,
+      "citation": 1
+    },
+    "unified_bytes": 1917,
+    "envs": {
+      "(top level)": 2,
+      "thebibliography": 1
+    }
+  },
+  {
+    "base": "A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion",
+    "old": "A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026",
+    "current": "A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026",
+    "files": [
+      "paper.tex",
+      "references.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2555,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "Fontaine-Mazur-modularity-at-the-prime-2",
+    "old": "Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026",
+    "current": "Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2125,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "Milnes-rationality-conjecture-for-abelian-varieties",
+    "old": "Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026",
+    "current": "Milnes-rationality-conjecture-for-abelian-varieties-October-7-2026",
+    "files": [
+      "main.tex",
+      "references.tex"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2088,
+    "envs": {
+      "(top level)": 1,
+      "thebibliography": 1
+    }
+  },
+  {
+    "base": "The-Selmer-converse-for-elliptic-curves-at-every-prime",
+    "old": "The-Selmer-converse-for-elliptic-curves-at-every-prime-September-24-2026",
+    "current": "The-Selmer-converse-for-elliptic-curves-at-every-prime-October-7-2026",
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2246,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves",
+    "old": "The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-September-23-2026",
+    "current": "The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2309,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "The-p-adic-section-conjecture",
+    "old": "The-p-adic-section-conjecture-September-24-2026",
+    "current": "The-p-adic-section-conjecture-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 1937,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "The-rational-Hodge-conjecture-for-CM-abelian-varieties",
+    "old": "The-rational-Hodge-conjecture-for-CM-abelian-varieties-September-30-2026",
+    "current": "The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026",
+    "files": [
+      "main.tex",
+      "references.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2089,
+    "envs": {
+      "(top level)": 2
+    }
+  },
+  {
+    "base": "Unrestricted-pro-modularity-at-the-prime-two",
+    "old": "Unrestricted-pro-modularity-at-the-prime-two-October-4-2026",
+    "current": "Unrestricted-pro-modularity-at-the-prime-two-October-6-2026",
+    "files": [
+      "source/main.tex",
+      "source/refs.bib"
+    ],
+    "added": 2,
+    "removed": 2,
+    "hunks": 2,
+    "categories": {
+      "body": 1,
+      "citation": 1
+    },
+    "unified_bytes": 2014,
+    "envs": {
+      "(top level)": 2
+    }
+  }
+]

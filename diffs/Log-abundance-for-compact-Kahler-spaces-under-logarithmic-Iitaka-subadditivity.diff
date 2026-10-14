@@ -1,0 +1,314 @@
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/main.tex /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/main.tex
+--- /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/main.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/main.tex	2026-10-15 02:18:26
+@@ -4,7 +4,7 @@
+ \title{Log abundance for compact Kähler spaces\\
+ under logarithmic Iitaka subadditivity}
+ \author{OpenAI}
+-\date{October 4, 2026}
++\date{October 6, 2026}
+ 
+ \begin{document}
+ \maketitle
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/references.bib /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/references.bib
+--- /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/references.bib	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/references.bib	2026-10-15 02:18:26
+@@ -700,7 +700,7 @@
+   author = {{OpenAI}},
+   title = {{Conditional good minimal models for compact K{\"a}hler fourfolds}},
+   howpublished = {OpenAI Math Release preprint
+-                  \href{https://github.com/openai/math/blob/main/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf}{OAI:Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026}},
++                  \href{https://github.com/openai/math/blob/main/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026/paper.pdf}{OAI:Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-6-2026}},
+   year = {2026}
+ }
+ 
+@@ -785,4 +785,31 @@
+   note = {arXiv:2305.00524v3, 29 June 2026; Appendix A only},
+   doi = {10.48550/arXiv.2305.00524},
+   url = {https://arxiv.org/abs/2305.00524v3}
++}
++
++@article{GuanZhouOptimal2015,
++  author = {Guan, Qi'an and Zhou, Xiangyu},
++  title = {A solution of an {$L^2$} extension problem with an optimal estimate and applications},
++  journal = {Annals of Mathematics},
++  series = {Second Series},
++  volume = {181},
++  number = {3},
++  year = {2015},
++  pages = {1139--1208},
++  doi = {10.4007/annals.2015.181.3.6},
++  eprint = {1310.7169},
++  archivePrefix = {arXiv},
++  url = {https://annals.math.princeton.edu/wp-content/uploads/annals-v181-n3-p06-p.pdf}
++}
++
++@article{PopoviciRegularization2004,
++  author = {Popovici, Dan},
++  title = {Estimation effective de la perte de positivit{\'e} dans la r{\'e}gularisation des courants},
++  journal = {Comptes Rendus Math{\'e}matique},
++  volume = {338},
++  number = {1},
++  year = {2004},
++  pages = {59--64},
++  doi = {10.1016/j.crma.2003.11.011},
++  url = {https://www.numdam.org/item/10.1016/j.crma.2003.11.011.pdf}
+ }
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/sections/01-introduction.tex /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections/01-introduction.tex
+--- /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections/01-introduction.tex	2026-10-15 02:18:26
+@@ -80,7 +80,7 @@
+ canonical fibration. For minimal projective threefolds, Miyaoka proved the
+ case of numerical dimension one and Kawamata completed canonical abundance
+ \cite{Miyaoka1988,Kawamata1992}. Keel, Matsuki, and McKernan established
+-log abundance for threefolds, with a subsequent published correction
++log abundance for threefolds
+ \cite{KMM1994,KMM2004}. In arbitrary dimension, Birkar, Cascini, Hacon, and
+ McKernan established log terminal models for projective klt pairs with big
+ boundary and pseudo-effective adjoint, and finite generation for big
+@@ -93,8 +93,8 @@
+ nonvanishing for nef terminal Kähler threefolds, including that case
+ \cite{DemaillyPeternell2003}. Höring and Peternell constructed minimal models
+ for normal \(\Q\)-factorial terminal compact Kähler threefolds with pseudo-effective canonical class
+-\cite{HoeringPeternell2016}. The abundance argument of Campana, Höring, and
+-Peternell required a correction \cite{CHP2016,CHP2023}, and Das and Ou
++\cite{HoeringPeternell2016}. Campana, Höring, and Peternell treated canonical abundance
++\cite{CHP2016,CHP2023}, and Das and Ou
+ established log abundance for compact Kähler log canonical threefolds
+ \cite[Corollary~1.3]{DasOu2026}.
+ 
+@@ -104,7 +104,7 @@
+ \cite[Equation~(1.0.1)]{CaoPaun2017}. Cao and Păun proved the analogous
+ logarithmic inequality over an abelian base when the pair on the total space
+ has an effective rational boundary and is klt
+-\cite[Theorem~1.1]{CaoPaun2017}. Fujino's corrected argument derives
++\cite[Theorem~1.1]{CaoPaun2017}. Fujino derives
+ logarithmic subadditivity from the conjectured equality
+ \(\kappa_\sigma(X,K_X+D)=\kappa(X,K_X+D)\) for smooth projective
+ \(X\) with reduced SNC \(D\)
+@@ -117,10 +117,15 @@
+ Kähler induction.
+ 
+ Hacon and Xie's cone theorem, adjunction, relative positivity, and
+-projective canonical bundle formula \cite{HX} provide the analytic inputs
+-for our program constructions. Section~\ref{sec:programs} proves the
+-restricted semiampleness, proper relative good-model, and finite-model
+-statements needed here, following their dimension-induction strategy.
++modified-big preparation \cite{HX} provide analytic inputs for our
++program constructions. Section~\ref{sec:programs} constructs effective
++generalized base data on a higher carrier, with an exact adjoint
++pullback identity and a multiplier-ideal inclusion. Fibrewise
++$L^2$ positivity and regularization give this presentation; its
++Stein-factor consequence supplies the non-klt induction.
++The section then proves the restricted semiampleness, proper relative
++good-model, and finite-model statements needed here, following the
++dimension-induction strategy of \cite{HX}.
+ The nef data remain globally nef on a fixed carrier, and the total
+ generalized boundary is globally modified big. Actual rational lines
+ make the selected ray contractions projective; ordinary projective
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/sections/03a-program-foundations.tex /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections/03a-program-foundations.tex
+--- /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/sections/03a-program-foundations.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections/03a-program-foundations.tex	2026-10-15 02:18:26
+@@ -34,7 +34,7 @@
+ projectivity criterion. The second case uses relative vanishing for
+ the ordinary rational klt pair and the projective relative curve
+ space. In particular, it can be applied to a projective log-Fano
+-contraction before invoking a canonical bundle formula.
++contraction before constructing generalized data on its base.
+ \end{proof}
+ 
+ In applications to an ordinary birational negative contraction,
+@@ -48,7 +48,7 @@
+ chosen separately on finitely many Stein base neighborhoods. For
+ fiber-type contractions in case~(ii), rationality of the base follows
+ from \cite[Lemma~8.8(i)]{DHP}; thus that application also precedes
+-any canonical bundle formula.
++the construction of generalized data on the base.
+ 
+ \begin{lemma}[Projectivity from a rational line detecting the ray]
+ \label{prog:detected-projectivity}
+Only in /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections: 03c-base-presentations.tex
+diff -ru --exclude=*.pdf --exclude=*.aux --exclude=*.log --exclude=*.out /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/sections/03c-restricted-induction.tex /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections/03c-restricted-induction.tex
+--- /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/build/sections/03c-restricted-induction.tex	2026-10-15 02:18:26
++++ /Users/dereky/oai-math/repo/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/build/sections/03c-restricted-induction.tex	2026-10-15 02:18:26
+@@ -51,12 +51,15 @@
+ 
+ The independent inputs are the analytic cone theorem, the projective
+ results of Proposition~\ref{prog:projective-good-model}, relative
+-vanishing, adjunction, relative-canonical positivity, the projective
+-canonical bundle formula, and the nef-and-big K\"ahler criterion.
++vanishing, adjunction, relative-canonical positivity, and the
++nef-and-big K\"ahler criterion. The base presentations and
++multiplier-ideal descent used in the induction are proved below.
+ The projective constructions use the actual-line lemmas of the preceding
+ subsection. No assertion of termination of an arbitrary sequence of
+ flips is used.
+ 
++\input{sections/03c-base-presentations}
++
+ \subsubsection{A fixed integral grid and cohomology transport}
+ 
+ \begin{lemma}[Integral degree-two descent for a locally log-Fano map]
+@@ -967,8 +970,8 @@
+ construction. Lemma~\ref{prog:actual-line-polarization} then supplies
+ precisely the relative ampleness needed in place of
+ \cite[Lemma~2.42]{HX}, including the common-resolution step in its
+-Claim~3.5. The uncorrected pullback $q^*\eta_U$ is not being treated
+-as a K\"ahler class.
++Claim~3.5. The exceptional term $-\varepsilon[E]$ makes the
++positive part $\eta''$ K\"ahler on the common resolution.
+ 
+ The exact sequences of multiplier ideals, relative vanishing,
+ finite pushouts, and extension from sufficiently thickened
+@@ -1119,18 +1122,21 @@
+ $K_Z$, would make it big globally. It is therefore not big over
+ $Z$. This property persists to its relative semiample model, so
+ its relative canonical morphism has $\dim S<d$.
+-The projective canonical bundle formula
+-\cite[Theorem~2.53]{HX} provides
++Apply Proposition~\ref{prog:base-presentation} to $g$ and the
++whole adjoint $D_V$. Its generalized data are effective and gklt.
++The nef datum is represented on the initial carrier by
++$\mathbf M_U+a\alpha_U$, a K\"ahler class; on a common carrier over
++$V$ its pullback is nef and big. Adding the strict transform of the
++effective boundary proves that the total boundary on $V$ is globally
++modified big. The proposition therefore gives
+ \[
+- D_S=K_S+B_S+\mathbf N_S+a\alpha_S,
+- \qquad D_V=g^*D_S,
++ D_S=K_S+B_S+\mathbf N_S,\qquad D_V=g^*D_S,
+ \]
+-with a gklt pair on $S$ and modified-big nef data.
+-The class $\alpha_S$ is nef by descent of nefness through the
+-surjective projective map $g$.
+-Thus adding $a\overline{\alpha_S}$ to the nef datum preserves the
+-gklt condition and modified bigness: on a common carrier this
+-addition is a nef pullback and preserves the existing big class.
++with effective gklt data on $S$, a globally nef carrier, and globally
++modified-big total boundary. Independently, $\alpha_S$ is nef by
++descent of nefness through the surjective projective map $g$.
++The lower-dimensional model assertion will be applied to this whole
++adjoint $D_S$.
+ 
+ Take a projective small factorialization $s:S^{\mathrm q}\to S$
+ and resolve the main component of $V\times_S S^{\mathrm q}$.
+@@ -1585,13 +1591,30 @@
+ $Y$, which is compact K\"ahler because it is projective over $Z$.
+ Lemma~\ref{prog:bc-descent} therefore gives an actual equality
+ $A_c=g^*A_Y$ in Bott--Chern cohomology. This descent precedes the
+-projective canonical bundle formula. That formula now provides gklt
+-data for $A_Y$, globally nef on a carrier, whose total boundary is
+-globally modified big. Relative pseudo-effectivity descends through
+-the projective surjection $g$, so $\mathsf M_{d-1}$ applies over $S$.
+-Keep the base shift in this application. Use its chosen output in
+-Lemma~\ref{prog:graph-good-model}.
++base presentation. Apply Proposition~\ref{prog:base-presentation}
++to $g$ and the whole adjoint $A_c$. The negative or crepant steps
++preserve its effective gklt data. Its nef part is the trace of
++$M_U+cP$ from the fixed carrier; on a common carrier it is nef and
++big, so its total boundary is globally modified big. The proposition
++gives effective gklt data for $A_Y$ with globally nef carrier and
++globally modified-big total boundary. Relative pseudo-effectivity
++descends through the projective surjection $g$, so $\mathsf M_{d-1}$
++applies over $S$, with the base shift retained. For the source data in
++Lemma~\ref{prog:graph-good-model}, use
++Lemma~\ref{prog:base-presentation-preparation} to choose a K\"ahler
++nef datum on a smooth carrier while keeping $A_c$ fixed. Apply that
++graph lemma to the chosen lower-dimensional output.
+ 
++Adjoint-preserving preparation is compatible with the original pair
++in this comparison. On a common resolution of a nonextracting good
++output, keep the original nef datum and subtract the effective model
++comparison divisor from the original structure divisor. The resulting
++structure divisor has the same adjoint as the output; its trace is
++effective by nonextraction, and its discrepancies have not decreased.
++Strictness on contracted original primes is preserved. Thus the
++prepared presentation supplies a comparison for the original data as
++well.
++
+ Steps at threshold one can be $A_c$-crepant divisorial contractions.
+ Consequently the composite constructed so far need only be a weak
+ good model of the original prepared adjoint. Apply
+@@ -1806,12 +1829,22 @@
+ proves $\mathsf F_d$.
+ 
+ It remains to prove $\mathsf C_d$ when its nef NQC adjoint $\alpha$
+-is not big. Take the projective dlt preparation in
+-\cite[Section~6]{HX}. Its underlying space is klt and globally
+-strongly $\mathbb Q$-factorial, and
+-$\alpha-c_1(K_X)$ is a big Bott--Chern class. Choose an NQC
+-expression with positive coefficients and integral multiples of its
+-rational degree-two summands. Corollary~\ref{prog:uniform-canonical-parameter}
++is not big. First use
++Lemma~\ref{prog:base-presentation-preparation}, preserving the
++adjoint $\alpha$ and making the nef datum K\"ahler on a smooth
++carrier. Its multiplier-ideal inclusion allows the given contraction
++to restrict to the prepared non-klt closed subspace by
++Lemma~\ref{prog:base-emc}. Next take the projective dlt preparation
++in \cite[Section~6]{HX}, keeping its crepant structure data. The
++working space is klt and globally strongly $\mathbb Q$-factorial.
++The retained crepant structure boundary need not be lc; it is
++effective, including the extracted primes of coefficient at least one. On a common carrier the nef datum is
++nef and big. Consequently the total boundary trace is modified big,
++and $\alpha-c_1(K_X)$ is a big Bott--Chern class. The contraction on
++the non-klt closed subspace transports through this preparation by
++Lemma~\ref{prog:multiplier-transport}. Choose an NQC expression with
++positive coefficients and integral multiples of its rational
++degree-two summands. Corollary~\ref{prog:uniform-canonical-parameter}
+ provides a single number $t$ such that each negative ray of
+ $K_X+t\alpha$ is $\alpha$-trivial. Choose a K\"ahler scaling class
+ $\omega$ with $K_X+t\alpha+\omega$ nef. Every selected negative
+@@ -1837,26 +1870,33 @@
+ terminates. Non-pseudo-effectivity excludes a nef endpoint, leaving
+ an $\alpha$-trivial ordinary Mori contraction $f:X'\to Z$.
+ 
+-For clarity, the remaining contraction argument uses only this
+-already-projective map. Relative vanishing transports the multiplier
+-ideal defining the non-klt closed subspace. Lemma~\ref{prog:bc-descent}
+-descends $\alpha$ in Bott--Chern cohomology, and
+-Lemma~\ref{prog:integral-h2} descends its fixed rational NQC summands;
+-projective multisections preserve their nonnegative degrees.
+-Make the adjoint-preserving modified-big replacement of
+-\cite[Lemma~2.23 and Section~6]{HX}, with a K\"ahler summand on
+-the source, and restrict the given contraction to the resulting
+-non-klt closed subspace, taking its Stein factor. If this non-klt
+-subspace dominates $Z$, relative Nadel vanishing gives
+-$\mathcal O_Z=f_*\mathcal O_{\operatorname{Nklt}}$, and its given
+-Moishezon contraction factors to the required contraction on $Z$.
+-If it does not dominate, apply the projective canonical bundle formula. The multiplier-ideal calculation identifies the
+-induced non-klt subspace on its lower-dimensional base and its
+-Moishezon contraction. Thus $\mathsf C_{d-1}$ applies there.
+-Pullback and factorization through the projective modifications give
+-the required Moishezon contraction on the original space. These are
+-relative vanishing, canonical-bundle-formula and closed-subspace
+-factorization operations; they require no further global program.
++The structure data of the prepared contraction problem remain
++crepant throughout this $\alpha$-trivial program. Their effective
++traces and globally nef and big carrier datum therefore persist.
++Lemma~\ref{prog:multiplier-transport} transports the contraction on
++the non-klt closed subspace through each birational step.
++Lemma~\ref{prog:bc-descent} gives
++\[
++                         \alpha_{X'}=f^*\gamma
++\]
++in Bott--Chern cohomology. The class $\gamma$ is nef by projective
++descent; Lemma~\ref{prog:integral-h2} descends the fixed rational
++NQC summands, and projective multisections preserve their
++nonnegative degrees.
++
++Apply Corollary~\ref{prog:base-emc-induction} to this projective
++Mori contraction. In its notation the prepared non-klt subspace
++$N_1$ has Stein space $V(f_*J_1)$ over $Z$. If $N_1$ dominates
++$Z$, this Stein space is $Z$ itself and its inherited contraction
++already supplies the contraction of $\gamma$. Otherwise the base
++presentation has multiplier ideal $J_Z\supset f_*J_1$, so the
++contraction restricts to $V(J_Z)$ as a closed subspace of
++$V(f_*J_1)$. Since $\dim Z<d$, the assertion $\mathsf C_{d-1}$
++then gives the contraction of $\gamma$. Pullback supplies the
++contraction on $X'$. Its pullback to projective common resolutions
++factors through the original space by Lemma~\ref{prog:base-emc},
++because the adjoint classes are crepant. This gives the required
++Moishezon contraction on the original space.
+ This proves $\mathsf C_d$ and completes the induction.
+ \end{proof}
+ 
