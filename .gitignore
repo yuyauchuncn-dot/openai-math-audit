@@ -1,4 +1,5 @@
 repo/
+fonts/
 out/
 __pycache__/
 *.pyc
